@@ -32,11 +32,10 @@ namespace ChartJSCore.Models
         /// </summary>
         public string BorderCapStyle { get; set; }
 
-        // TODO: Convert to an array.
         /// <summary>
         /// Default line dash.
         /// </summary>
-        public string BorderDash { get; set; }
+        public IList<int> BorderDash { get; set; }
 
         /// <summary>
         /// Default line dash offset.

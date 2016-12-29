@@ -58,5 +58,7 @@ namespace ChartJSCore.Models
         /// Options can be configured for four different types of elements: arc, lines, points, and rectangles. When set, these options apply to all objects of that type unless specifically overridden by the configuration attached to a dataset.
         /// </summary>
         public Elements Elements { get; set; }
+
+        public Scales Scales { get; set; }
     }
 }

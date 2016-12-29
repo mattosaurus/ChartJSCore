@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class XLabel
+    public class Scales
     {
+        public IList<Scale> XAxes { get; set; }
+
+        public IList<Scale> YAxes { get; set; }
     }
 }
