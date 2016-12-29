@@ -1,4 +1,5 @@
-﻿using ChartJSCore.Models;
+﻿using ChartJSCore.Helpers;
+using ChartJSCore.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
