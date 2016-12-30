@@ -12,19 +12,21 @@ namespace ChartJSCoreTest
     {
         public static void Main(string[] args)
         {
-            GenerateBarChart();
+            Console.WriteLine(GenerateBarChart());
 
-            GenerateLineChart();
+            Console.WriteLine(GenerateLineChart());
 
-            GenerateRadarChart();
+            Console.WriteLine(GenerateLineScatterChart());
 
-            GeneratePolarChart();
+            Console.WriteLine(GenerateRadarChart());
 
-            GeneratePieChart();
+            Console.WriteLine(GeneratePolarChart());
 
-            GenerateLineScatterChart();
+            Console.WriteLine(GeneratePieChart());
 
-            GenerateBubbleChart();
+            Console.WriteLine(GenerateBubbleChart());
+
+            Console.Read();
         }
 
         public static string GenerateBarChart()
@@ -57,7 +59,7 @@ namespace ChartJSCoreTest
                 "rgba(153, 102, 255, 1)",
                 "rgba(255, 159, 64, 1)"
                 },
-                BorderWidth = 1
+                BorderWidth = new List<int>() { 1 }
             };
 
             data.Datasets = new List<Dataset>();
@@ -114,15 +116,15 @@ namespace ChartJSCoreTest
                 BorderDash = new List<int> { },
                 BorderDashOffset = 0.0,
                 BorderJoinStyle = "miter",
-                PointBorderColor = "rgba(75,192,192,1)",
-                PointBackgroundColor = "#fff",
-                PointBorderWidth = 1,
-                PointHoverRadius = 5,
-                PointHoverBackgroundColor = "rgba(75,192,192,1)",
-                PointHoverBorderColor = "rgba(220,220,220,1)",
-                PointHoverBorderWidth = 2,
-                PointRadius = 1,
-                PointHitRadius = 10,
+                PointBorderColor = new List<string>() { "rgba(75,192,192,1)" },
+                PointBackgroundColor = new List<string>() { "#fff" },
+                PointBorderWidth = new List<int> { 1 },
+                PointHoverRadius = new List<int> { 5 },
+                PointHoverBackgroundColor = new List<string>() { "rgba(75,192,192,1)" },
+                PointHoverBorderColor = new List<string>() { "rgba(220,220,220,1)" },
+                PointHoverBorderWidth = new List<int> { 2 },
+                PointRadius = new List<int> { 1 },
+                PointHitRadius = new List<int> { 10 },
                 SpanGaps = false
             };
 
@@ -209,10 +211,10 @@ namespace ChartJSCoreTest
                 Label = "My First dataset",
                 BackgroundColor = "rgba(179,181,198,0.2)",
                 BorderColor = "rgba(179,181,198,1)",
-                PointBackgroundColor = "rgba(179,181,198,1)",
-                PointBorderColor = "#fff",
-                PointHoverBackgroundColor = "#fff",
-                PointHoverBorderColor = "rgba(179,181,198,1)",
+                PointBackgroundColor = new List<string>() { "rgba(179,181,198,1)" },
+                PointBorderColor = new List<string>() { "#fff" },
+                PointHoverBackgroundColor = new List<string>() { "#fff" },
+                PointHoverBorderColor = new List<string>() { "rgba(179,181,198,1)" },
                 Data = new List<double>() { 65, 59, 80, 81, 56, 55, 40 }
             };
 
@@ -221,10 +223,10 @@ namespace ChartJSCoreTest
             Label = "My Second dataset",
             BackgroundColor = "rgba(255,99,132,0.2)",
             BorderColor = "rgba(255,99,132,1)",
-            PointBackgroundColor = "rgba(255,99,132,1)",
-            PointBorderColor = "#fff",
-            PointHoverBackgroundColor = "#fff",
-            PointHoverBorderColor = "rgba(255,99,132,1)",
+            PointBackgroundColor = new List<string>() { "rgba(255,99,132,1)" },
+            PointBorderColor = new List<string>() { "#fff" },
+            PointHoverBackgroundColor = new List<string>() { "#fff" },
+            PointHoverBorderColor = new List<string>() { "rgba(255,99,132,1)" },
             Data = new List<double>() { 28, 48, 40, 19, 96, 27, 100 }
             };
 
