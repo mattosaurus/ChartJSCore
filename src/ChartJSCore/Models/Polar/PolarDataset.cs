@@ -20,7 +20,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Border width of arcs in pixels.
         /// </summary>
-        public IList<int> BorderWidth { get; set; }
+        public int? BorderWidth { get; set; }
 
         /// <summary>
         /// Arc background color when hovered.
@@ -35,6 +35,6 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Border width of arc when hovered.
         /// </summary>
-        public IList<int> HoverBorderWidth { get; set; }
+        public int? HoverBorderWidth { get; set; }
     }
 }

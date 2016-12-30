@@ -20,7 +20,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Position of the scale. Possible values are 'top', 'left', 'bottom' and 'right'.
         /// </summary>
-        public bool Position { get; set; }
+        public string Position { get; set; }
 
         /// <summary>
         /// The ID is used to link datasets and scale axes together. The properties datasets.xAxisID or datasets.yAxisID have to match the scale properties scales.xAxes.id or scales.yAxes.id. This is especially needed if multi-axes charts are used.

@@ -13,8 +13,8 @@ namespace ChartJSCore.Models
 
         public IList<string> Labels { get; set; }
 
-        public IList<XLabel> XLabels { get; set; }
+        public IList<string> XLabels { get; set; }
 
-        public IList<YLabel> YLabels { get; set; }
+        public IList<string> YLabels { get; set; }
     }
 }

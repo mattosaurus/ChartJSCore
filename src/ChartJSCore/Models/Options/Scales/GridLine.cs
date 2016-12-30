@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,7 +14,8 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Color of the grid lines.
         /// </summary>
-        public bool Color { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
+        public IList<string> Color { get; set; }
 
         /// <summary>
         /// Length and spacing of dashes.
@@ -27,6 +30,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Stroke width of grid lines.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> LineWidth { get; set; }
 
         /// <summary>

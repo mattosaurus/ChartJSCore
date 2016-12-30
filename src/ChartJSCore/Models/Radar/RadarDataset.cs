@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -45,7 +47,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Offset for line dashes.
         /// </summary>
-        public int? BorderDashOffset { get; set; }
+        public double? BorderDashOffset { get; set; }
 
         /// <summary>
         /// Line joint style.
@@ -55,52 +57,61 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The border color for points.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
         public IList<string> PointBorderColor { get; set; }
 
         /// <summary>
         /// The fill color for points.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
         public IList<string> PointBackgroundColor { get; set; }
 
         /// <summary>
         /// The width of the point border in pixels.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> PointBorderWidth { get; set; }
 
         /// <summary>
         /// The radius of the point shape. If set to 0, nothing is rendered.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> PointRadius { get; set; }
 
         /// <summary>
         /// The radius of the point when hovered.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> PointHoverRadius { get; set; }
 
         /// <summary>
         /// The pixel size of the non-displayed point that reacts to mouse events.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> HitRadius { get; set; }
 
         /// <summary>
         /// Point background color when hovered.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
         public IList<string> PointHoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Point border color when hovered.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
         public IList<string> PointHoverBorderColor { get; set; }
 
         /// <summary>
         /// Border width of point when hovered.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> PointHoverBorderWidth { get; set; }
 
-        // TODO: Allow images as well as strings.
         /// <summary>
         /// The style of point. Options are 'circle', 'triangle', 'rect', 'rectRot', 'cross', 'crossRot', 'star', 'line', and 'dash'. If the option is an image, that image is drawn on the canvas using drawImage.
         /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
         public IList<string> PointStyle { get; set; }
     }
 }
