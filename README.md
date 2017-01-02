@@ -1,7 +1,7 @@
 # ChartJSCore
-Implementation of Chart.js for use with .NET Core. This libary allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
+Implementation of Chart.js for use with .NET Core. This library allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
 
-# Installaton
+# Installation
 To use ChartJSCore in your C# project, you can either download the ChartJSCore C# .NET libraries directly from the Github repository or, if you have the NuGet package manager installed, you can grab them automatically.
 
 ```
@@ -16,6 +16,8 @@ using ChartJSCore.Models;
 ```
 # Dependencies
 This produces code for generating chart using Chart.js so Chart.js is required to render them, Chart.js also uses require.js so this is also needed. Chart.js seems to no longer support the Bower package manager in Visual Studio so needs to be downloaded directly to the project root folder wwwroot\lib\Chart.js.
+
+This package has been created and tested with version 2.4.0 of Chart.js, earlier versions may well be incompatible.
 
 Require.js isn't available in the Bower package manager but can be added by directly updating the bower.json file.
 
@@ -36,7 +38,7 @@ Require.js isn't available in the Bower package manager but can be added by dire
 # Usage
 This is intended for usage in ASP.NET 5 Core MVC projects.
 
-Once a project has been created a nwe Chart object can be created by using code similar to that below. In this example the Index method of the Home controller has been updated to generate a Chart and pass it through to the relevant view.
+Once a project has been created a new Chart object can be created by using code similar to that below. In this example the Index method of the Home controller has been updated to generate a Chart and pass it through to the relevant view.
 
 ```C#
         public IActionResult Index()
