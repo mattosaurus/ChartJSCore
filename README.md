@@ -30,7 +30,8 @@ Require.js isn't available in the Bower package manager but can be added by dire
     "jquery": "3.1.1",
     "jquery-validation": "1.16.0",
     "jquery-validation-unobtrusive": "3.2.6",
-    "requirejs": "2.3.2"
+    "requirejs": "2.3.3",
+    "chart.js": "2.5.0"
   }
 }
 ```
