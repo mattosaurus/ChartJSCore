@@ -1,4 +1,6 @@
 {
+  "title": "ChartJSCore",
+  "description": "A .NET Core library for generating Chart.js code.",
   "version": "1.0.2-*",
 
   "dependencies": {
