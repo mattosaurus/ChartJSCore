@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ChartJSCore</id>
+    <version>1.0.0</version>
+    <title>$title$</title>
+    <authors>mattosaurus</authors>
+    <owners>mattosaurus</owners>
+    <projectUrl>https://github.com/mattosaurus/ChartJSCore</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET Core class library for generating the jQuery needed to include Chart.js charts in MVC views.</description>
+    <releaseNotes>Initial package creation.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Chart.js jQuery MVC Core ASP.NET5</tags>
+  </metadata>
+</package>

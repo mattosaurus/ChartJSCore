@@ -60,5 +60,10 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(SingleOrArrayConverter<int>))]
         public IList<int> HoverBorderWidth { get; set; }
+
+        /// <summary>
+        /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack)
+        /// </summary>
+        public string Stack { get; set; }
     }
 }
