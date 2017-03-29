@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class PieOptions
+    public class PieOptions : Options
     {
         /// <summary>
         /// The percentage of the chart that is cut out of the middle.
