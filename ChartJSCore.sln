@@ -1,18 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C254607F-F00D-4AEE-9B00-633505D7C854}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45CD8D37-88CA-4F86-A3A9-B00F12F52F1C}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ChartJSCore", "src\ChartJSCore\ChartJSCore.xproj", "{BAA468D9-4C99-4191-A03B-7E1BA0262A28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore", "src\ChartJSCore\ChartJSCore.csproj", "{BAA468D9-4C99-4191-A03B-7E1BA0262A28}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ChartJSCoreTest", "src\ChartJSCoreTest\ChartJSCoreTest.xproj", "{E12141E2-58AD-4902-8B8A-908609B082DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCoreTest", "src\ChartJSCoreTest\ChartJSCoreTest.csproj", "{E12141E2-58AD-4902-8B8A-908609B082DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
