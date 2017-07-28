@@ -48,7 +48,7 @@ Once a project has been created a new Chart object can be created by using code 
 
             chart.Type = "line";
 
-            Data data = new Data();
+            ChartJSCore.Models.Data data = new ChartJSCore.Models.Data();
             data.Labels = new List<string>() { "January", "February", "March", "April", "May", "June", "July" };
 
             LineDataset dataset = new LineDataset()
