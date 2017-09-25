@@ -17,5 +17,9 @@ namespace ChartJSCore.Models
         /// The label for the dataset which appears in the legend and tooltips.
         /// </summary>
         public string Label { get; set; }
+        /// <summary>
+        /// Start Dataset Disabled if set to True
+        /// </summary>
+        public bool Hidden { get; set; }
     }
 }
