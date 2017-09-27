@@ -14,7 +14,8 @@ namespace ChartJSCore.Models
 
         public Data Data { get; set; }
 
-        public Options Options { get; set; }
+        // TODO: Update to only accept options and derived classes
+        public Object Options { get; set; }
 
         public string SerializeBody()
         {
