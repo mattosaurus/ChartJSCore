@@ -115,6 +115,6 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If true datasets are stacked on top of each other
         /// </summary>
-        public bool Stacked { get; set; }
+        public bool? Stacked { get; set; }
     }
 }

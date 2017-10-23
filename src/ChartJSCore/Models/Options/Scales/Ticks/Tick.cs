@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ namespace ChartJSCore.Models
 
         public int? AutoSkipPadding { get; set; }
 
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string Callback { get; set; }
 
         public bool? Display { get; set; }

@@ -131,6 +131,31 @@ namespace ChartJSCoreTest
             data.Datasets = new List<Dataset>();
             data.Datasets.Add(dataset);
 
+            Options options = new Options()
+            {
+                Scales = new Scales()
+            };
+
+            Scales scales = new Scales()
+            {
+                YAxes = new List<Scale>()
+            };
+
+            Scale yAxes = new Scale()
+            {
+                Ticks = new Tick()
+            };
+
+            Tick tick = new Tick()
+            {
+                Callback = "function(value, index, values) {return '$' + value;}"
+            };
+
+            yAxes.Ticks = tick;
+            scales.YAxes = new List<Scale>() { yAxes };
+            options.Scales = scales;
+            chart.Options = options;
+
             chart.Data = data;
 
             string code = chart.CreateChartCode("lineChart");
