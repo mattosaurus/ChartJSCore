@@ -17,7 +17,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The ID of the y axis to plot this dataset on.
         /// </summary>
-        public string YAxesID { get; set; }
+        public string YAxisID { get; set; }
 
         /// <summary>
         /// The fill color of the bars.
