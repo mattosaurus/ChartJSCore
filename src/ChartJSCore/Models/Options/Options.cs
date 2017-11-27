@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,6 +37,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Function to generate a legend. Receives the chart object to generate a legend from. Default implementation returns an HTML string.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string LegendCallback { get; set; }
 
         /// <summary>
