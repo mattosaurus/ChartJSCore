@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace ChartJSCore.Models
         /// </summary>
         public bool? Enabled { get; set; }
 
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string Custom { get; set; }
 
         /// <summary>
