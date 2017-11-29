@@ -15,7 +15,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If true, show the scale including gridlines, ticks, and labels. Overrides gridLines.display, scaleLabel.display, and ticks.display.
         /// </summary>
-        public bool Display { get; set; }
+        public bool? Display { get; set; }
 
         /// <summary>
         /// Position of the scale. Possible values are 'top', 'left', 'bottom' and 'right'.
