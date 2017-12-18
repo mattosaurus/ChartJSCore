@@ -74,19 +74,18 @@ namespace ChartJSCoreTest
 
             Scales scales = new Scales()
             {
-                YAxes = new List<Scale>()
+                YAxes = new List<Object>()
+                {
+                    new CartesianScale()
+                    {
+                        Ticks = new CartesianLinearTick()
+                        {
+                            BeginAtZero = true
+                        }
+                    }
+                }
             };
 
-            Scale yAxes = new Scale()
-            {
-                Ticks = new Tick()
-            };
-
-            Tick tick = new Tick();
-
-            tick.BeginAtZero = true;
-            yAxes.Ticks = tick;
-            scales.YAxes.Add(yAxes);
             options.Scales = scales;
 
             chart.Options = options;
@@ -138,10 +137,13 @@ namespace ChartJSCoreTest
 
             Scales scales = new Scales()
             {
-                YAxes = new List<Scale>()
+                YAxes = new List<Object>()
+                {
+                    new CartesianScale()
+                }
             };
 
-            Scale yAxes = new Scale()
+            CartesianScale yAxes = new CartesianScale()
             {
                 Ticks = new Tick()
             };
@@ -204,16 +206,20 @@ namespace ChartJSCoreTest
 
             Scales scales = new Scales()
             {
-                XAxes = new List<Scale>()
+                XAxes = new List<Object>()
+                {
+                    new CartesianScale()
+                    {
+                        Type = "linear",
+                        Position = "bottom",
+                        Ticks = new CartesianLinearTick()
+                        {
+                            BeginAtZero = true
+                        }
+                    }
+                }
             };
 
-            Scale xAxes = new Scale()
-            {
-                Type = "linear",
-                Position = "bottom"
-            };
-
-            scales.XAxes.Add(xAxes);
             options.Scales = scales;
 
             chart.Options = options;

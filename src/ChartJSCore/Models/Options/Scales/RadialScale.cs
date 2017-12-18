@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class RadialLinearScale : Scale
+    public class RadialScale : Scale
     {
-        public bool LineArc { get; set; }
-
         public AngleLine AngleLines { get; set; }
 
+        public GridLine GridLines { get; set; }
+
         public PointLabel PointLabels { get; set; }
+
+        public Object Ticks { get; set; }
     }
 }

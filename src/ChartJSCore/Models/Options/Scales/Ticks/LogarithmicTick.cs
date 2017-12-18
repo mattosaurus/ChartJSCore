@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class LogarithmicTick : Tick
+    public class LogarithmicTick : CartesianTick
     {
         /// <summary>
-        /// User defined minimum number for the scale, overrides minimum value from data.
+        /// User defined minimum number for the scale, overrides minimum value from data
         /// </summary>
-        public string Min { get; set; }
+        public double? Min { get; set; }
 
         /// <summary>
         /// User defined maximum number for the scale, overrides maximum value from data.
         /// </summary>
-        public string Max { get; set; }
+        public double? Max { get; set; }
     }
 }

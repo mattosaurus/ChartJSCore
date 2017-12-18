@@ -5,16 +5,21 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class CategoryTick : Tick
+    public class CategoryTick : CartesianTick
     {
         /// <summary>
-        /// User defined minimum number for the scale, overrides minimum value from data.
+        /// The minimum item to display.
         /// </summary>
         public string Min { get; set; }
 
         /// <summary>
-        /// User defined maximum number for the scale, overrides maximum value from data.
+        /// The maximum item to display.
         /// </summary>
         public string Max { get; set; }
+
+        /// <summary>
+        /// An array of labels to display.
+        /// </summary>
+        public List<string> Labels { get; set; }
     }
 }

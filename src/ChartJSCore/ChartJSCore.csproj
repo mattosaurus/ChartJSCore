@@ -4,23 +4,22 @@
     <Description>A .NET Core library for generating Chart.js code.</Description>
     <AssemblyTitle>ChartJSCore</AssemblyTitle>
     <VersionPrefix>1.0.3</VersionPrefix>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>ChartJSCore</AssemblyName>
     <PackageId>ChartJSCore</PackageId>
     <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.1.6</Version>
+    <Version>1.2.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>1.1.6.0</AssemblyVersion>
-    <FileVersion>1.1.6.0</FileVersion>
-    <PackageReleaseNotes>Made display bool nullable.</PackageReleaseNotes>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <PackageReleaseNotes>Updated scales structure (breaking change) and updated runtime to .NET Core 2.0</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
   </PropertyGroup>
 
