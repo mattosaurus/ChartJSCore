@@ -86,7 +86,7 @@ Once a project has been created a new Chart object can be created by using code 
         }
 ```
 
-See the [test project] (https://github.com/mattosaurus/ChartJSCore/blob/master/src/ChartJSCoreTest/Program.cs) for further examples.
+See the [test project](https://github.com/mattosaurus/ChartJSCore/blob/master/src/ChartJSCoreTest/Program.cs) for further examples.
 
 Within the Index view the Chart can then be accessed and rendered.
 
