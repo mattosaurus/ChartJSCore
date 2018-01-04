@@ -1,8 +1,9 @@
-# ChartJSCore
+# ChartJSCore v1.2.0
 Implementation of Chart.js for use with .NET Core. This library allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
 
 # Installation
 To use ChartJSCore in your C# project, you can either download the ChartJSCore C# .NET libraries directly from the Github repository or, if you have the NuGet package manager installed, you can grab them automatically.
+* Nuget package: https://www.nuget.org/packages/ChartJSCore/ [![NuGet Badge](https://buildstats.info/nuget/ChartJSCore)](https://www.nuget.org/packages/ChartJSCore/) 
 
 ```
 PM> Install-Package ChartJSCore
