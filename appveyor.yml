@@ -1,0 +1,17 @@
+version: 1.0.{build}
+image: Visual Studio 2017
+configuration: Debug
+platform: Any CPU
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+cache: packages -> **\packages.config
+before_build:
+- cmd: >-
+    ver
+
+
+    nuget restore src/ChartJSCore/ChartJSCore.csproj
+build:
+  project: src/ChartJSCore/ChartJSCore.csproj
+  verbosity: minimal
+test: off
