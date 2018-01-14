@@ -11,7 +11,7 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
@@ -19,7 +19,8 @@
     <Platforms>AnyCPU;x64</Platforms>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <FileVersion>1.2.0.0</FileVersion>
-    <PackageReleaseNotes>Updated scales structure (breaking change) and updated runtime to .NET Core 2.0</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 1.2.1 - Options is now of type Options.
+Version 1.2.0 - Updated scales structure (breaking change) and updated runtime to .NET Core 2.0</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
   </PropertyGroup>
 
