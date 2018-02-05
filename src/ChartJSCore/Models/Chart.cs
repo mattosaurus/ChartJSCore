@@ -14,8 +14,7 @@ namespace ChartJSCore.Models
 
         public Data Data { get; set; }
 
-        // TODO: Update to only accept options and derived classes
-        public Object Options { get; set; }
+        public Options Options { get; set; }
 
         public string SerializeBody()
         {
@@ -45,6 +44,11 @@ namespace ChartJSCore.Models
             code += ");";
 
             return code;
+        }
+
+        public Chart()
+        {
+            Options = new Options();
         }
     }
 }
