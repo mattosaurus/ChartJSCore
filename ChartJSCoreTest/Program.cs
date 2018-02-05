@@ -1,5 +1,6 @@
 ﻿using ChartJSCore.Helpers;
 using ChartJSCore.Models;
+using ChartJSCore.Models.Bar;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -67,9 +68,10 @@ namespace ChartJSCoreTest
 
             chart.Data = data;
 
-            Options options = new Options()
+            BarOptions options = new BarOptions()
             {
-                Scales = new Scales()
+                Scales = new Scales(),
+                BarPercentage = 0.7
             };
 
             Scales scales = new Scales()
@@ -251,14 +253,14 @@ namespace ChartJSCoreTest
 
             RadarDataset dataset2 = new RadarDataset()
             {
-            Label = "My Second dataset",
-            BackgroundColor = "rgba(255,99,132,0.2)",
-            BorderColor = "rgba(255,99,132,1)",
-            PointBackgroundColor = new List<string>() { "rgba(255,99,132,1)" },
-            PointBorderColor = new List<string>() { "#fff" },
-            PointHoverBackgroundColor = new List<string>() { "#fff" },
-            PointHoverBorderColor = new List<string>() { "rgba(255,99,132,1)" },
-            Data = new List<double>() { 28, 48, 40, 19, 96, 27, 100 }
+                Label = "My Second dataset",
+                BackgroundColor = "rgba(255,99,132,0.2)",
+                BorderColor = "rgba(255,99,132,1)",
+                PointBackgroundColor = new List<string>() { "rgba(255,99,132,1)" },
+                PointBorderColor = new List<string>() { "#fff" },
+                PointHoverBackgroundColor = new List<string>() { "#fff" },
+                PointHoverBorderColor = new List<string>() { "rgba(255,99,132,1)" },
+                Data = new List<double>() { 28, 48, 40, 19, 96, 27, 100 }
             };
 
             data.Datasets = new List<Dataset>();

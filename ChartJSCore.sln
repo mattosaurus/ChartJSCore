@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C254607F-F00D-4AEE-9B00-633505D7C854}"
 EndProject
@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore", "src\ChartJSCore\ChartJSCore.csproj", "{BAA468D9-4C99-4191-A03B-7E1BA0262A28}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCoreTest", "src\ChartJSCoreTest\ChartJSCoreTest.csproj", "{E12141E2-58AD-4902-8B8A-908609B082DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJSCoreTest", "ChartJSCoreTest\ChartJSCoreTest.csproj", "{25C5F598-6616-46F1-A6BD-DA4B870B50A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,21 +27,20 @@ Global
 		{BAA468D9-4C99-4191-A03B-7E1BA0262A28}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BAA468D9-4C99-4191-A03B-7E1BA0262A28}.Release|x64.ActiveCfg = Release|x64
 		{BAA468D9-4C99-4191-A03B-7E1BA0262A28}.Release|x64.Build.0 = Release|x64
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Debug|x64.Build.0 = Debug|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Release|x64.ActiveCfg = Release|Any CPU
-		{E12141E2-58AD-4902-8B8A-908609B082DA}.Release|x64.Build.0 = Release|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Debug|x64.Build.0 = Debug|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|x64.ActiveCfg = Release|Any CPU
+		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BAA468D9-4C99-4191-A03B-7E1BA0262A28} = {C254607F-F00D-4AEE-9B00-633505D7C854}
-		{E12141E2-58AD-4902-8B8A-908609B082DA} = {C254607F-F00D-4AEE-9B00-633505D7C854}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0730BBA-BC12-46E8-9ED3-E57AF6782896}
