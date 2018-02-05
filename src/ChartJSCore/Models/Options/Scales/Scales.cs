@@ -7,8 +7,8 @@ namespace ChartJSCore.Models
 {
     public class Scales
     {
-        public Scale XAxes { get; set; }
+        public List<Scale> XAxes { get; set; }
 
-        public Scale YAxes { get; set; }
+        public List<Scale> YAxes { get; set; }
     }
 }

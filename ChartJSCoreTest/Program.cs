@@ -76,7 +76,7 @@ namespace ChartJSCoreTest
 
             Scales scales = new Scales()
             {
-                YAxes = new List<Object>()
+                YAxes = new List<Scale>()
                 {
                     new CartesianScale()
                     {
@@ -139,7 +139,7 @@ namespace ChartJSCoreTest
 
             Scales scales = new Scales()
             {
-                YAxes = new List<Object>()
+                YAxes = new List<Scale>()
                 {
                     new CartesianScale()
                 }
@@ -208,7 +208,7 @@ namespace ChartJSCoreTest
 
             Scales scales = new Scales()
             {
-                XAxes = new List<Object>()
+                XAxes = new List<Scale>()
                 {
                     new CartesianScale()
                     {
