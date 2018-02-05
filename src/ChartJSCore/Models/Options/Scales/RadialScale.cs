@@ -13,6 +13,6 @@ namespace ChartJSCore.Models
 
         public PointLabel PointLabels { get; set; }
 
-        public Object Ticks { get; set; }
+        public Tick Ticks { get; set; }
     }
 }
