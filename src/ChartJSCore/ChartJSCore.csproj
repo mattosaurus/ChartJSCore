@@ -17,8 +17,8 @@
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>1.2.0.0</AssemblyVersion>
-    <FileVersion>1.2.0.0</FileVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <FileVersion>1.2.1.0</FileVersion>
     <PackageReleaseNotes>Version 1.2.1 - Options is now of type Options.
 Version 1.2.0 - Updated scales structure (breaking change) and updated runtime to .NET Core 2.0</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
