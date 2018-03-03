@@ -22,7 +22,8 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If true, fill the area under the line.
         /// </summary>
-        public bool? Fill { get; set; }
+        [JsonConverter(typeof(BoolIntStringConverter))]
+        public string Fill { get; set; }
 
         /// <summary>
         /// Algorithm used to interpolate a smooth curve from the discrete data points. Options are 'default' and 'monotone'. The 'default' algorithm uses a custom weighted cubic interpolation, which produces pleasant curves for all types of datasets. The 'monotone' algorithm is more suited to y = f(x) datasets : it preserves monotonicity (or piecewise monotonicity) of the dataset being interpolated, and ensures local extremums (if any) stay at input data points. If left untouched (undefined), the global options.elements.line.cubicInterpolationMode property is used.
@@ -143,6 +144,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If true, the line is shown as a stepped line and 'lineTension' will be ignored.
         /// </summary>
-        public bool? SteppedLine { get; set; }
+        [JsonConverter(typeof(BoolIntStringConverter))]
+        public string SteppedLine { get; set; }
     }
 }
