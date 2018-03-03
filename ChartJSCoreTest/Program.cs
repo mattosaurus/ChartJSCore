@@ -109,7 +109,7 @@ namespace ChartJSCoreTest
             {
                 Label = "My First dataset",
                 Data = new List<double>() { 65, 59, 80, 81, 56, 55, 40 },
-                Fill = false,
+                Fill = "false",
                 LineTension = 0.1,
                 BackgroundColor = "rgba(75, 192, 192, 0.4)",
                 BorderColor = "rgba(75,192,192,1)",
