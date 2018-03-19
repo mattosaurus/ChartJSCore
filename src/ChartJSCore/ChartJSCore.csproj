@@ -11,15 +11,16 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.2.2</Version>
+    <Version>1.2.3</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>1.2.2.0</AssemblyVersion>
-    <FileVersion>1.2.2.0</FileVersion>
-    <PackageReleaseNotes>Version 1.2.2 - Fill and SteppedLine changed to string with converter for other datatypes.
+    <AssemblyVersion>1.2.3.0</AssemblyVersion>
+    <FileVersion>1.2.3.0</FileVersion>
+    <PackageReleaseNotes>Version 1.2.3 - Line x &amp; y changed to string with converter for doubles.
+Version 1.2.2 - Fill and SteppedLine changed to string with converter for other datatypes.
 Version 1.2.1 - Options is now of type Options.
 Version 1.2.0 - Updated scales structure (breaking change) and updated runtime to .NET Core 2.0.</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
