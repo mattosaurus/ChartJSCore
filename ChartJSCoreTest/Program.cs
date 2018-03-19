@@ -184,16 +184,16 @@ namespace ChartJSCoreTest
             LineScatterData scatterData2 = new LineScatterData();
             LineScatterData scatterData3 = new LineScatterData();
 
-            scatterData1.x = -10;
-            scatterData1.y = 0;
+            scatterData1.x = "-10";
+            scatterData1.y = "0";
             dataset.Data.Add(scatterData1);
 
-            scatterData2.x = 0;
-            scatterData2.y = 10;
+            scatterData2.x = "0";
+            scatterData2.y = "10";
             dataset.Data.Add(scatterData2);
 
-            scatterData3.x = 10;
-            scatterData3.y = 5;
+            scatterData3.x = "10";
+            scatterData3.y = "5";
             dataset.Data.Add(scatterData3);
 
             data.Datasets = new List<Dataset>();
