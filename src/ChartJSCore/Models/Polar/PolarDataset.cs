@@ -7,6 +7,11 @@ namespace ChartJSCore.Models
 {
     public class PolarDataset : Dataset
     {
+		/// <summary>
+		/// The type of the dataset
+		/// </summary>
+		public string Type { get; set; } = "polarArea";
+
         /// <summary>
         /// The fill color of the arcs.
         /// </summary>

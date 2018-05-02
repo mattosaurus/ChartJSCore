@@ -9,6 +9,11 @@ namespace ChartJSCore.Models
 {
     public class BubbleDataset : Dataset
     {
+		/// <summary>
+		/// The type of the dataset
+		/// </summary>
+		public string Type { get; set; } = "bubble";
+
         /// <summary>
         /// The data to plot in the bubble chart.
         /// </summary>

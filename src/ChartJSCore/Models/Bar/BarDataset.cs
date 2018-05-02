@@ -9,6 +9,11 @@ namespace ChartJSCore.Models
 {
     public class BarDataset : Dataset
     {
+		/// <summary>
+		/// The type of the dataset
+		/// </summary>
+		public string Type { get; set; } = "bar";
+
         /// <summary>
         /// The ID of the x axis to plot this dataset on.
         /// </summary>
