@@ -16,6 +16,9 @@ namespace ChartJSCore.Models
 
         public Options Options { get; set; }
 
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string Plugins { get; set; }
+
         public string SerializeBody()
         {
             // keys need to be camel case to match data contract so use custom serializer to alter
