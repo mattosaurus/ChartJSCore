@@ -1,6 +1,7 @@
 ﻿using ChartJSCore.Helpers;
 using ChartJSCore.Models;
 using ChartJSCore.Models.Bar;
+using ChartJSCore.Plugins;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -91,6 +92,18 @@ namespace ChartJSCoreTest
             options.Scales = scales;
 
             chart.Options = options;
+
+            chart.Options.Layout = new Layout()
+            {
+                Padding = new Padding()
+                {
+                    PaddingObject = new PaddingObject()
+                    {
+                        Left = 10,
+                        Right = 12
+                    }
+                }
+            };
 
             string code = chart.CreateChartCode("barChart");
 

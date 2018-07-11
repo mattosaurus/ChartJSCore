@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Tick
+    public class Tick : Base
     {
         /// <summary>
         /// Returns the string representation of the tick value as it should be displayed on the chart.

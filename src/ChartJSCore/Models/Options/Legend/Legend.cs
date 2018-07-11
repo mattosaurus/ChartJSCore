@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Legend
+    public class Legend : Base
     {
         /// <summary>
         /// Is the legend displayed.

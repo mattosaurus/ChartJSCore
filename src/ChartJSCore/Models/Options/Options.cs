@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Options
+    public class Options : Base
     {
         /// <summary>
         /// Resizes the chart canvas when its container does.

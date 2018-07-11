@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class LegendLabel
+    public class LegendLabel : Base
     {
         /// <summary>
         /// Width of coloured box.

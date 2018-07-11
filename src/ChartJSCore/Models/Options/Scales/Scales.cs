@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Scales
+    public class Scales : Base
     {
         public List<Scale> XAxes { get; set; }
 

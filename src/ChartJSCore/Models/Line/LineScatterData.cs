@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class LineScatterData
+    public class LineScatterData : Base
     {
         [JsonConverter(typeof(DoubleStringConverter))]
         public string x { get; set; }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Point
+    public class Point : Base
     {
         /// <summary>
         /// Default point radius.

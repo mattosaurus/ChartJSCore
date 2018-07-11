@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class PointLabel
+    public class PointLabel : Base
     {
         /// <summary>
         /// Callback function to transform data label to axis label.

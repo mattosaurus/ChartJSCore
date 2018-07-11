@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ChartJSCore.Models
 {
     //TODO: Create correct tooltip item object rather than using string
-    public class Callback
+    public class Callback : Base
     {
         /// <summary>
         /// Text to render before the title.

@@ -1,4 +1,5 @@
 ﻿using ChartJSCore.Helpers;
+using ChartJSCore.Plugins;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Chart
+    public class Chart : Base
     {
         public string Type { get; set; }
 

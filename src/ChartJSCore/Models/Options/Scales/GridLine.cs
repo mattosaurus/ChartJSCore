@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class GridLine
+    public class GridLine : Base
     {
         public bool Display { get; set; }
 

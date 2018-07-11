@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class TimeDisplayFormat
+    public class TimeDisplayFormat : Base
     {
         public string Millisecond { get; set; }
 

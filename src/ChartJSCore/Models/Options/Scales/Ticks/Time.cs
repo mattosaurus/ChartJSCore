@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ChartJSCore.Models
 {
-    public class Time
+    public class Time : Base
     {
         /// <summary>
         /// Sets how different time units are displayed.

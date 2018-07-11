@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class AngleLine
+    public class AngleLine : Base
     {
         /// <summary>
         /// If true, angle lines are shown.

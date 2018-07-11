@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Animation
+    public class Animation : Base
     {
         /// <summary>
         /// The number of milliseconds an animation takes.

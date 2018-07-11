@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class BubbleData
+    public class BubbleData : Base
     {
         public double x { get; set; }
 

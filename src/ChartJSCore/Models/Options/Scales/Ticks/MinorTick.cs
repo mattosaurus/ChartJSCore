@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ChartJSCore.Models
 {
-    public class MinorTick
+    public class MinorTick : Base
     {
         /// <summary>
         /// Returns the string representation of the tick value as it should be displayed on the chart.

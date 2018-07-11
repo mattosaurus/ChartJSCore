@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Line
+    public class Line : Base
     {
         /// <summary>
         /// Default bezier curve tension. Set to 0 for no bezier curves.

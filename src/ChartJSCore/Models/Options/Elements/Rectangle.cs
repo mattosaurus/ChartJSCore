@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Rectangle
+    public class Rectangle : Base
     {
         /// <summary>
         /// Default bar fill color.

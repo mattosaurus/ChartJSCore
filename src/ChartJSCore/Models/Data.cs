@@ -7,7 +7,7 @@ namespace ChartJSCore.Models
 {
     // TODO: Implement color object rather than using string.
     // TODO: Implement mixed chart types.
-    public class Data
+    public class Data : Base
     {
         public IList<Dataset> Datasets { get; set; }
 

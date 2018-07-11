@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Arc
+    public class Arc : Base
     {
         /// <summary>
         /// Default fill color for arcs. Inherited from the global default.

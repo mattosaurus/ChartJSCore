@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Scale
+    public class Scale : Base
     {
         /// <summary>
         /// If true, show the scale including gridlines, ticks, and labels. Overrides gridLines.display, scaleLabel.display, and ticks.display.

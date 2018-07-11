@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class ToolTip
+    public class ToolTip : Base
     {
         /// <summary>
         /// Are tooltips enabled.

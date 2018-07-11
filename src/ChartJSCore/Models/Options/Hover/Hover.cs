@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Hover
+    public class Hover : Base
     {
         public string Mode { get; set; }
 

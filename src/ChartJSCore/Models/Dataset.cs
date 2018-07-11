@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace ChartJSCore.Models
 {
     // TODO: Allow scatter datasets to be accepted as data.
-    public class Dataset
+    public class Dataset : Base
     {
         /// <summary>
         /// The data to plot in a line.

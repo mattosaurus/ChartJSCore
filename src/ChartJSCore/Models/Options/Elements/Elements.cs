@@ -8,7 +8,7 @@ namespace ChartJSCore.Models
     /// <summary>
     /// Options can be configured for four different types of elements: arc, lines, points, and rectangles. When set, these options apply to all objects of that type unless specifically overridden by the configuration attached to a dataset.
     /// </summary>
-    public class Elements
+    public class Elements : Base
     {
         /// <summary>
         /// Arcs are used in the polar area, doughnut and pie charts.

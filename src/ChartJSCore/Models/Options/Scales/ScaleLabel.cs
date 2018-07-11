@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class ScaleLabel
+    public class ScaleLabel : Base
     {
         public bool Display { get; set; }
 

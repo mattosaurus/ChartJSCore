@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
-    public class Title
+    public class Title : Base
     {
         /// <summary>
         /// Display the title block.
