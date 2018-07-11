@@ -109,3 +109,5 @@ Within the Index view the Chart can then be accessed and rendered.
     </script>
 }
 ```
+# Plugins
+As there's a large number of plugins available for Chart.js and it's not feasable to create object representations of them all I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
