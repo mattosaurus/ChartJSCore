@@ -1,4 +1,4 @@
-# ChartJSCore v1.2.1
+# ChartJSCore v1.3.0
 Implementation of Chart.js for use with .NET Core. This library allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/7n78iys8p8dhf9fm?svg=true)](https://ci.appveyor.com/project/perezLamed/chartjscore)
@@ -18,7 +18,7 @@ Add the following namespaces to use the library:
 using ChartJSCore.Models;
 ```
 # Dependencies
-This produces code for generating chart using Chart.js so Chart.js is required to render them, Chart.js also uses require.js so this is also needed. Chart.js seems to no longer support the Bower package manager in Visual Studio so needs to be downloaded directly to the project root folder wwwroot\lib\Chart.js.
+This produces code for generating chart using Chart.js so Chart.js is required to render them, Chart.js also uses require.js so this is also needed. To install Chart.js using Bower on Visual Studio it is needed to update the registry in .bowerrc file, because the old heroku repository is deprecated as stated in [here](https://gist.github.com/sheerun/c04d856a7a368bad2896ff0c4958cb00). Otherwise you can download it directly to the project root folder wwwroot\lib\Chart.js.
 
 This package has been created and tested with version 2.4.0 of Chart.js, earlier versions may well be incompatible.
 
@@ -89,7 +89,7 @@ Once a project has been created a new Chart object can be created by using code 
         }
 ```
 
-See the [test project](https://github.com/mattosaurus/ChartJSCore/blob/master/src/ChartJSCoreTest/Program.cs) for further examples.
+See the [test project](https://github.com/mattosaurus/ChartJSCore/blob/master/ChartJSCoreTest/Program.cs) for further examples.
 
 Within the Index view the Chart can then be accessed and rendered.
 
@@ -109,3 +109,5 @@ Within the Index view the Chart can then be accessed and rendered.
     </script>
 }
 ```
+# Plugins
+As there's a large number of plugins available for Chart.js and it's not feasable to create object representations of them all I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
