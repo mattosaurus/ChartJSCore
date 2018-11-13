@@ -38,6 +38,8 @@ Require.js isn't available in the Bower package manager but can be added by dire
   }
 }
 ```
+# Demo
+This project can be seen in action on the demo site [here](https://bitscry.com/Projects/Chart).
 
 # Usage
 This is intended for usage in ASP.NET 5 Core MVC projects.
