@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ChartJSCore.Plugins
+﻿namespace ChartJSCore.Plugins
 {
     public class PluginDynamic
     {
