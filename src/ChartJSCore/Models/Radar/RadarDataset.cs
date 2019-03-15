@@ -9,10 +9,10 @@ namespace ChartJSCore.Models
 {
     public class RadarDataset : Dataset
     {
-		/// <summary>
-		/// The type of the dataset
-		/// </summary>
-		public string Type { get; set; } = "radar";
+        /// <summary>
+        /// The type of the dataset
+        /// </summary>
+        public Enums.ChartType Type { get; set; } = Enums.ChartType.Radar;
 
         /// <summary>
         /// If true, fill the area under the line.

@@ -12,7 +12,7 @@ namespace ChartJSCore.Models
 		/// <summary>
 		/// The type of the dataset
 		/// </summary>
-		public string Type { get; set; } = "bar";
+		public Enums.ChartType Type { get; set; } = Enums.ChartType.Bar;
 
         /// <summary>
         /// The ID of the x axis to plot this dataset on.

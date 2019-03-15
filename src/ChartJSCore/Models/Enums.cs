@@ -4,12 +4,13 @@
     {
         public enum ChartType : byte
         {
-            BarChart = 0,
-            BubbleChart = 1,
-            RadarChart = 2,
-            PolarAreaChart = 3,
-            PieChart = 4,
-            LineChart = 5
+            Bar = 0,
+            Bubble = 1,
+            Radar = 2,
+            PolarArea = 3,
+            Pie = 4,
+            Line = 5,
+            Doughnut = 6
         }
     }
 }

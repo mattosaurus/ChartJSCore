@@ -12,7 +12,7 @@ namespace ChartJSCore.Models
 		/// <summary>
 		/// The type of the dataset
 		/// </summary>
-		public string Type { get; set; } = "bubble";
+		public Enums.ChartType Type { get; set; } = Enums.ChartType.Bubble;
 
         /// <summary>
         /// The data to plot in the bubble chart.

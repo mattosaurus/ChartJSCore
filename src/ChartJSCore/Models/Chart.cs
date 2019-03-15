@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Converters;
 
 namespace ChartJSCore.Models
 {
@@ -26,6 +27,7 @@ namespace ChartJSCore.Models
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.ContractResolver = new CamelcaseContractResolver();
             settings.NullValueHandling = NullValueHandling.Ignore;
+            settings.Converters.Add(new StringEnumConverter(true));
 
             string json = JsonConvert.SerializeObject(this, settings);
 
@@ -41,6 +43,7 @@ namespace ChartJSCore.Models
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.ContractResolver = new CamelcaseContractResolver();
             settings.NullValueHandling = NullValueHandling.Ignore;
+            settings.Converters.Add(new StringEnumConverter(true));
 
             string json = JsonConvert.SerializeObject(this, settings);
 
