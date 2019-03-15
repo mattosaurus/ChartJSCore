@@ -11,7 +11,7 @@ namespace ChartJSCore.Models
 {
     public class Chart : Base
     {
-        public string Type { get; set; }
+        public Enums.ChartType Type { get; set; }
 
         public Data Data { get; set; }
 

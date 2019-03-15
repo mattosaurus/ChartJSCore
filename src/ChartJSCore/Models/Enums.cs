@@ -8,7 +8,8 @@
             BubbleChart = 1,
             RadarChart = 2,
             PolarAreaChart = 3,
-            PieChart = 4
+            PieChart = 4,
+            LineChart = 5
         }
     }
 }

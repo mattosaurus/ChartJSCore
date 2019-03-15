@@ -34,7 +34,7 @@ namespace ChartJSCoreTest
         public static string GenerateBarChart()
         {
             Chart chart = new Chart();
-            chart.Type = "bar";
+            chart.Type = Enums.ChartType.BarChart;
 
             Data data = new Data();
             data.Labels = new List<string>() { "Red", "Blue", "Yellow", "Green", "Purple", "Orange" };
@@ -113,7 +113,7 @@ namespace ChartJSCoreTest
         public static string GenerateLineChart()
         {
             Chart chart = new Chart();
-            chart.Type = "line";
+            chart.Type = Enums.ChartType.LineChart;
 
             Data data = new Data();
             data.Labels = new List<string>() { "January", "February", "March", "April", "May", "June", "July" };
@@ -183,7 +183,7 @@ namespace ChartJSCoreTest
         public static string GenerateLineScatterChart()
         {
             Chart chart = new Chart();
-            chart.Type = "line";
+            chart.Type = Enums.ChartType.LineChart;
 
             Data data = new Data();
 
@@ -247,7 +247,7 @@ namespace ChartJSCoreTest
         public static string GenerateRadarChart()
         {
             Chart chart = new Chart();
-            chart.Type = "radar";
+            chart.Type = Enums.ChartType.RadarChart;
 
             Data data = new Data();
             data.Labels = new List<string>() { "Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running" };
@@ -290,7 +290,7 @@ namespace ChartJSCoreTest
         public static string GeneratePolarChart()
         {
             Chart chart = new Chart();
-            chart.Type = "polarArea";
+            chart.Type = Enums.ChartType.PolarAreaChart;
 
             Data data = new Data();
             data.Labels = new List<string>() { "Red", "Green", "Yellow", "Grey", "Blue" };
@@ -315,7 +315,7 @@ namespace ChartJSCoreTest
         public static string GeneratePieChart()
         {
             Chart chart = new Chart();
-            chart.Type = "pie";
+            chart.Type = Enums.ChartType.PieChart;
 
             Data data = new Data();
             data.Labels = new List<string>() { "Red", "Blue", "Yellow" };
@@ -341,7 +341,7 @@ namespace ChartJSCoreTest
         public static string GenerateBubbleChart()
         {
             Chart chart = new Chart();
-            chart.Type = "bubble";
+            chart.Type = Enums.ChartType.BubbleChart;
 
             Data data = new Data();
 
