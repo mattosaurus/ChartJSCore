@@ -30,8 +30,8 @@ namespace ChartJSCore.Models
 
         public string CreateChartCode(string canvasId)
         {
-            string code = "var " + canvasId + "Element = document.getElementById(\"" + canvasId + "\");\r\n";
-            code += "var " + canvasId + " = new Chart(" + canvasId + "Element, ";
+            string code = $"var {canvasId}Element = document.getElementById(\"{canvasId}\");\r\n";
+            code += $"var {canvasId} = new Chart({canvasId}Element, ";
 
             // keys need to be camel case to match data contract so use custom serializer to alter
             JsonSerializerSettings settings = new JsonSerializerSettings();
@@ -41,7 +41,7 @@ namespace ChartJSCore.Models
 
             string json = JsonConvert.SerializeObject(this, settings);
 
-            code += json + "\r\n";
+            code += $"{json}\r\n";
             code += ");";
 
             return code;
