@@ -1,18 +1,15 @@
 ﻿using ChartJSCore.Helpers;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
     public class LineDataset : Dataset
     {
-		/// <summary>
-		/// The type of the dataset
-		/// </summary>
-		public string Type { get; set; } = "line";
+        /// <summary>
+        /// The type of the dataset
+        /// </summary>
+        public Enums.ChartType Type { get; set; } = Enums.ChartType.Line;
 
         /// <summary>
         /// The ID of the x axis to plot this dataset on.

@@ -1,18 +1,15 @@
 ﻿using ChartJSCore.Helpers;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
     public class RadarDataset : Dataset
     {
-		/// <summary>
-		/// The type of the dataset
-		/// </summary>
-		public string Type { get; set; } = "radar";
+        /// <summary>
+        /// The type of the dataset
+        /// </summary>
+        public Enums.ChartType Type { get; set; } = Enums.ChartType.Radar;
 
         /// <summary>
         /// If true, fill the area under the line.

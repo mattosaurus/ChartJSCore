@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ChartJSCore.Models
 {
     public class PolarDataset : Dataset
     {
-		/// <summary>
-		/// The type of the dataset
-		/// </summary>
-		public string Type { get; set; } = "polarArea";
+        /// <summary>
+        /// The type of the dataset
+        /// </summary>
+        public Enums.ChartType Type { get; set; } = Enums.ChartType.PolarArea;
 
         /// <summary>
         /// The fill color of the arcs.
