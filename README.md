@@ -51,7 +51,7 @@ Once a project has been created a new Chart object can be created by using code 
         {
             Chart chart = new Chart();
 
-            chart.Type = "line";
+            chart.Type = Enums.ChartType.Line;
 
             ChartJSCore.Models.Data data = new ChartJSCore.Models.Data();
             data.Labels = new List<string>() { "January", "February", "March", "April", "May", "June", "July" };
