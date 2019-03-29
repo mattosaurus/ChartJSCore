@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ChartJSCore.Models.Bar
+﻿namespace ChartJSCore.Models.Bar
 {
     public class BarOptions : Options
     {

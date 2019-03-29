@@ -1,7 +1,4 @@
 ﻿using ChartJSCore.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ChartJSCore.Plugins.Zoom
 {

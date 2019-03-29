@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ChartJSCore.Plugins.Zoom
+﻿namespace ChartJSCore.Plugins.Zoom
 {
     public class Zoom
     {

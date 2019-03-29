@@ -1,9 +1,6 @@
 ﻿using ChartJSCore.Helpers;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
@@ -12,7 +9,7 @@ namespace ChartJSCore.Models
 		/// <summary>
 		/// The type of the dataset
 		/// </summary>
-		public string Type { get; set; } = "bubble";
+		public Enums.ChartType Type { get; set; } = Enums.ChartType.Bubble;
 
         /// <summary>
         /// The data to plot in the bubble chart.

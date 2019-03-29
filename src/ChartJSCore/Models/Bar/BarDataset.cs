@@ -1,9 +1,6 @@
 ﻿using ChartJSCore.Helpers;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChartJSCore.Models
 {
@@ -12,7 +9,7 @@ namespace ChartJSCore.Models
 		/// <summary>
 		/// The type of the dataset
 		/// </summary>
-		public string Type { get; set; } = "bar";
+		public Enums.ChartType Type { get; set; } = Enums.ChartType.Bar;
 
         /// <summary>
         /// The ID of the x axis to plot this dataset on.
