@@ -10,7 +10,9 @@
             PolarArea = 3,
             Pie = 4,
             Line = 5,
-            Doughnut = 6
+            Doughnut = 6,
+            HorizontalBar = 7,
+            Scatter = 8
         }
     }
 }
