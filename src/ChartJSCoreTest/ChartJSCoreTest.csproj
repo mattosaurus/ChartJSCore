@@ -12,6 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\ChartJSCore\ChartJSCore.csproj" />
+    <ProjectReference Include="..\ChartJSCore\ChartJSCore.csproj" />
   </ItemGroup>
 </Project>
