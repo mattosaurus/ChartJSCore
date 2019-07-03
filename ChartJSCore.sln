@@ -1,15 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C254607F-F00D-4AEE-9B00-633505D7C854}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{45CD8D37-88CA-4F86-A3A9-B00F12F52F1C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore", "src\ChartJSCore\ChartJSCore.csproj", "{BAA468D9-4C99-4191-A03B-7E1BA0262A28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJSCoreTest", "ChartJSCoreTest\ChartJSCoreTest.csproj", "{25C5F598-6616-46F1-A6BD-DA4B870B50A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCoreTest", "src\ChartJSCoreTest\ChartJSCoreTest.csproj", "{25C5F598-6616-46F1-A6BD-DA4B870B50A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +34,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{BAA468D9-4C99-4191-A03B-7E1BA0262A28} = {C254607F-F00D-4AEE-9B00-633505D7C854}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0730BBA-BC12-46E8-9ED3-E57AF6782896}
