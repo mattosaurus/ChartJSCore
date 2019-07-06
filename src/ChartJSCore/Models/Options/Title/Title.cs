@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class Title : Base
     {
@@ -30,7 +32,7 @@
         /// <summary>
         /// Font color inherited from global configuration.
         /// </summary>
-        public string FontColor { get; set; }
+        public ChartColor FontColor { get; set; }
 
         /// <summary>
         /// Font styling of the title.

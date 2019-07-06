@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class ScaleLabel : Base
     {
@@ -12,7 +14,7 @@
         /// <summary>
         /// Font color for the scale title.
         /// </summary>
-        public string FontColor { get; set; }
+        public ChartColor FontColor { get; set; }
 
         /// <summary>
         /// Font family for the scale title, follows CSS font-family options.

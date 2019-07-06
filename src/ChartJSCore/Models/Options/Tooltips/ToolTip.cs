@@ -41,7 +41,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Background color of the tooltip.
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
         /// Font family for tooltip title inherited from global font family.
@@ -61,7 +61,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Font color for tooltip title.
         /// </summary>
-        public string TitleFontColor { get; set; }
+        public ChartColor TitleFontColor { get; set; }
 
         /// <summary>
         /// Spacing to add to top and bottom of each title line.
@@ -91,7 +91,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Font color for tooltip items.
         /// </summary>
-        public string BodyFontColor { get; set; }
+        public ChartColor BodyFontColor { get; set; }
 
         /// <summary>
         /// Spacing to add to top and bottom of each tooltip item.
@@ -116,7 +116,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Font color for tooltip footer.
         /// </summary>
-        public string FooterFontColor { get; set; }
+        public ChartColor FooterFontColor { get; set; }
 
         /// <summary>
         /// Spacing to add to top and bottom of each footer line.
@@ -151,7 +151,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Color to draw behind the colored boxes when multiple items are in the tooltip.
         /// </summary>
-        public string MultiKeyBackground { get; set; }
+        public ChartColor MultiKeyBackground { get; set; }
 
         /// <summary>
         /// if true, color boxes are shown in the tooltip.

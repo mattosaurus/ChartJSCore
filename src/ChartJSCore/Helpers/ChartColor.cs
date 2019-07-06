@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Globalization;
+using Newtonsoft.Json;
 
 namespace ChartJSCore.Helpers
 {
+    [JsonConverter(typeof(ToStringJsonConverter))]
     public class ChartColor
     {
         /// <summary>
@@ -119,9 +121,9 @@ namespace ChartJSCore.Helpers
         }
 
         /// <summary>
-        /// Produces a string of the form 'rgba(r,g,b,a)'
+        /// Produces a string of the form 'rgba(r, g, b, a)'
         /// </summary>
-        /// <returns>A string of the form 'rgba(r,g,b,a)'</returns>
-        public override string ToString() => $"rgba({Red},{Green},{Blue},{Alpha})";
+        /// <returns>A string of the form 'rgba(r, g, b, a)'</returns>
+        public override string ToString() => $"rgba({Red}, {Green}, {Blue}, {Alpha})";
     }
 }

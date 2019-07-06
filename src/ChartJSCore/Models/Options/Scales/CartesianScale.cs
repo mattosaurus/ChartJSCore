@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ChartJSCore.Models
+﻿namespace ChartJSCore.Models
 {
     public class CartesianScale : Scale
     {

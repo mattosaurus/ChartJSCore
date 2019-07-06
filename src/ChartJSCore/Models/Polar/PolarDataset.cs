@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ChartJSCore.Helpers;
 
 namespace ChartJSCore.Models
 {
@@ -12,12 +13,12 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The fill color of the arcs.
         /// </summary>
-        public IList<string> BackgroundColor { get; set; }
+        public IList<ChartColor> BackgroundColor { get; set; }
 
         /// <summary>
         /// Arc border color.
         /// </summary>
-        public IList<string> BorderColor { get; set; }
+        public IList<ChartColor> BorderColor { get; set; }
 
         /// <summary>
         /// Border width of arcs in pixels.
@@ -27,12 +28,12 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Arc background color when hovered.
         /// </summary>
-        public IList<string> HoverBackgroundColor { get; set; }
+        public IList<ChartColor> HoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Arc border color when hovered.
         /// </summary>
-        public IList<string> HoverBorderColor { get; set; }
+        public IList<ChartColor> HoverBorderColor { get; set; }
 
         /// <summary>
         /// Border width of arc when hovered.

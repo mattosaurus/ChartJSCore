@@ -144,7 +144,7 @@ namespace ChartJSCoreTest
             byte blue = 154;
             double alpha = 0.232;
 
-            string expectedString = $"rgba({red},{green},{blue},{alpha})";
+            string expectedString = $"rgba({red}, {green}, {blue}, {alpha})";
 
             var color = ChartColor.FromRgba(red, green, blue, alpha);
             var actualString = color.ToString();

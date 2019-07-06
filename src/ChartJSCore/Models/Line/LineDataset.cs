@@ -40,7 +40,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The fill color under the line.
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
         /// The width of the line in pixels.
@@ -50,7 +50,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The color of the line.
         /// </summary>
-        public string BorderColor { get; set; }
+        public ChartColor BorderColor { get; set; }
 
         /// <summary>
         /// Cap style of the line.
@@ -75,14 +75,14 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The border color for points.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> PointBorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointBorderColor { get; set; }
 
         /// <summary>
         /// The fill color for points.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> PointBackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointBackgroundColor { get; set; }
 
         /// <summary>
         /// The width of the point border in pixels.
@@ -111,14 +111,14 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Point background color when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> PointHoverBackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointHoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Point border color when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> PointHoverBorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointHoverBorderColor { get; set; }
 
         /// <summary>
         /// Border width of point when hovered.

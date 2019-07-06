@@ -19,8 +19,8 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Color of the grid lines.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> Color { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> Color { get; set; }
 
         /// <summary>
         /// Length and spacing of dashes.
@@ -66,7 +66,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Stroke color of the grid line for the first index (index 0).
         /// </summary>
-        public string ZeroLineColor { get; set; }
+        public ChartColor ZeroLineColor { get; set; }
 
         /// <summary>
         /// Length and spacing of dashes of the grid line for the first index (index 0).

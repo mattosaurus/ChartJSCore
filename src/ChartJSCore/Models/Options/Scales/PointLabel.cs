@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class PointLabel : Base
     {
@@ -10,7 +12,7 @@
         /// <summary>
         /// Font color.
         /// </summary>
-        public string FontColor { get; set; }
+        public ChartColor FontColor { get; set; }
 
         /// <summary>
         /// Font family to render.
