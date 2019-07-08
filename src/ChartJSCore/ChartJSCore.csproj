@@ -11,15 +11,15 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.4.3</Version>
+    <Version>1.5.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
-    <AssemblyVersion>1.4.3.0</AssemblyVersion>
-    <FileVersion>1.4.3.0</FileVersion>
-    <PackageReleaseNotes>Version 1.4.3 - Updated GridLine</PackageReleaseNotes>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <FileVersion>1.5.0.0</FileVersion>
+    <PackageReleaseNotes>Version 1.5.0 - BREAKING CHANGE: Update to add color object by Davee02</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
     <PackOnBuild>true</PackOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
