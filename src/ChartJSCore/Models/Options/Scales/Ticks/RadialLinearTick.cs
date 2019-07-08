@@ -1,11 +1,13 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class RadialLinearTick : RadialTick
     {
         /// <summary>
         /// Color of label backdrops.
         /// </summary>
-        public string BackdropColor { get; set; }
+        public ChartColor BackdropColor { get; set; }
 
         /// <summary>
         /// Horizontal padding of label backdrop.

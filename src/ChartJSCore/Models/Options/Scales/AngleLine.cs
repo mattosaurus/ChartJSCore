@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class AngleLine : Base
     {
@@ -10,7 +12,7 @@
         /// <summary>
         /// Color of angled lines.
         /// </summary>
-        public string Color { get; set; }
+        public ChartColor Color { get; set; }
 
         /// <summary>
         /// Width of angled lines.

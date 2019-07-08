@@ -20,14 +20,11 @@ namespace ChartJSCore.Helpers
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            int intValue;
-            bool boolValue;
-
-            if (bool.TryParse(value.ToString(), out boolValue))
+            if (bool.TryParse(value.ToString(), out bool boolValue))
             {
                 writer.WriteValue(boolValue);
             }
-            else if (int.TryParse(value.ToString(), out intValue))
+            else if (int.TryParse(value.ToString(), out int intValue))
             {
                 if (value.ToString().StartsWith("+") || value.ToString().StartsWith("-"))
                 {

@@ -24,14 +24,14 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The fill color of the bars.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> BackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> BackgroundColor { get; set; }
 
         /// <summary>
         /// Bar border color.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> BorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> BorderColor { get; set; }
 
         /// <summary>
         /// Border width of bar in pixels.
@@ -48,14 +48,14 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Bar background color when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> HoverBackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> HoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Bar border color when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> HoverBorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> HoverBorderColor { get; set; }
 
         /// <summary>
         /// Border width of bar when hovered.

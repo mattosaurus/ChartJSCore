@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class Point : Base
     {
@@ -15,7 +17,7 @@
         /// <summary>
         /// Default point fill color.
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
         /// Default point stroke width.
@@ -25,7 +27,7 @@
         /// <summary>
         /// Default point stroke color.
         /// </summary>
-        public string BorderColor { get; set; }
+        public ChartColor BorderColor { get; set; }
 
         /// <summary>
         /// Extra radius added to point radius for hit detection.

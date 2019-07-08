@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ChartJSCore.Helpers;
 
 namespace ChartJSCore.Models
 {
@@ -12,7 +13,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Default line fill color.
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
         /// Default line stroke width.
@@ -22,7 +23,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Default line stroke color.
         /// </summary>
-        public string BorderColor { get; set; }
+        public ChartColor BorderColor { get; set; }
 
         /// <summary>
         /// Default line cap style.

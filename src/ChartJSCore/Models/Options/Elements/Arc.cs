@@ -1,16 +1,18 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class Arc : Base
     {
         /// <summary>
         /// Default fill color for arcs. Inherited from the global default.
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
         /// Default stroke color for arcs.
         /// </summary>
-        public string BorderColor { get; set; }
+        public ChartColor BorderColor { get; set; }
 
         /// <summary>
         /// Default stroke width for arcs.
