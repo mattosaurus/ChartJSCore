@@ -14,7 +14,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Font color for tick labels.
         /// </summary>
-        public string FontColor { get; set; }
+        public ChartColor FontColor { get; set; }
 
         /// <summary>
         /// Font family for the tick labels, follows CSS font-family options.

@@ -23,7 +23,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Font color inherited from global configuration.
         /// </summary>
-        public string FontColor { get; set; }
+        public ChartColor FontColor { get; set; }
 
         /// <summary>
         /// Font family inherited from global configuration.

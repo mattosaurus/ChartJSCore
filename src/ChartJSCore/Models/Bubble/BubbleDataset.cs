@@ -19,14 +19,14 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The fill color of the bubbles.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> BackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> BackgroundColor { get; set; }
 
         /// <summary>
         /// The stroke color of the bubbles.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> BorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> BorderColor { get; set; }
 
         /// <summary>
         /// The stroke width of bubble in pixels.
@@ -37,14 +37,14 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The fill color of the bubbles when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> HoverBackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> HoverBackgroundColor { get; set; }
 
         /// <summary>
         /// The stroke color of the bubbles when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> HoverBorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> HoverBorderColor { get; set; }
 
         /// <summary>
         /// The stroke width of the bubbles when hovered.

@@ -1,11 +1,13 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+
+namespace ChartJSCore.Models
 {
     public class Rectangle : Base
     {
         /// <summary>
         /// Default bar fill color.
         /// </summary>
-        public string BackgroundColor { get; set; }
+        public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
         /// Default bar stroke width.
@@ -15,7 +17,7 @@
         /// <summary>
         /// Default bar stroke color.
         /// </summary>
-        public string BorderColor { get; set; }
+        public ChartColor BorderColor { get; set; }
 
         /// <summary>
         /// Default skipped (excluded) border for rectangle. Can be one of bottom, left, top, right.
