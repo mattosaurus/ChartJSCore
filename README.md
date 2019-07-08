@@ -1,4 +1,4 @@
-# ChartJSCore v1.3.1
+# ChartJSCore v1.4.0
 Implementation of Chart.js for use with .NET Core. This library allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/7n78iys8p8dhf9fm?svg=true)](https://ci.appveyor.com/project/perezLamed/chartjscore)
@@ -51,7 +51,7 @@ Once a project has been created a new Chart object can be created by using code 
         {
             Chart chart = new Chart();
 
-            chart.Type = "line";
+            chart.Type = Enums.ChartType.Line;
 
             ChartJSCore.Models.Data data = new ChartJSCore.Models.Data();
             data.Labels = new List<string>() { "January", "February", "March", "April", "May", "June", "July" };

@@ -6,7 +6,15 @@ namespace ChartJSCore.Models
 {
     public class GridLine : Base
     {
+        /// <summary>
+        /// If false, do not display grid lines for this axis.
+        /// </summary>
         public bool Display { get; set; }
+
+        /// <summary>
+        /// If true, gridlines are circular (on radar chart only).
+        /// </summary>
+        public bool Circular { get; set; }
 
         /// <summary>
         /// Color of the grid lines.
@@ -59,6 +67,16 @@ namespace ChartJSCore.Models
         /// Stroke color of the grid line for the first index (index 0).
         /// </summary>
         public string ZeroLineColor { get; set; }
+
+        /// <summary>
+        /// Length and spacing of dashes of the grid line for the first index (index 0).
+        /// </summary>
+        public IList<int> ZeroLineBorderDash { get; set; }
+
+        /// <summary>
+        /// Offset for line dashes of the grid line for the first index (index 0).
+        /// </summary>
+        public double ZeroLineBorderDashOffset { get; set; }
 
         /// <summary>
         /// If true, labels are shifted to be between grid lines. This is used in the bar chart.

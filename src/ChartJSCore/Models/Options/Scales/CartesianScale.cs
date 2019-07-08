@@ -27,7 +27,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The grid line configuration is nested under the scale configuration in the gridLines key. It defines options for the grid lines that run perpendicular to the axis.
         /// </summary>
-        public IList<GridLine> GridLines { get; set; }
+        public GridLine GridLines { get; set; }
 
         /// <summary>
         /// The scale label configuration is nested under the scale configuration in the scaleLabel key. It defines options for the scale title.

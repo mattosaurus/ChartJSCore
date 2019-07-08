@@ -1,4 +1,7 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+
+namespace ChartJSCore.Models
 {
     public class Animation : Base
     {
@@ -15,11 +18,13 @@
         /// <summary>
         /// Callback called on each step of an animation. Passed a single argument, an object, containing the chart instance and an object with details of the animation.
         /// </summary>
-        public int? OnProgress { get; set; }
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string OnProgress { get; set; }
 
         /// <summary>
         /// Callback called at the end of an animation. Passed the same arguments as onProgress.
         /// </summary>
-        public int? OnComplete { get; set; }
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string OnComplete { get; set; }
     }
 }
