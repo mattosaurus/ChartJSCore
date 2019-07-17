@@ -124,6 +124,6 @@ namespace ChartJSCore.Helpers
         /// Produces a string of the form 'rgba(r, g, b, a)'
         /// </summary>
         /// <returns>A string of the form 'rgba(r, g, b, a)'</returns>
-        public override string ToString() => $"rgba({Red}, {Green}, {Blue}, {Alpha})";
+        public override string ToString() => $"rgba({Red}, {Green}, {Blue}, {Alpha.ToString(CultureInfo.InvariantCulture)})";
     }
 }

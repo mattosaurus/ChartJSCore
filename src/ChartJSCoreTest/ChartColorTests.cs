@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using ChartJSCore.Helpers;
 using NUnit.Framework;
 
@@ -144,7 +145,24 @@ namespace ChartJSCoreTest
             byte blue = 154;
             double alpha = 0.232;
 
-            string expectedString = $"rgba({red}, {green}, {blue}, {alpha})";
+            string expectedString = $"rgba({red}, {green}, {blue}, {alpha.ToString(CultureInfo.InvariantCulture)})";
+
+            var color = ChartColor.FromRgba(red, green, blue, alpha);
+            var actualString = color.ToString();
+
+            Assert.AreEqual(expectedString, actualString);
+        }
+
+        [Test]
+        public void ToString_Comma_Culture_Returns_Correct_Rgba_String_Representation()
+        {
+            byte red = 4;
+            byte green = 65;
+            byte blue = 154;
+            double alpha = 0.232;
+
+            CultureInfo.CurrentCulture = CultureInfo.CreateSpecificCulture("nl-NL");
+            string expectedString = $"rgba({red}, {green}, {blue}, {alpha.ToString(CultureInfo.InvariantCulture)})";
 
             var color = ChartColor.FromRgba(red, green, blue, alpha);
             var actualString = color.ToString();
