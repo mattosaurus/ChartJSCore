@@ -9,12 +9,12 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If false, do not display grid lines for this axis.
         /// </summary>
-        public bool Display { get; set; }
+        public bool? Display { get; set; }
 
         /// <summary>
         /// If true, gridlines are circular (on radar chart only).
         /// </summary>
-        public bool Circular { get; set; }
+        public bool? Circular { get; set; }
 
         /// <summary>
         /// Color of the grid lines.
@@ -30,7 +30,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Offset for line dashes.
         /// </summary>
-        public double BorderDashOffset { get; set; }
+        public double? BorderDashOffset { get; set; }
 
         /// <summary>
         /// Stroke width of grid lines.
@@ -41,27 +41,27 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If true draw border on the edge of the chart.
         /// </summary>
-        public bool DrawBorder { get; set; }
+        public bool? DrawBorder { get; set; }
 
         /// <summary>
         /// If true, draw lines on the chart area inside the axis lines. This is useful when there are multiple axes and you need to control which grid lines are drawn.
         /// </summary>
-        public bool DrawOnChartArea { get; set; }
+        public bool? DrawOnChartArea { get; set; }
 
         /// <summary>
         /// If true, draw lines beside the ticks in the axis area beside the chart.
         /// </summary>
-        public bool DrawTicks { get; set; }
+        public bool? DrawTicks { get; set; }
 
         /// <summary>
         /// Length in pixels that the grid lines will draw into the axis area.
         /// </summary>
-        public int TickMarkLength { get; set; }
+        public int? TickMarkLength { get; set; }
 
         /// <summary>
         /// Stroke width of the grid line for the first index (index 0).
         /// </summary>
-        public int ZeroLineWidth { get; set; }
+        public int? ZeroLineWidth { get; set; }
 
         /// <summary>
         /// Stroke color of the grid line for the first index (index 0).
@@ -76,11 +76,11 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Offset for line dashes of the grid line for the first index (index 0).
         /// </summary>
-        public double ZeroLineBorderDashOffset { get; set; }
+        public double? ZeroLineBorderDashOffset { get; set; }
 
         /// <summary>
         /// If true, labels are shifted to be between grid lines. This is used in the bar chart.
         /// </summary>
-        public bool OffsetGridLines { get; set; }
+        public bool? OffsetGridLines { get; set; }
     }
 }
