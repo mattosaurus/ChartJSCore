@@ -5,7 +5,7 @@
         /// <summary>
         /// The percentage of the chart that is cut out of the middle.
         /// </summary>
-        public int? CutoutPercantage { get; set; }
+        public int? CutoutPercentage { get; set; }
 
         /// <summary>
         /// Starting angle to draw arcs from.
