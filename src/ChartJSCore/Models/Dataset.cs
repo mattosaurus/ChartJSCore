@@ -8,7 +8,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The data to plot in a line.
         /// </summary>
-        public IList<double> Data { get; set; }
+        public IList<double?> Data { get; set; }
 
         /// <summary>
         /// The label for the dataset which appears in the legend and tooltips.
