@@ -8,7 +8,7 @@ namespace ChartJSCoreTest
     [TestFixture]
     public class RadarChartTests
     {
-        private const string KNOWN_GOOD_CHART = "var radarChartElement = document.getElementById(\"radarChart\");\r\nvar radarChart = new Chart(radarChartElement, {\"type\":\"radar\",\"data\":{\"datasets\":[{\"type\":\"radar\",\"backgroundColor\":\"rgba(179, 181, 198, 0.2)\",\"borderColor\":\"rgba(179, 181, 198, 1)\",\"pointBorderColor\":\"rgba(255, 255, 255, 1)\",\"pointBackgroundColor\":\"rgba(179, 181, 198, 1)\",\"pointHoverBackgroundColor\":\"rgba(255, 255, 255, 1)\",\"pointHoverBorderColor\":\"rgba(179, 181, 198, 1)\",\"data\":[65.0,59.0,80.0,81.0,56.0,55.0,40.0],\"label\":\"My First dataset\"},{\"type\":\"radar\",\"backgroundColor\":\"rgba(255, 99, 132, 0.2)\",\"borderColor\":\"rgba(255, 99, 132, 1)\",\"pointBorderColor\":\"rgba(255, 255, 255, 1)\",\"pointBackgroundColor\":\"rgba(255, 99, 132, 1)\",\"pointHoverBackgroundColor\":\"rgba(255, 255, 255, 1)\",\"pointHoverBorderColor\":\"rgba(255, 99, 132, 1)\",\"data\":[28.0,48.0,40.0,19.0,96.0,27.0,100.0],\"label\":\"My Second dataset\"}],\"labels\":[\"Eating\",\"Drinking\",\"Sleeping\",\"Designing\",\"Coding\",\"Cycling\",\"Running\"]},\"options\":{}}\r\n);";
+        private const string KNOWN_GOOD_CHART = "var radarChartElement = document.getElementById(\"radarChart\");\r\nvar radarChart = new Chart(radarChartElement, {\"type\":\"radar\",\"data\":{\"datasets\":[{\"type\":\"radar\",\"backgroundColor\":\"rgba(179, 181, 198, 0.2)\",\"borderColor\":\"rgba(179, 181, 198, 1)\",\"pointBorderColor\":\"rgba(255, 255, 255, 1)\",\"pointBackgroundColor\":\"rgba(179, 181, 198, 1)\",\"pointHoverBackgroundColor\":\"rgba(255, 255, 255, 1)\",\"pointHoverBorderColor\":\"rgba(179, 181, 198, 1)\",\"data\":[65.0,59.0,null,81.0,56.0,55.0,40.0],\"label\":\"My First dataset\"},{\"type\":\"radar\",\"backgroundColor\":\"rgba(255, 99, 132, 0.2)\",\"borderColor\":\"rgba(255, 99, 132, 1)\",\"pointBorderColor\":\"rgba(255, 255, 255, 1)\",\"pointBackgroundColor\":\"rgba(255, 99, 132, 1)\",\"pointHoverBackgroundColor\":\"rgba(255, 255, 255, 1)\",\"pointHoverBorderColor\":\"rgba(255, 99, 132, 1)\",\"data\":[28.0,48.0,40.0,null,96.0,27.0,100.0],\"label\":\"My Second dataset\"}],\"labels\":[\"Eating\",\"Drinking\",\"Sleeping\",\"Designing\",\"Coding\",\"Cycling\",\"Running\"]},\"options\":{}}\r\n);";
 
         [Test]
         public void Generate_RadarChart_Generates_Valid_Chart()
@@ -47,7 +47,7 @@ namespace ChartJSCoreTest
                 PointBorderColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
                 PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
                 PointHoverBorderColor = new List<ChartColor> { ChartColor.FromRgb(179, 181, 198) },
-                Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 }
+                Data = new List<double?> { 65, 59, null, 81, 56, 55, 40 }
             };
 
             var dataset2 = new RadarDataset
@@ -59,7 +59,7 @@ namespace ChartJSCoreTest
                 PointBorderColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
                 PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
                 PointHoverBorderColor = new List<ChartColor> { ChartColor.FromRgb(255, 99, 132) },
-                Data = new List<double> { 28, 48, 40, 19, 96, 27, 100 }
+                Data = new List<double?> { 28, 48, 40, null, 96, 27, 100 }
             };
 
             data.Datasets = new List<Dataset> { dataset1, dataset2 };

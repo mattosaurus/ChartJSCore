@@ -41,7 +41,7 @@ namespace ChartJSCoreTest
             var dataset = new LineDataset
             {
                 Label = "My First dataset",
-                Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
+                Data = new List<double?> { 65, 59, 80, 81, 56, 55, 40 },
                 Fill = "false",
                 LineTension = 0.1,
                 BackgroundColor = ChartColor.FromRgba(75, 192, 192, 0.4),
