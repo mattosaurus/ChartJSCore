@@ -11,15 +11,15 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.5.6</Version>
+    <Version>1.5.7</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
     <AssemblyVersion>1.5.5.0</AssemblyVersion>
-    <FileVersion>1.5.6.0</FileVersion>
-    <PackageReleaseNotes>Version 1.5.6 - Add RadialScale to RadarOption</PackageReleaseNotes>
+    <FileVersion>1.5.7.0</FileVersion>
+    <PackageReleaseNotes>Version 1.5.7 - Allow null dataset values</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
     <PackOnBuild>true</PackOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
