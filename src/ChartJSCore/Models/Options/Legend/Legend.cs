@@ -1,4 +1,7 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+
+namespace ChartJSCore.Models
 {
     public class Legend : Base
     {
@@ -20,16 +23,19 @@
         /// <summary>
         /// A callback that is called when a 'click' event is registered on top of a label item.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnClick { get; set; }
 
         /// <summary>
         /// Generates the HTML legend via calls to generateLegend.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string Callback { get; set; }
 
         /// <summary>
         /// A callback that is called when a 'mousemove' event is registered on top of a label item.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnHover { get; set; }
 
         public LegendLabel Labels { get; set; }

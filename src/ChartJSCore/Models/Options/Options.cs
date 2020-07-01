@@ -29,6 +29,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed an array of active elements.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnClick { get; set; }
 
         /// <summary>
@@ -40,6 +41,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Called when a resize occurs. Gets passed two arguments: the chart instance and the new size.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnResize { get; set; }
 
         public Layout Layout { get; set; }
