@@ -1,4 +1,5 @@
 ﻿using ChartJSCore.Helpers;
+using ChartJSCore.Models.Options;
 using Newtonsoft.Json;
 
 namespace ChartJSCore.Models
@@ -11,24 +12,19 @@ namespace ChartJSCore.Models
         public int? BoxWidth { get; set; }
 
         /// <summary>
-        /// Font size inherited from global configuration.
+        /// Height of coloured box.
         /// </summary>
-        public int? FontSize { get; set; }
+        public int? BoxHeight { get; set; }
+
+        /// <summary>
+        /// Color of label and the strikethrough.
+        /// </summary>
+        public ChartColor Color { get; set; }
 
         /// <summary>
         /// Font style inherited from global configuration.
         /// </summary>
-        public string FontStyle { get; set; }
-
-        /// <summary>
-        /// Font color inherited from global configuration.
-        /// </summary>
-        public ChartColor FontColor { get; set; }
-
-        /// <summary>
-        /// Font family inherited from global configuration.
-        /// </summary>
-        public string FontFamily { get; set; }
+        public Models.Options.Font Font { get; set; }
 
         /// <summary>
         /// Padding between rows of colored boxes.
@@ -40,6 +36,28 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
         public string GenerateLabels { get; set; }
+
+        /// <summary>
+        /// Filters legend items out of the legend. Receives 2 parameters, a Legend Item and the chart data.
+        /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string Filter { get; set; }
+
+        /// <summary>
+        /// Sorts legend items. Receives 3 parameters, two Legend Items and the chart data.
+        /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string Sort { get; set; }
+
+        /// <summary>
+        /// If specified, this style of point is used for the legend. Only used if usePointStyle is true.
+        /// </summary>
+        public string PointStyle { get; set; }
+
+        /// <summary>
+        /// Horizontal alignment of the label text. Options are: 'left', 'right' or 'center'.
+        /// </summary>
+        public string TextAlign { get; set; }
 
         /// <summary>
         /// Label style will match corresponding point style (size is based on fontSize, boxWidth is not used in this case).

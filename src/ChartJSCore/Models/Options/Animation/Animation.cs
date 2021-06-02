@@ -17,6 +17,16 @@ namespace ChartJSCore.Models
         public Easing? Easing { get; set; }
 
         /// <summary>
+        /// Delay before starting the animations.
+        /// </summary>
+        public int? Delay { get; set; }
+
+        /// <summary>
+        /// If set to true, the animations loop endlessly.
+        /// </summary>
+        public bool? Loop { get; set; }
+
+        /// <summary>
         /// Callback called on each step of an animation. Passed a single argument, an object, containing the chart instance and an object with details of the animation.
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
