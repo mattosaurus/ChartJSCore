@@ -1,4 +1,4 @@
-# ChartJSCore v1.4.3
+# ChartJSCore v1.5.7
 
 Implementation of Chart.js for use with .NET Core. This library allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
 
@@ -68,7 +68,7 @@ Once a project has been created a new Chart object can be created by using code 
             LineDataset dataset = new LineDataset()
             {
                 Label = "My First dataset",
-                Data = new List<double> { 65, 59, 80, 81, 56, 55, 40 },
+                Data = new List<double?> { 65, 59, 80, 81, 56, 55, 40 },
                 Fill = "false",
                 LineTension = 0.1,
                 BackgroundColor = ChartColor.FromRgba(75, 192, 192, 0.4),

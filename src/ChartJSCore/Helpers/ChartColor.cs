@@ -74,6 +74,15 @@ namespace ChartJSCore.Helpers
             try
             {
                 hexString = hexString.Remove(0, 1);
+                if (hexString.Length == 3)
+                {
+                    color.Red = byte.Parse(hexString.Substring(0, 1) + hexString.Substring(0, 1), NumberStyles.HexNumber);
+                    color.Green = byte.Parse(hexString.Substring(1, 1) + hexString.Substring(1, 1), NumberStyles.HexNumber);
+                    color.Blue = byte.Parse(hexString.Substring(2, 1) + hexString.Substring(2, 1), NumberStyles.HexNumber);
+                    color.Alpha = 1;
+
+                    return color;
+                }
                 if (hexString.Length == 6)
                 {
                     color.Red = byte.Parse(hexString.Substring(0, 2), NumberStyles.HexNumber);

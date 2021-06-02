@@ -41,7 +41,7 @@ namespace ChartJSCoreTest
                     ChartColor.FromHexString("#36A2EB"),
                     ChartColor.FromHexString("#FFCE56")
                 },
-                Data = new List<double> { 300, 50, 100 }
+                Data = new List<double?> { 300, 50, 100 }
             };
 
             data.Datasets = new List<Dataset> { dataset };

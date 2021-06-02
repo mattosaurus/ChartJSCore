@@ -1,4 +1,7 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+
+namespace ChartJSCore.Models
 {
     public class Hover : Base
     {
@@ -8,6 +11,7 @@
 
         public int? AnimationDuration { get; set; }
 
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnHover { get; set; }
     }
 }
