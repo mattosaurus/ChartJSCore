@@ -7,7 +7,7 @@ namespace ChartJSCoreTest
     [TestFixture]
     public class LineScatterChartTests
     {
-        private const string KNOWN_GOOD_CHART = "var lineScatterChartElement = document.getElementById(\"lineScatterChart\");\r\nvar lineScatterChart = new Chart(lineScatterChartElement, {\"type\":\"line\",\"data\":{\"datasets\":[{\"data\":[{\"x\":-10.0,\"y\":0.0},{\"x\":0.0,\"y\":10.0},{\"x\":10.0,\"y\":5.0}],\"type\":\"line\",\"label\":\"Scatter Dataset\"}]},\"options\":{\"scales\":{\"xAxes\":[{\"type\":\"linear\",\"position\":\"bottom\",\"ticks\":{\"beginAtZero\":true}}]}}}\r\n);";
+        private const string KNOWN_GOOD_CHART = "var lineScatterChartElement = document.getElementById(\"lineScatterChart\");\r\nvar lineScatterChart = new Chart(lineScatterChartElement, {\"type\":\"line\",\"data\":{\"datasets\":[{\"data\":[{\"x\":-10.0,\"y\":0.0},{\"x\":0.0,\"y\":10.0},{\"x\":10.0,\"y\":5.0}],\"type\":\"line\",\"label\":\"Scatter Dataset\"}]},\"options\":{\"scales\":{\"x\":{\"type\":\"linear\",\"position\":\"bottom\",\"ticks\":{\"beginAtZero\":true}}}}}\r\n);";
 
         [Test]
         public void Generate_LineChartScatter_Generates_Valid_Chart()
@@ -53,14 +53,13 @@ namespace ChartJSCoreTest
 
             var options = new Options
             {
-                Scales = new Scales()
+                Scales = new Dictionary<string, Scale>()
             };
 
-            var scales = new Scales
+            var scales = new Dictionary<string, Scale>
             {
-                XAxes = new List<Scale>
                 {
-                    new CartesianScale
+                    "x", new CartesianScale
                     {
                         Type = "linear",
                         Position = "bottom",
@@ -78,5 +77,4 @@ namespace ChartJSCoreTest
             return chart;
         }
     }
-
 }
