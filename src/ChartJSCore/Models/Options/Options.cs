@@ -82,6 +82,6 @@ namespace ChartJSCore.Models
         ///// </summary>
         //public Elements Elements { get; set; }
 
-        //public Scales Scales { get; set; }
+        public Dictionary<string, Scale> Scales { get; set; }
     }
 }

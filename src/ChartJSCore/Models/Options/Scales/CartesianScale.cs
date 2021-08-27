@@ -18,11 +18,6 @@
         public bool? Offset { get; set; }
 
         /// <summary>
-        /// The ID is used to link datasets and scale axes together. The properties datasets.xAxisID or datasets.yAxisID have to match the scale properties scales.xAxes.id or scales.yAxes.id. This is especially needed if multi-axes charts are used.
-        /// </summary>
-        public string Id { get; set; }
-
-        /// <summary>
         /// The grid line configuration is nested under the scale configuration in the gridLines key. It defines options for the grid lines that run perpendicular to the axis.
         /// </summary>
         public GridLine GridLines { get; set; }
