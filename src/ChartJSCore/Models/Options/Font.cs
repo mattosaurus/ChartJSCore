@@ -6,6 +6,7 @@ using System.Text;
 
 namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.5.1/general/fonts.html
     public class Font
     {
         /// <summary>
