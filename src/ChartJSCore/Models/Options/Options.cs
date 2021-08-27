@@ -6,6 +6,8 @@ namespace ChartJSCore.Models
 {
     public class Options : Base
     {
+        #region Responsive Charts
+        //https://www.chartjs.org/docs/3.5.1/configuration/responsive.html
         /// <summary>
         /// Resizes the chart canvas when its container does.
         /// </summary>
@@ -30,17 +32,26 @@ namespace ChartJSCore.Models
         /// Delay the resize update by give amount of milliseconds. This can ease the resize process by debouncing update of the elements.
         /// </summary>
         public int? ResizeDelay { get; set; }
+        #endregion Responsive Charts
 
+        #region Device Pixel Ratio
+        // https://www.chartjs.org/docs/3.5.1/configuration/device-pixel-ratio.html
         /// <summary>
         /// Override the window's default devicePixelRatio.
         /// </summary>
         public int? DevicePixelRatio { get; set; }
+        #endregion Device Pixel Ratio
 
+        #region Locale
+        // https://www.chartjs.org/docs/3.5.1/configuration/locale.html
         /// <summary>
         /// A string with a BCP 47 language tag, leveraging on INTL NumberFormat
         /// </summary>
         public string Locale { get; set; }
+        #endregion Locale
 
+        #region Interactions
+        // https://www.chartjs.org/docs/3.5.1/configuration/interactions.html
         /// <summary>
         /// Configure which events trigger chart interactions
         /// </summary>
@@ -62,27 +73,17 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnClick { get; set; }
+        #endregion Interactions
 
+        #region Animations
+        // https://www.chartjs.org/docs/3.5.1/configuration/animations.html
         public Animation Animation { get; set; }
+        #endregion Animations
 
+        #region Layout
+        // https://www.chartjs.org/docs/3.5.1/configuration/layout.html
         public Layout Layout { get; set; }
-
-        ///// <summary>
-        ///// Function to generate a legend. Receives the chart object to generate a legend from. Default implementation returns an HTML string.
-        ///// </summary>
-        //[JsonConverter(typeof(PlainJsonStringConverter))]
-        //public string LegendCallback { get; set; }
-
-        //
-
-        //public ToolTip Tooltips { get; set; }
-
-        //public Hover Hover { get; set; }
-
-        ///// <summary>
-        ///// Options can be configured for four different types of elements: arc, lines, points, and rectangles. When set, these options apply to all objects of that type unless specifically overridden by the configuration attached to a dataset.
-        ///// </summary>
-        //public Elements Elements { get; set; }
+        #endregion Layout
 
         public Dictionary<string, Scale> Scales { get; set; }
     }

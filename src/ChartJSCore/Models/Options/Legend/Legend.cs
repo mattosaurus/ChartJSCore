@@ -1,5 +1,6 @@
 ﻿namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.5.1/configuration/legend.html
     public class Legend : Base
     {
         /// <summary>
