@@ -54,11 +54,13 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Called when any of the events fire over chartArea. Passed the event, an array of active elements (bars, points, etc), and the chart.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnHover { get; set; }
 
         /// <summary>
         /// Called if the event is of type 'mouseup' or 'click'. Called in the context of the chart and passed an array of active elements.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string OnClick { get; set; }
 
         public Animation Animation { get; set; }
