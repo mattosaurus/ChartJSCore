@@ -37,11 +37,6 @@
         /// </summary>
         public string OnClick { get; set; }
 
-        ///// <summary>
-        ///// Generates the HTML legend via calls to generateLegend.
-        ///// </summary>
-        //public string Callback { get; set; }
-
         /// <summary>
         /// A callback that is called when a 'mousemove' event is registered on top of a label item.
         /// </summary>
