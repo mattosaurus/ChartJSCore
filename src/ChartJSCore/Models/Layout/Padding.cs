@@ -1,5 +1,6 @@
 ﻿namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.5.1/general/padding.html
     public class Padding : Base
     {
         /// <summary>

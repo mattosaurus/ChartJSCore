@@ -3,15 +3,16 @@ using Newtonsoft.Json;
 
 namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.5.1/configuration/tooltip.html
     public class ToolTip : Base
     {
         /// <summary>
-        /// Are tooltips enabled.
+        /// Are on-canvas tooltips enabled?
         /// </summary>
         public bool? Enabled { get; set; }
 
         [JsonConverter(typeof(PlainJsonStringConverter))]
-        public string Custom { get; set; }
+        public string External { get; set; }
 
         /// <summary>
         /// Sets which elements appear in the tooltip.
@@ -31,11 +32,13 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Allows sorting of tooltip items. Must implement at minimum a function that can be passed to Array.prototype.sort. This function can also accept a third parameter that is the data object passed to the ChartJSCore.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string ItemSort { get; set; }
 
         /// <summary>
         /// Allows filtering of tooltip items. Must implement at minimum a function that can be passed to Array.prototype.filter. This function can also accept a second parameter that is the data object passed to the ChartJSCore.
         /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
         public string Filter { get; set; }
 
         /// <summary>
@@ -44,24 +47,19 @@ namespace ChartJSCore.Models
         public ChartColor BackgroundColor { get; set; }
 
         /// <summary>
-        /// Font family for tooltip title inherited from global font family.
+        /// Color of title text.
         /// </summary>
-        public string TitleFontFamily { get; set; }
+        public ChartColor TitleColor { get; set; }
 
         /// <summary>
-        /// Font size for tooltip title inherited from global font size.
+        /// Font of the tooltip.
         /// </summary>
-        public int? TitleFontSize { get; set; }
+        public Font TitleFont { get; set; }
 
         /// <summary>
-        /// Font style for tooltip title.
+        /// Horizontal alignment of the title text lines.
         /// </summary>
-        public string TitleFontStyle { get; set; }
-
-        /// <summary>
-        /// Font color for tooltip title.
-        /// </summary>
-        public ChartColor TitleFontColor { get; set; }
+        public string TitleAlign { get; set; }
 
         /// <summary>
         /// Spacing to add to top and bottom of each title line.
@@ -74,24 +72,19 @@ namespace ChartJSCore.Models
         public int? TitleMarginBottom { get; set; }
 
         /// <summary>
-        /// Font family for tooltip items inherited from global font family.
+        /// Color of body text.
         /// </summary>
-        public string BodyFontFamily { get; set; }
+        public ChartColor BodyColor { get; set; }
 
         /// <summary>
-        /// Font size for tooltip items inherited from global font size.
+        /// Font of the tooltip body.
         /// </summary>
-        public int? BodyFontSize { get; set; }
+        public Font BodyFont { get; set; }
 
         /// <summary>
-        /// Font style for tooltip body.
+        /// Horizontal alignment of the body text lines.
         /// </summary>
-        public string BodyFontStyle { get; set; }
-
-        /// <summary>
-        /// Font color for tooltip items.
-        /// </summary>
-        public ChartColor BodyFontColor { get; set; }
+        public string BodyAlign { get; set; }
 
         /// <summary>
         /// Spacing to add to top and bottom of each tooltip item.
@@ -99,24 +92,14 @@ namespace ChartJSCore.Models
         public int? BodySpacing { get; set; }
 
         /// <summary>
-        /// Font family for tooltip footer inherited from global font family.
+        /// Color of footer text.
         /// </summary>
-        public string FooterFontFamily { get; set; }
+        public ChartColor FooterColor { get; set; }
 
         /// <summary>
-        /// Font size for tooltip footer inherited from global font size.
+        /// Horizontal alignment of the footer text lines.
         /// </summary>
-        public int? FooterFontSize { get; set; }
-
-        /// <summary>
-        /// Font style for tooltip footer.
-        /// </summary>
-        public string FooterFontStyle { get; set; }
-
-        /// <summary>
-        /// Font color for tooltip footer.
-        /// </summary>
-        public ChartColor FooterFontColor { get; set; }
+        public string FooterAlign { get; set; }
 
         /// <summary>
         /// Spacing to add to top and bottom of each footer line.
@@ -129,14 +112,15 @@ namespace ChartJSCore.Models
         public int? FooterMarginTop { get; set; }
 
         /// <summary>
-        /// Padding to add on left and right of tooltip.
+        /// Padding inside the tooltip.
         /// </summary>
-        public int? XPadding { get; set; }
+        [JsonConverter(typeof(PaddingConverter))]
+        public Padding Padding { get; set; }
 
         /// <summary>
-        /// Padding to add on top and bottom of tooltip.
+        /// Extra distance to move the end of the tooltip arrow away from the tooltip point.
         /// </summary>
-        public int? YPadding { get; set; }
+        public int? CaretPadding { get; set; }
 
         /// <summary>
         /// Size, in px, of the tooltip arrow.
@@ -144,7 +128,7 @@ namespace ChartJSCore.Models
         public int? CaretSize { get; set; }
 
         /// <summary>
-        /// 	Radius of tooltip corner curves.
+        /// Radius of tooltip corner curves.
         /// </summary>
         public int? CornerRadius { get; set; }
 
@@ -157,6 +141,48 @@ namespace ChartJSCore.Models
         /// if true, color boxes are shown in the tooltip.
         /// </summary>
         public bool? DisplayColors { get; set; }
+
+        /// <summary>
+        /// Width of the color box if displayColors is true.
+        /// </summary>
+        public int? BoxWidth { get; set; }
+
+        /// <summary>
+        /// Height of the color box if displayColors is true.
+        /// </summary>
+        public int? BoxHeight { get; set; }
+
+        /// <summary>
+        /// Use the corresponding point style (from dataset options) instead of color boxes, ex: star, triangle etc. (size is based on the minimum value between boxWidth and boxHeight).
+        /// </summary>
+        public bool? UsePointStyle { get; set; }
+
+        /// <summary>
+        /// Color of the border.
+        /// </summary>
+        public ChartColor BorderColor { get; set; }
+
+        /// <summary>
+        /// Size of the border.
+        /// </summary>
+        public int? BorderWidth { get; set; }
+
+        /// <summary>
+        /// true for rendering the tooltip from right to left.
+        /// </summary>
+        public bool? Rtl { get; set; }
+
+        public string TextDirection { get; set; }
+
+        /// <summary>
+        /// Position of the tooltip caret in the X direction.
+        /// </summary>
+        public string XAlign { get; set; }
+
+        /// <summary>
+        /// Position of the tooltip caret in the Y direction.
+        /// </summary>
+        public string YAlign { get; set; }
 
         public Callback Callbacks { get; set; }
     }

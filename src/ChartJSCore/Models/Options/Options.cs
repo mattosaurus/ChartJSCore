@@ -86,5 +86,7 @@ namespace ChartJSCore.Models
         #endregion Layout
 
         public Dictionary<string, Scale> Scales { get; set; }
+
+        public Plugins Plugins { get; set; }
     }
 }
