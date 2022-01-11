@@ -146,6 +146,6 @@ namespace ChartJSCore.Models
         /// If true, the line is shown as a stepped line and 'lineTension' will be ignored.
         /// </summary>
         [JsonConverter(typeof(BoolIntStringConverter))]
-        public string SteppedLine { get; set; }
+        public string Stepped { get; set; }
     }
 }
