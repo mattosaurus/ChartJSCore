@@ -38,11 +38,12 @@ namespace ChartJSCoreTest
                 }
             };
 
+            var fill = new LineChartFill() { target = "origin", above = ChartColor.FromRgba(255, 0, 0, 0.3), below = ChartColor.FromRgba(0, 255, 0, 0.3) };
             var dataset = new LineDataset
             {
                 Label = "My First dataset",
                 Data = new List<double?> { 65, 59, 80, 81, 56, 55, 40 },
-                Fill = "false",
+                Fill = fill,
                 LineTension = 0.1,
                 BackgroundColor = ChartColor.FromRgba(75, 192, 192, 0.4),
                 BorderColor = ChartColor.FromRgb(75, 192, 192),
