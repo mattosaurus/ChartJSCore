@@ -1,5 +1,5 @@
 ﻿using ChartJSCore.Helpers;
-using ChartJSCore.Models.Options;
+using ChartJSCore.Models;
 using Newtonsoft.Json;
 
 namespace ChartJSCore.Models
@@ -24,7 +24,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Font style inherited from global configuration.
         /// </summary>
-        public Models.Options.Font Font { get; set; }
+        public Font Font { get; set; }
 
         /// <summary>
         /// Padding between rows of colored boxes.

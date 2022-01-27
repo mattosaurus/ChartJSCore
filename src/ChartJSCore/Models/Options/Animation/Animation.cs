@@ -4,6 +4,7 @@ using static ChartJSCore.Models.Enums;
 
 namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.5.1/configuration/animations.html#animation
     public class Animation : Base
     {
         /// <summary>
