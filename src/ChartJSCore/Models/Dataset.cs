@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace ChartJSCore.Models
 {
@@ -14,7 +16,8 @@ namespace ChartJSCore.Models
         /// <summary>
         /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea. 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
         /// </summary>
-        public virtual int? Clip { get; set; }
+        [JsonConverter(typeof(ClipConverter))]
+        public Clip Clip { get; set; }
 
         /// <summary>
         /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
@@ -24,7 +27,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Defaults to dataset type.
         /// </summary>
-        public string Stack { get; set; }
+        public virtual string Stack { get; set; }
 
         /// <summary>
         /// The data to plot in a line.

@@ -14,26 +14,11 @@ namespace ChartJSCore.Models
         #region General
         // https://www.chartjs.org/docs/latest/charts/line.html#general
         /// <summary>
-        /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea. 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
-        /// </summary>
-        [JsonConverter(typeof(ClipConverter))]
-        public Clip Clip { get; set; }
-
-        /// <summary>
         /// The base axis of the dataset. 'x' for horizontal lines and 'y' for vertical lines.
         /// </summary>
         public string IndexAxis { get; set; }
 
-        /// <summary>
-        /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
-        /// </summary>
-        public int Order { get; set; }
-
-        /// <summary>
-        /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack).
-        /// </summary>
-        public string Stack { get; set; }
-
+        // https://www.chartjs.org/docs/latest/charts/bar.html#general
         /// <summary>
         /// The ID of the x axis to plot this dataset on.
         /// </summary>
