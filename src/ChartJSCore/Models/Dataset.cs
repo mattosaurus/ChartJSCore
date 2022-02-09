@@ -9,9 +9,19 @@ namespace ChartJSCore.Models
     public class Dataset : Base
     {
         /// <summary>
-        /// The label for the dataset which appears in the legend and tooltips.
+        /// The fill color under the line.
         /// </summary>
-        public string Label { get; set; }
+        public ChartColor BackgroundColor { get; set; }
+
+        /// <summary>
+        /// The color of the line.
+        /// </summary>
+        public ChartColor BorderColor { get; set; }
+
+        /// <summary>
+        /// The width of the line in pixels.
+        /// </summary>
+        public int? BorderWidth { get; set; }
 
         /// <summary>
         /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea. 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
@@ -20,19 +30,19 @@ namespace ChartJSCore.Models
         public Clip Clip { get; set; }
 
         /// <summary>
-        /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
-        /// </summary>
-        public int? Order { get; set; }
-
-        /// <summary>
-        /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Defaults to dataset type.
-        /// </summary>
-        public virtual string Stack { get; set; }
-
-        /// <summary>
         /// The data to plot in a line.
         /// </summary>
         public IList<double?> Data { get; set; }
+
+        /// <summary>
+        /// Point background color when hovered.
+        /// </summary>
+        public ChartColor HoverBackgroundColor { get; set; }
+
+        /// <summary>
+        /// Point border color when hovered.
+        /// </summary>
+        public ChartColor HoverBorderColor { get; set; }
 
         /// <summary>
         /// How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.

@@ -29,6 +29,26 @@ namespace ChartJSCore.Models
         public string IndexAxis { get; set; }
 
         /// <summary>
+        /// The label for the dataset which appears in the legend and tooltips.
+        /// </summary>
+        public string Label { get; set; }
+
+        /// <summary>
+        /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
+        /// </summary>
+        public int? Order { get; set; }
+
+        /// <summary>
+        /// If true, null or undefined values will not be used for spacing calculations when determining bar size.
+        /// </summary>
+        public bool? SkipNull { get; set; }
+
+        /// <summary>
+        /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Defaults to dataset type.
+        /// </summary>
+        public string Stack { get; set; }
+
+        /// <summary>
         /// The ID of the x axis to plot this dataset on.
         /// </summary>
         public string XAxisID { get; set; }
@@ -37,27 +57,10 @@ namespace ChartJSCore.Models
         /// The ID of the y axis to plot this dataset on.
         /// </summary>
         public string YAxisID { get; set; }
-
-        /// <summary>
-        /// If true, null or undefined values will not be used for spacing calculations when determining bar size.
-        /// </summary>
-        public bool? SkipNull { get; set; }
         #endregion General
 
         #region Styling
         // https://www.chartjs.org/docs/latest/charts/bar.html#styling
-        /// <summary>
-        /// The fill color of the bars.
-        /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> BackgroundColor { get; set; }
-
-        /// <summary>
-        /// Bar border color.
-        /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> BorderColor { get; set; }
-
         /// <summary>
         /// Which edge to skip drawing the border for. Options are 'bottom', 'left', 'top', and 'right'.
         /// </summary>
@@ -69,12 +72,6 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(BorderRadiusConverter))]
         public BorderRadius BorderRadius { get; set; }
-
-        /// <summary>
-        /// The bar border width (in pixels).
-        /// </summary>
-        [JsonConverter(typeof(BorderWidthConverter))]
-        public BorderWidth BorderWidth { get; set; }
 
         /// <summary>
         /// Set this to ensure that bars have a minimum length in pixels.
@@ -90,16 +87,6 @@ namespace ChartJSCore.Models
         #region Interactions
         // https://www.chartjs.org/docs/latest/charts/bar.html#interactions
         /// <summary>
-        /// The bar background color when hovered.
-        /// </summary>
-        public ChartColor HoverBackgroundColor { get; set; }
-
-        /// <summary>
-        /// The bar border color when hovered.
-        /// </summary>
-        public ChartColor HoverBorderColor { get; set; }
-
-        /// <summary>
         /// The bar border width when hovered (in pixels).
         /// </summary>
         public int? HoverBorderWidth { get; set; }
@@ -110,24 +97,38 @@ namespace ChartJSCore.Models
         public int? HoverBorderRadius { get; set; }
         #endregion Interactions
 
+        #region BarPercentage
+        // https://www.chartjs.org/docs/latest/charts/bar.html#barpercentage
         /// <summary>
         /// Percent (0-1) of the available width each bar should be within the category percentage. 1.0 will take the whole category width and put the bars right next to each other.
         /// </summary>
         public double? BarPercentage { get; set; }
+        #endregion BarPercentage
 
+        #region CategoryPercentage
+        // https://www.chartjs.org/docs/latest/charts/bar.html#categorypercentage
         /// <summary>
         /// Percent (0-1) of the available width each category should be within the sample width.
         /// </summary>
         public double? CategoryPercentage { get; set; }
+        #endregion CategoryPercentage
 
+        #region BarThickness
+        // https://www.chartjs.org/docs/latest/charts/bar.html#barthickness
         /// <summary>
         /// Manually set width of each bar in pixels. If set to 'flex', it computes "optimal" sample widths that globally arrange bars side by side. If not set (default), bars are equally sized based on the smallest interval.
         /// </summary>
         public double? BarThickness { get; set; }
+        #endregion BarThickness
 
+        #region MaxBarThickness
+        // https://www.chartjs.org/docs/latest/charts/bar.html#maxbarthickness
         /// <summary>
         /// Set this to ensure that bars are not sized thicker than this.
         /// </summary>
         public double? MaxBarThickness { get; set; }
+        #endregion MaxBarThickness
+
+        public Scale Scale { get; set; }
     }
 }

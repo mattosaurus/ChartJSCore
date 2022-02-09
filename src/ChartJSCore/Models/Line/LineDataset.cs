@@ -18,7 +18,21 @@ namespace ChartJSCore.Models
         /// </summary>
         public string IndexAxis { get; set; }
 
-        // https://www.chartjs.org/docs/latest/charts/bar.html#general
+        /// <summary>
+        /// The label for the dataset which appears in the legend and tooltips.
+        /// </summary>
+        public string Label { get; set; }
+
+        /// <summary>
+        /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
+        /// </summary>
+        public int? Order { get; set; }
+
+        /// <summary>
+        /// The ID of the group to which this dataset belongs to (when stacked, each group will be a separate stack). Defaults to dataset type.
+        /// </summary>
+        public string Stack { get; set; }
+
         /// <summary>
         /// The ID of the x axis to plot this dataset on.
         /// </summary>
@@ -83,19 +97,9 @@ namespace ChartJSCore.Models
         #region LineStyling
         // https://www.chartjs.org/docs/latest/charts/line.html#line-styling
         /// <summary>
-        /// The fill color under the line.
-        /// </summary>
-        public ChartColor BackgroundColor { get; set; }
-
-        /// <summary>
         /// Cap style of the line.
         /// </summary>
         public string BorderCapStyle { get; set; }
-
-        /// <summary>
-        /// The color of the line.
-        /// </summary>
-        public ChartColor BorderColor { get; set; }
 
         /// <summary>
         /// Length and spacing of dashes.
@@ -111,11 +115,6 @@ namespace ChartJSCore.Models
         /// Line joint style.
         /// </summary>
         public string BorderJoinStyle { get; set; }
-
-        /// <summary>
-        /// The width of the line in pixels.
-        /// </summary>
-        public int? BorderWidth { get; set; }
 
         /// <summary>
         /// If true, fill the area under the line.
@@ -169,6 +168,15 @@ namespace ChartJSCore.Models
         /// </summary>
         public string CubicInterpolationMode { get; set; }
         #endregion CubicInterpolationMode
+
+        #region Segment
+        // https://www.chartjs.org/docs/latest/charts/line.html#segment
+        /// <summary>
+        /// Line segment styles can be overridden by scriptable options in the segment object. Currently all of the border* and backgroundColor options are supported. The segment styles are resolved for each section of the line between each point. undefined fallbacks to main line styles.
+        /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string Segment { get; set; }
+        #endregion Segment
 
         #region Stepped
         // https://www.chartjs.org/docs/latest/charts/line.html#stepped
