@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 namespace ChartJSCore.Models
 {
     // https://www.chartjs.org/docs/latest/charts/doughnut.html#config-options
-    public class PieOptions : Options
+    public class DoughnutOptions : Options
     {
         /// <summary>
         /// The portion of the chart that is cut out of the middle. If string and ending with '%', percentage of the chart radius. number is considered to be pixels.
