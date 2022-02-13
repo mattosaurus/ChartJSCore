@@ -1,8 +1,10 @@
-# ChartJSCore v1.5.7
+# ChartJSCore v3.0.0
 
 Implementation of Chart.js for use with .NET Core. This library allows Chart.js code to be generated in an MVC controller from a .NET object and injected into the desired view.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/7n78iys8p8dhf9fm?svg=true)](https://ci.appveyor.com/project/perezLamed/chartjscore)
+
+**This library has been updated to work with v3 of Chart.js, I have done minimal testing so there are likely to be bugs. If something doesn't work as expected please open a new issue with an example of the failing code and alink to the relevant Chart.js documentation.**
 
 ## Installation
 
