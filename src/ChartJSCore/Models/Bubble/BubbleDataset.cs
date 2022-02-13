@@ -11,51 +11,58 @@ namespace ChartJSCore.Models
 		/// </summary>
 		public Enums.ChartType Type { get; set; } = Enums.ChartType.Bubble;
 
+        #region General
+        // https://www.chartjs.org/docs/latest/charts/bubble.html#general
         /// <summary>
-        /// The data to plot in the bubble chart.
+        /// Draw the active points of a dataset over the other points of the dataset
         /// </summary>
-        public new IList<BubbleData> Data { get; set; }
+        public bool? DrawActiveElementsOnTop { get; set; }
 
         /// <summary>
-        /// The fill color of the bubbles.
+        /// The label for the dataset which appears in the legend and tooltips.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> BackgroundColor { get; set; }
+        public string Label { get; set; }
 
         /// <summary>
-        /// The stroke color of the bubbles.
+        /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> BorderColor { get; set; }
+        public int? Order { get; set; }
+        #endregion General
+
+        #region Styling
+        // https://www.chartjs.org/docs/latest/charts/bubble.html#styling
+        /// <summary>
+        /// Bubble shape style.
+        /// </summary>
+        public string PointStyle { get; set; }
 
         /// <summary>
-        /// The stroke width of bubble in pixels.
+        /// Bubble rotation (in degrees).
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> BorderWidth { get; set; }
+        public int? Rotation { get; set; }
 
         /// <summary>
-        /// The fill color of the bubbles when hovered.
+        /// Bubble radius (in pixels).
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> HoverBackgroundColor { get; set; }
+        public int? Radius { get; set; }
+        #endregion Styling
+
+        #region Interactions
+        // https://www.chartjs.org/docs/latest/charts/bubble.html#interactions
+        /// <summary>
+        /// Bubble additional radius for hit detection (in pixels).
+        /// </summary>
+        public int? HitRadius { get; set; }
 
         /// <summary>
-        /// The stroke color of the bubbles when hovered.
+        /// Bubble border width when hovered (in pixels).
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> HoverBorderColor { get; set; }
+        public int? HoverBorderWidth { get; set; }
 
         /// <summary>
-        /// The stroke width of the bubbles when hovered.
+        /// Bubble additional radius when hovered (in pixels).
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> HoverBorderWidth { get; set; }
-
-        /// <summary>
-        /// Additional radius to add to data radius on hover.
-        /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> HoverRadius { get; set; }
+        public int? HoverRadius { get; set; }
+        #endregion Interactions
     }
 }
