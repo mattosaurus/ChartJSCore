@@ -14,6 +14,11 @@ namespace ChartJSCore.Models
         #region General
         // https://www.chartjs.org/docs/latest/charts/line.html#general
         /// <summary>
+        /// Draw the active points of a dataset over the other points of the dataset
+        /// </summary>
+        public bool? DrawActiveElementsOnTop { get; set; }
+
+        /// <summary>
         /// The base axis of the dataset. 'x' for horizontal lines and 'y' for vertical lines.
         /// </summary>
         public string IndexAxis { get; set; }
@@ -87,11 +92,6 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(SingleOrArrayConverter<string>))]
         public IList<string> PointStyle { get; set; }
-
-        /// <summary>
-        /// Draw the active points of a dataset over the other points of the dataset
-        /// </summary>
-        public bool? DrawActiveElementsOnTop { get; set; }
         #endregion PointStyling
 
         #region LineStyling
