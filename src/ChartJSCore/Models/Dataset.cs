@@ -11,17 +11,20 @@ namespace ChartJSCore.Models
         /// <summary>
         /// The fill color under the line.
         /// </summary>
-        public ChartColor BackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> BackgroundColor { get; set; }
 
         /// <summary>
         /// The color of the line.
         /// </summary>
-        public ChartColor BorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> BorderColor { get; set; }
 
         /// <summary>
         /// The width of the line in pixels.
         /// </summary>
-        public int? BorderWidth { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> BorderWidth { get; set; }
 
         /// <summary>
         /// How to clip relative to chartArea. Positive value allows overflow, negative value clips that many pixels inside chartArea. 0 = clip at chartArea. Clipping can also be configured per side: clip: {left: 5, top: false, right: -2, bottom: 0}
