@@ -21,11 +21,6 @@ namespace ChartJSCore.Models
         public bool? DrawActiveElementsOnTop { get; set; }
 
         /// <summary>
-        /// The label for the dataset which appears in the legend and tooltips.
-        /// </summary>
-        public string Label { get; set; }
-
-        /// <summary>
         /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
         /// </summary>
         public int? Order { get; set; }
