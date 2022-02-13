@@ -6,7 +6,7 @@ namespace ChartJSCore.Models
 {
     // https://www.chartjs.org/docs/3.5.1/general/data-structures.html
     // TODO: Allow scatter datasets to be accepted as data.
-    public class Dataset : Base
+    public abstract class Dataset : Base
     {
         /// <summary>
         /// The fill color under the line.
