@@ -11,31 +11,60 @@ namespace ChartJSCore.Models
         /// </summary>
         public Enums.ChartType Type { get; set; } = Enums.ChartType.Radar;
 
+        #region General
         /// <summary>
-        /// If true, fill the area under the line.
+        /// The drawing order of dataset. Also affects order for stacking, tooltip and legend.
         /// </summary>
-        public bool? Fill { get; set; }
+        public int? Order { get; set; }
+        #endregion General
+
+        #region PointStyling
+        // https://www.chartjs.org/docs/latest/charts/radar.html#point-styling
+        /// <summary>
+        /// The fill color for points.
+        /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointBackgroundColor { get; set; }
 
         /// <summary>
-        /// Bezier curve tension of the line. Set to 0 to draw straightlines. This option is ignored if monotone cubic interpolation is used. Note This was renamed from 'tension' but the old name still works.
+        /// The border color for points.
         /// </summary>
-        public double? LineTension { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointBorderColor { get; set; }
 
         /// <summary>
-        /// The fill color under the line.
+        /// The width of the point border in pixels.
         /// </summary>
-        public ChartColor BackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> PointBorderWidth { get; set; }
 
         /// <summary>
-        /// The width of the line in pixels.
+        /// The pixel size of the non-displayed point that reacts to mouse events.
         /// </summary>
-        public int? BorderWidth { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> PointHitRadius { get; set; }
 
         /// <summary>
-        /// The color of the line.
+        /// The radius of the point shape. If set to 0, nothing is rendered.
         /// </summary>
-        public ChartColor BorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> PointRadius { get; set; }
 
+        /// <summary>
+        /// The rotation of the point in degrees.
+        /// </summary>
+        public int? PointRotation { get; set; }
+
+        // TODO: Allow images as well as strings.
+        /// <summary>
+        /// The style of point. Options are 'circle', 'triangle', 'rect', 'rectRot', 'cross', 'crossRot', 'star', 'line', and 'dash'. If the option is an image, that image is drawn on the canvas using drawImage.
+        /// </summary>
+        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
+        public IList<string> PointStyle { get; set; }
+        #endregion PointStyling
+
+        #region LineStyling
+        // https://www.chartjs.org/docs/latest/charts/radar.html#line-styling
         /// <summary>
         /// Cap style of the line.
         /// </summary>
@@ -57,41 +86,24 @@ namespace ChartJSCore.Models
         public string BorderJoinStyle { get; set; }
 
         /// <summary>
-        /// The border color for points.
+        /// If true, fill the area under the line.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> PointBorderColor { get; set; }
+        [JsonConverter(typeof(BoolIntStringConverter))]
+        public string Fill { get; set; }
 
         /// <summary>
-        /// The fill color for points.
+        /// Bezier curve tension of the line. Set to 0 to draw straightlines. This option is ignored if monotone cubic interpolation is used. Note This was renamed from 'tension' but the old name still works.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
-        public IList<ChartColor> PointBackgroundColor { get; set; }
+        public double? Tension { get; set; }
 
         /// <summary>
-        /// The width of the point border in pixels.
+        /// If true, lines will be drawn between points with no or null data. If false, points with null data will create a break in the line. Can also be a number specifying the maximum gap length to span. The unit of the value depends on the scale used.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> PointBorderWidth { get; set; }
+        public bool? SpanGaps { get; set; }
+        #endregion LineStyling
 
-        /// <summary>
-        /// The radius of the point shape. If set to 0, nothing is rendered.
-        /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> PointRadius { get; set; }
-
-        /// <summary>
-        /// The radius of the point when hovered.
-        /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> PointHoverRadius { get; set; }
-
-        /// <summary>
-        /// The pixel size of the non-displayed point that reacts to mouse events.
-        /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
-        public IList<int> HitRadius { get; set; }
-
+        #region Interactions
+        // https://www.chartjs.org/docs/latest/charts/radar.html#interactions
         /// <summary>
         /// Point background color when hovered.
         /// </summary>
@@ -107,13 +119,22 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Border width of point when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
         public IList<int> PointHoverBorderWidth { get; set; }
 
         /// <summary>
-        /// The style of point. Options are 'circle', 'triangle', 'rect', 'rectRot', 'cross', 'crossRot', 'star', 'line', and 'dash'. If the option is an image, that image is drawn on the canvas using drawImage.
+        /// The radius of the point when hovered.
         /// </summary>
-        [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public IList<string> PointStyle { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> PointHoverRadius { get; set; }
+        #endregion Interactions
+
+        #region Scale
+        // https://www.chartjs.org/docs/latest/charts/radar.html#scale-options
+        /// <summary>
+        /// The radar chart supports only a single scale. The options for this scale are defined in the scales.r property
+        /// </summary>
+        public Scale Scale { get; set; }
+        #endregion Scale
     }
 }

@@ -41,8 +41,8 @@ namespace ChartJSCoreTest
             var dataset1 = new RadarDataset
             {
                 Label = "My First dataset",
-                BackgroundColor = ChartColor.FromRgba(179,181,198,0.2),
-                BorderColor = ChartColor.FromRgb(179,181,198),
+                BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(179, 181, 198, 0.2) },
+                BorderColor = new List<ChartColor> { ChartColor.FromRgb(179, 181, 198) },
                 PointBackgroundColor = new List<ChartColor> { ChartColor.FromRgb(179, 181, 198) },
                 PointBorderColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
                 PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
@@ -53,8 +53,8 @@ namespace ChartJSCoreTest
             var dataset2 = new RadarDataset
             {
                 Label = "My Second dataset",
-                BackgroundColor = ChartColor.FromRgba(255,99,132,0.2),
-                BorderColor = ChartColor.FromRgb(255, 99, 132),
+                BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(255, 99, 132, 0.2) },
+                BorderColor = new List<ChartColor> { ChartColor.FromRgb(255, 99, 132) },
                 PointBackgroundColor = new List<ChartColor> { ChartColor.FromRgb(255, 99, 132) },
                 PointBorderColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
                 PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },

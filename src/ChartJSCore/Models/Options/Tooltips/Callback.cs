@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 namespace ChartJSCore.Models
 {
+    // Returns the point style to use instead of color boxes if usePointStyle is true (object with values pointStyle and rotation). Default implementation uses the point style from the dataset points.
     //TODO: Create correct tooltip item object rather than using string
     public class Callback : Base
     {
@@ -49,6 +50,18 @@ namespace ChartJSCore.Models
         public string LabelColor { get; set; }
 
         /// <summary>
+        /// Returns the colors for the text of the label for the tooltip item.
+        /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string LabelTextColor { get; set; }
+
+        /// <summary>
+        /// Returns the point style to use instead of color boxes if usePointStyle is true (object with values pointStyle and rotation). Default implementation uses the point style from the dataset points.
+        /// </summary>
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string LabelPointStyle { get; set; }
+
+        /// <summary>
         /// Text to render after an individual label.
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
@@ -77,11 +90,5 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
         public string AfterFooter { get; set; }
-
-        /// <summary>
-        /// List of matching point informations.
-        /// </summary>
-        [JsonConverter(typeof(PlainJsonStringConverter))]
-        public string DataPoints { get; set; }
     }
 }
