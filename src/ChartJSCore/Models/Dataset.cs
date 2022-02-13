@@ -40,12 +40,19 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Point background color when hovered.
         /// </summary>
-        public ChartColor HoverBackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> HoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Point border color when hovered.
         /// </summary>
-        public ChartColor HoverBorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> HoverBorderColor { get; set; }
+
+        /// <summary>
+        /// The label for the dataset which appears in the legend and tooltips.
+        /// </summary>
+        public string Label { get; set; }
 
         /// <summary>
         /// How to parse the dataset. The parsing can be disabled by specifying parsing: false at chart options or dataset. If parsing is disabled, data must be sorted and in the formats the associated chart type and scales use internally.

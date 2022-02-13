@@ -11,6 +11,8 @@ namespace ChartJSCore.Models
 		/// </summary>
 		public Enums.ChartType Type { get; set; } = Enums.ChartType.Bubble;
 
+        public new IList<BubbleData> Data { get; set; }
+
         #region General
         // https://www.chartjs.org/docs/latest/charts/bubble.html#general
         /// <summary>

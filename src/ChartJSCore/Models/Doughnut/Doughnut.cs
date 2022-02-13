@@ -94,6 +94,4 @@ namespace ChartJSCore.Models
             #endregion Interactions
         }
     }
-
-}
 }

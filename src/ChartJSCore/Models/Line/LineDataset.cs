@@ -143,22 +143,26 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Point background color when hovered.
         /// </summary>
-        public ChartColor PointHoverBackgroundColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointHoverBackgroundColor { get; set; }
 
         /// <summary>
         /// Point border color when hovered.
         /// </summary>
-        public ChartColor PointHoverBorderColor { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ChartColor>))]
+        public IList<ChartColor> PointHoverBorderColor { get; set; }
 
         /// <summary>
         /// Border width of point when hovered.
         /// </summary>
-        public int? PointHoverBorderWidth { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> PointHoverBorderWidth { get; set; }
 
         /// <summary>
         /// The radius of the point when hovered.
         /// </summary>
-        public int? PointHoverRadius { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<int>))]
+        public IList<int> PointHoverRadius { get; set; }
         #endregion Interactions
 
         #region CubicInterpolationMode
