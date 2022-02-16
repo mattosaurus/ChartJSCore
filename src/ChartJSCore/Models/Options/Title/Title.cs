@@ -1,5 +1,6 @@
 ﻿using ChartJSCore.Helpers;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace ChartJSCore.Models
 {
@@ -45,6 +46,6 @@ namespace ChartJSCore.Models
         /// Title text.
         /// </summary>
         [JsonConverter(typeof(SingleOrArrayConverter<string>))]
-        public string Text { get; set; }
+        public IList<string> Text { get; set; }
     }
 }
