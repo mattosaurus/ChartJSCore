@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ChartJSCore.Models
 {
-    public class Plugins
+    public class Plugins : Base
     {
         /// <summary>
         /// The chart legend displays data about the datasets that are appearing on the chart.
