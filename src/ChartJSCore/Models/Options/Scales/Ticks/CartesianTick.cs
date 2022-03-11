@@ -1,4 +1,7 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+
+namespace ChartJSCore.Models
 {
     public class CartesianTick : Tick
     {
@@ -35,6 +38,7 @@
         /// <summary>
         /// Padding between the tick label and the axis. When set on a vertical axis, this applies in the horizontal (X) direction. When set on a horizontal axis, this applies in the vertical (Y) direction.
         /// </summary>
-        public int? Padding { get; set; }
+        [JsonConverter(typeof(PaddingConverter))]
+        public Padding Padding { get; set; }
     }
 }

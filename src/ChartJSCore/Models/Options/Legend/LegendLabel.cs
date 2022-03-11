@@ -29,7 +29,8 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Padding between rows of colored boxes.
         /// </summary>
-        public int? Padding { get; set; }
+        [JsonConverter(typeof(PaddingConverter))]
+        public Padding Padding { get; set; }
 
         /// <summary>
         /// Generates legend items for each thing in the legend. Default implementation returns the text + styling for the color box.
