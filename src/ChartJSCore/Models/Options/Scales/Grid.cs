@@ -56,7 +56,7 @@ namespace ChartJSCore.Models
         /// <summary>
         /// Length in pixels that the grid lines will draw into the axis area.
         /// </summary>
-        public int? TickMarkLength { get; set; }
+        public int? TickLength { get; set; }
 
         /// <summary>
         /// Stroke width of the grid line for the first index (index 0).
