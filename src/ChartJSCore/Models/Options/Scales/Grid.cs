@@ -81,6 +81,6 @@ namespace ChartJSCore.Models
         /// <summary>
         /// If true, labels are shifted to be between grid lines. This is used in the bar chart.
         /// </summary>
-        public bool? OffsetGridLines { get; set; }
+        public bool? Offset { get; set; }
     }
 }
