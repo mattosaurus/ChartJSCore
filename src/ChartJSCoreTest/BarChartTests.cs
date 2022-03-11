@@ -80,7 +80,7 @@ namespace ChartJSCoreTest
                 {
                     "x", new BarScale
                     {
-                        GridLines = new GridLine()
+                        GridLines = new Grid()
                         {
                             OffsetGridLines = true
                         }

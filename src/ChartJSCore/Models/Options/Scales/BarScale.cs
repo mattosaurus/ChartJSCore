@@ -6,6 +6,6 @@ namespace ChartJSCore.Models
 {
     public class BarScale : Scale
     {
-        public GridLine GridLines { get; set; }
+        public Grid Grid { get; set; }
     }
 }

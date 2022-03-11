@@ -20,7 +20,7 @@
         /// <summary>
         /// The grid line configuration is nested under the scale configuration in the gridLines key. It defines options for the grid lines that run perpendicular to the axis.
         /// </summary>
-        public GridLine GridLines { get; set; }
+        public Grid Grid { get; set; }
 
         /// <summary>
         /// The scale label configuration is nested under the scale configuration in the scaleLabel key. It defines options for the scale title.

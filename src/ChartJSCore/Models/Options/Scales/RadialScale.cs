@@ -4,7 +4,7 @@
     {
         public AngleLine AngleLines { get; set; }
 
-        public GridLine GridLines { get; set; }
+        public Grid Grid { get; set; }
 
         public PointLabel PointLabels { get; set; }
 

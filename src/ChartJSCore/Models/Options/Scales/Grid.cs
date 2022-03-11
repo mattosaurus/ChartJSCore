@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ChartJSCore.Models
 {
-    public class GridLine : Base
+    public class Grid : Base
     {
         /// <summary>
         /// If false, do not display grid lines for this axis.
