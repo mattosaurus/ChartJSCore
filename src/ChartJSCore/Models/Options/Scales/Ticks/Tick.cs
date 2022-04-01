@@ -3,8 +3,19 @@ using Newtonsoft.Json;
 
 namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.7.1/axes/#common-tick-options-to-all-axes
     public class Tick : Base
     {
+        /// <summary>
+        /// Color of label backdrops.
+        /// </summary>
+        public ChartColor BackdropColor { get; set; }
+
+        /// <summary>
+        /// Padding of label backdrop.
+        /// </summary>
+        public string BackdropPadding { get; set; }
+
         /// <summary>
         /// Returns the string representation of the tick value as it should be displayed on the chart.
         /// </summary>
@@ -12,43 +23,42 @@ namespace ChartJSCore.Models
         public string Callback { get; set; }
 
         /// <summary>
-        /// If true, show tick marks.
+        /// If true, show tick labels.
         /// </summary>
         public bool? Display { get; set; }
 
         /// <summary>
-        /// Font color for tick labels.
+        /// Color of ticks.
         /// </summary>
-        public ChartColor FontColor { get; set; }
+        public ChartColor Color { get; set; }
 
-        /// <summary>
-        /// Font family for the tick labels, follows CSS font-family options.
-        /// </summary>
-        public string FontFamily { get; set; }
+        public Font Font { get; set; }
 
-        /// <summary>
-        /// Font size for the tick labels.
-        /// </summary>
-        public int? FontSize { get; set; }
-
-        /// <summary>
-        /// Font style for the tick labels, follows CSS font-style options (i.e. normal, italic, oblique, initial, inherit).
-        /// </summary>
-        public string FontStyle { get; set; }
-
-        /// <summary>
-        /// Reverses order of tick labels.
-        /// </summary>
-        public bool? Reverse { get; set; }
-
-        /// <summary>
-        /// Minor ticks configuration. Ommited options are inherited from options above.
-        /// </summary>
-        public MinorTick Minor { get; set; }
-
-        /// <summary>
-        /// Major ticks configuration. Ommited options are inherited from options above.
-        /// </summary>
         public MajorTick Major { get; set; }
+
+        /// <summary>
+        /// Sets the offset of the tick labels from the axis.
+        /// </summary>
+        public int? Padding { get; set; }
+
+        /// <summary>
+        /// If true, draw a background behind the tick labels.
+        /// </summary>
+        public bool? ShowLabelBackdrop { get; set; }
+
+        /// <summary>
+        /// The color of the stroke around the text.
+        /// </summary>
+        public ChartColor TextStrokeColor { get; set; }
+
+        /// <summary>
+        /// Stroke width around the text.
+        /// </summary>
+        public int? TextStrokeWidth { get; set; }
+
+        /// <summary>
+        /// z-index of tick layer. Useful when ticks are drawn on chart area. Values <= 0 are drawn under datasets, > 0 on top.
+        /// </summary>
+        public string Z { get; set; }
     }
 }

@@ -7,11 +7,6 @@
         /// </summary>
         public string Distribution { get; set; }
 
-        /// <summary>
-        /// Determines the scale bounds.
-        /// </summary>
-        public string Bounds { get; set; }
-
         public Time Time { get; set; }
     }
 }

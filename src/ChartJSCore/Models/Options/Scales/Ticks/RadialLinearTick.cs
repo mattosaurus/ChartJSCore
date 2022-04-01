@@ -6,27 +6,15 @@ namespace ChartJSCore.Models
     public class RadialLinearTick : RadialTick
     {
         /// <summary>
-        /// Color of label backdrops.
+        /// The number of ticks to generate. If specified, this overrides the automatic generation.
         /// </summary>
-        public ChartColor BackdropColor { get; set; }
-
-        [JsonConverter(typeof(PaddingConverter))]
-        public Padding BackdropPadding { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
-        /// If true, scale will include 0 if it is not already included.
+        /// The Intl.NumberFormat options used by the default label formatter.
         /// </summary>
-        public bool? BeginAtZero { get; set; }
-
-        /// <summary>
-        /// User defined minimum number for the scale, overrides minimum value from data.
-        /// </summary>
-        public double? Min { get; set; }
-
-        /// <summary>
-        /// User defined maximum number for the scale, overrides maximum value from data.
-        /// </summary>
-        public double? Max { get; set; }
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string Format { get; set; }
 
         /// <summary>
         /// Maximum number of ticks and gridlines to show.
@@ -34,23 +22,13 @@ namespace ChartJSCore.Models
         public int? MaxTicksLimit { get; set; }
 
         /// <summary>
+        /// If defined and stepSize is not specified, the step size will be rounded to this many decimal places.
+        /// </summary>
+        public int? Precision { get; set; }
+
+        /// <summary>
         /// User defined fixed step size for the scale.
         /// </summary>
-        public double? StepSize { get; set; }
-
-        /// <summary>
-        /// Adjustment used when calculating the maximum data value.
-        /// </summary>
-        public double? SuggestedMax { get; set; }
-
-        /// <summary>
-        /// Adjustment used when calculating the minimum data value.
-        /// </summary>
-        public double? SuggestedMin { get; set; }
-
-        /// <summary>
-        /// If true, draw a background behind the tick labels.
-        /// </summary>
-        public bool? ShowLabelBackdrop { get; set; }
+        public int? StepSize { get; set; }
     }
 }

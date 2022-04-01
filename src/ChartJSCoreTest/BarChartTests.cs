@@ -78,7 +78,7 @@ namespace ChartJSCoreTest
             var scales = new Dictionary<string, Scale>
             {
                 {
-                    "x", new BarScale
+                    "x", new Scale
                     {
                         Grid = new Grid()
                         {
@@ -87,12 +87,9 @@ namespace ChartJSCoreTest
                     }
                 },
                 {
-                    "y", new CartesianScale
+                    "y", new CartesianLinearScale
                     {
-                        Ticks = new CartesianLinearTick
-                        {
-                            BeginAtZero = true
-                        }
+                        BeginAtZero = true
                     }
                 }
             };

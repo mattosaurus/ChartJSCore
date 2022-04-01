@@ -1,40 +1,30 @@
-﻿namespace ChartJSCore.Models
+﻿using ChartJSCore.Helpers;
+using Newtonsoft.Json;
+
+namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/3.7.1/axes/cartesian/linear.html#linear-axis-specific-tick-options
     public class CartesianLinearTick : CartesianTick
     {
         /// <summary>
-        /// If true, scale will include 0 if it is not already included.
+        /// The number of ticks to generate. If specified, this overrides the automatic generation.
         /// </summary>
-        public bool? BeginAtZero { get; set; }
+        public int? Count { get; set; }
 
         /// <summary>
-        /// User defined minimum number for the scale, overrides minimum value from data.
+        /// The Intl.NumberFormat options used by the default label formatter.
         /// </summary>
-        public double? Min { get; set; }
+        [JsonConverter(typeof(PlainJsonStringConverter))]
+        public string Format { get; set; }
 
         /// <summary>
-        /// User defined maximum number for the scale, overrides maximum value from data
+        /// If defined and stepSize is not specified, the step size will be rounded to this many decimal places.
         /// </summary>
-        public double? Max { get; set; }
+        public int? Precision { get; set; }
 
         /// <summary>
-        /// Maximum number of ticks and gridlines to show.
-        /// </summary>
-        public int? MaxTicksLimit { get; set; }
-
-        /// <summary>
-        /// User defined fixed step size for the scale.
+        /// User-defined fixed step size for the scale.
         /// </summary>
         public double? StepSize { get; set; }
-
-        /// <summary>
-        /// Adjustment used when calculating the maximum data value
-        /// </summary>
-        public double? SuggestedMax { get; set; }
-
-        /// <summary>
-        /// Adjustment used when calculating the minimum data value.
-        /// </summary>
-        public double? SuggestedMin { get; set; }
     }
 }

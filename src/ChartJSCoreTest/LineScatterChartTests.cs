@@ -59,14 +59,11 @@ namespace ChartJSCoreTest
             var scales = new Dictionary<string, Scale>
             {
                 {
-                    "x", new CartesianScale
+                    "x", new CartesianLinearScale
                     {
                         Type = "linear",
                         Position = "bottom",
-                        Ticks = new CartesianLinearTick
-                        {
-                            BeginAtZero = true
-                        }
+                        BeginAtZero = true
                     }
                 }
             };
