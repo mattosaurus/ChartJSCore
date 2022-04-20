@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29001.49
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore", "src\ChartJSCore\ChartJSCore.csproj", "{BAA468D9-4C99-4191-A03B-7E1BA0262A28}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCoreTest", "src\ChartJSCoreTest\ChartJSCoreTest.csproj", "{25C5F598-6616-46F1-A6BD-DA4B870B50A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJSCore.Tests", "ChartJSCore.Tests\ChartJSCore.Tests.csproj", "{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJSCore.Demo", "ChartJSCore.Demo\ChartJSCore.Demo.csproj", "{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,22 @@ Global
 		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|x64.ActiveCfg = Release|Any CPU
 		{25C5F598-6616-46F1-A6BD-DA4B870B50A8}.Release|x64.Build.0 = Release|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Debug|x64.Build.0 = Debug|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Release|x64.ActiveCfg = Release|Any CPU
+		{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}.Release|x64.Build.0 = Release|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Debug|x64.Build.0 = Debug|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|x64.ActiveCfg = Release|Any CPU
+		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
