@@ -1,6 +1,8 @@
-﻿using ChartJSCore.Helpers;
+﻿using System;
+using ChartJSCore.Helpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
 
 namespace ChartJSCore.Models
 {
@@ -21,7 +23,7 @@ namespace ChartJSCore.Models
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.ContractResolver = new CamelcaseContractResolver();
             settings.NullValueHandling = NullValueHandling.Ignore;
-            settings.Converters.Add(new StringEnumConverter(true));
+            settings.Converters.Add(new StringEnumConverter(new CamelCaseNamingStrategy()));
 
             string json = JsonConvert.SerializeObject(this, settings);
 
@@ -30,14 +32,14 @@ namespace ChartJSCore.Models
 
         public string CreateChartCode(string canvasId)
         {
-            string code = $"var {canvasId}Element = document.getElementById(\"{canvasId}\");\r\n";
+            string code = $"var {canvasId}Element = document.getElementById(\"{canvasId}\");{Environment.NewLine}";
             code += $"var {canvasId} = new Chart({canvasId}Element, ";
 
             // keys need to be camel case to match data contract so use custom serializer to alter
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.ContractResolver = new CamelcaseContractResolver();
             settings.NullValueHandling = NullValueHandling.Ignore;
-            settings.Converters.Add(new StringEnumConverter(true));
+            settings.Converters.Add(new StringEnumConverter(new CamelCaseNamingStrategy()));
 
             string json = JsonConvert.SerializeObject(this, settings);
 
