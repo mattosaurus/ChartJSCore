@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore", "src\ChartJSC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCoreTest", "src\ChartJSCoreTest\ChartJSCoreTest.csproj", "{25C5F598-6616-46F1-A6BD-DA4B870B50A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJSCore.Tests", "ChartJSCore.Tests\ChartJSCore.Tests.csproj", "{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore.Tests", "ChartJSCore.Tests\ChartJSCore.Tests.csproj", "{A0B79EDE-124B-44BE-A5B9-79A3C85B31B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartJSCore.Demo", "ChartJSCore.Demo\ChartJSCore.Demo.csproj", "{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore.Demo", "ChartJSCore.Demo\ChartJSCore.Demo.csproj", "{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D573DD7C-56A6-45AB-82C9-20968B6963F1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
