@@ -6,6 +6,10 @@
         /// Boolean to enable zooming.
         /// </summary>
         public bool? Enabled { get; set; }
+        
+        public Wheel Wheel { get; set; }
+
+        public Pinch Pinch { get; set; }
 
         /// <summary>
         /// Enable drag-to-zoom behavior.
