@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Plugins.Zoom
+﻿using System;
+
+namespace ChartJSCore.Plugins.Zoom
 {
     /// <summary>
     /// Requires Zoom and Pan plugin.
@@ -6,6 +8,7 @@
     /// </summary>
     public class ZoomOptions : Models.Options
     {
+        [Obsolete("Use Zoom.Pan")]
         public Pan Pan { get; set; }
 
         public Zoom Zoom { get; set; }

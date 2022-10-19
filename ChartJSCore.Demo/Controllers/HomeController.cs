@@ -315,6 +315,11 @@ namespace ChartJSCore.Demo.Controllers
                     Pinch = new Pinch
                     {
                         Enabled = true
+                    },
+                    Drag = new Drag
+                    {
+                        Enabled = true,
+                        ModifierKey = Enums.ModifierKey.alt
                     }
                 },
                 Pan = new Pan

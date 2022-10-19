@@ -1,4 +1,6 @@
-﻿namespace ChartJSCore.Models
+﻿using Newtonsoft.Json;
+
+namespace ChartJSCore.Models
 {
     public static class Enums
     {
@@ -48,6 +50,14 @@
             EaseInBounce,
             EaseOutBounce,
             EaseInOutBounce
+        }
+
+        public enum ModifierKey
+        {
+            ctrl,
+            alt,
+            shift,
+            meta
         }
     }
 }
