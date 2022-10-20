@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>A .NET Core library for generating Chart.js code.</Description>
     <AssemblyTitle>ChartJSCore</AssemblyTitle>
-    <VersionPrefix>3.3.0</VersionPrefix>
+    <VersionPrefix>3.9.0</VersionPrefix>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>ChartJSCore</AssemblyName>
     <PackageId>ChartJSCore</PackageId>
@@ -18,8 +18,8 @@
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
     <AssemblyVersion>3.0.0</AssemblyVersion>
-    <FileVersion>3.3.0</FileVersion>
-    <PackageReleaseNotes>Version 3.3.0 - Add vertical bar data points</PackageReleaseNotes>
+    <FileVersion>3.9.0</FileVersion>
+    <PackageReleaseNotes>Version 3.9.0 - Support zoom plugin and Chart.js 3.9</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
     <PackOnBuild>true</PackOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
