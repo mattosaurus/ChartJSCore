@@ -11,7 +11,7 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>3.3.0</Version>
+    <Version>3.9.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>

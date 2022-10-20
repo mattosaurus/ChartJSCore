@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\ChartJSCore\ChartJSCore.csproj" />
+    <ProjectReference Include="..\ChartJSCore\ChartJSCore.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties wwwroot_4lib_4bootstrap_4dist_4css_4bootstrap-grid_1rtl_1css_1map__JsonSchema="" /></VisualStudio></ProjectExtensions>
