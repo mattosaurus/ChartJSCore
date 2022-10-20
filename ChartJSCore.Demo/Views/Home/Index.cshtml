@@ -5,7 +5,7 @@
 
     Chart verticalBarChart = (Chart)ViewData["VerticalBarChart"];
     Chart horizontalBarChart = (Chart)ViewData["HorizontalBarChart"];
-    //Chart lineChart = (Chart)ViewData["LineChart"];
+    Chart lineChart = (Chart)ViewData["LineChart"];
     //Chart lineScatterChart = (Chart)ViewData["LineScatterChart"];
     //Chart radarChart = (Chart)ViewData["RadarChart"];
     //Chart polarChart = (Chart)ViewData["PolarChart"];
@@ -15,7 +15,9 @@
 }
 
 @section Head {
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/1.2.1/chartjs-plugin-zoom.min.js" integrity="sha512-klQv6lz2YR+MecyFYMFRuU2eAl8IPRo6zHnsc9n142TJuJHS8CG0ix4Oq9na9ceeg1u5EkBfZsFcV3U7J51iew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 }
 
 <h2>Charts</h2>
@@ -40,13 +42,14 @@
             <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
         </div>
     </div>
-@*    <div class="card col-md-6">
+    <div class="card col-md-6">
         <div class="card-body">
-            <h5 class="card-title">Line Chart</h5>
+            <h5 class="card-title">Line Chart with Zoom</h5>
             <canvas id="lineChart"></canvas>
             <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
         </div>
-    </div>*@
+        <div>Use alt-click for drag-to-zoom</div>
+    </div>
 </div>
 @*<div class="row">
     <div class="col">
@@ -118,17 +121,16 @@
 </div>
 
 @section Scripts {
-    <script src="~/vendor/chart.js/Chart.js"></script>
     <script type="text/javascript">
         @Html.Raw(verticalBarChart.CreateChartCode("verticalBarChart"));
     </script>
     <script type="text/javascript">
         @Html.Raw(horizontalBarChart.CreateChartCode("horizontalBarChart"));
     </script>
-    @*<script type="text/javascript">
+    <script type="text/javascript">
         @Html.Raw(lineChart.CreateChartCode("lineChart"));
     </script>
-    <script type="text/javascript">
+    @*<script type="text/javascript">
         @Html.Raw(lineScatterChart.CreateChartCode("lineScatterChart"));
     </script>
     <script type="text/javascript">

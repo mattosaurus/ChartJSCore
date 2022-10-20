@@ -3,6 +3,7 @@ using ChartJSCore.Helpers;
 using ChartJSCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using ChartJSCore.Plugins.Zoom;
 
 namespace ChartJSCore.Demo.Controllers
 {
@@ -19,7 +20,7 @@ namespace ChartJSCore.Demo.Controllers
         {
             Chart verticalBarChart = GenerateVerticalBarChart();
             Chart horizontalBarChart = GenerateHorizontalBarChart();
-            //Chart lineChart = GenerateLineChart();
+            Chart lineChart = GenerateLineChart();
             //Chart lineScatterChart = GenerateLineScatterChart();
             //Chart radarChart = GenerateRadarChart();
             //Chart polarChart = GeneratePolarChart();
@@ -28,7 +29,7 @@ namespace ChartJSCore.Demo.Controllers
 
             ViewData["VerticalBarChart"] = verticalBarChart;
             ViewData["HorizontalBarChart"] = horizontalBarChart;
-            //ViewData["LineChart"] = lineChart;
+            ViewData["LineChart"] = lineChart;
             //ViewData["LineScatterChart"] = lineScatterChart;
             //ViewData["RadarChart"] = radarChart;
             //ViewData["PolarChart"] = polarChart;
@@ -256,73 +257,85 @@ namespace ChartJSCore.Demo.Controllers
             return chart;
         }
 
-        //private static Chart GenerateLineChart()
-        //{
-        //    Chart chart = new Chart();
-        //    chart.Type = Enums.ChartType.Line;
+        private static Chart GenerateLineChart()
+        {
+            Chart chart = new Chart();
 
-        //    Data data = new Data();
-        //    data.Labels = new List<string>() { "January", "February", "March", "April", "May", "June", "July" };
+            chart.Type = Enums.ChartType.Line;
+            chart.Options.Scales = new Dictionary<string, Scale>();
+            Scale scale = new Scale();
+            scale.Display = false;
+            chart.Options.Scales.Add("xAxes", scale);
 
-        //    LineDataset dataset = new LineDataset()
-        //    {
-        //        Label = "My First dataset",
-        //        Data = new List<double>() { 65, 59, 80, 81, 56, 55, 40 },
-        //        Fill = "false",
-        //        LineTension = 0.1,
-        //        BackgroundColor = ChartColor.FromRgba(75, 192, 192, 0.4),
-        //        BorderColor = ChartColor.FromRgba(75, 192, 192, 1),
-        //        BorderCapStyle = "butt",
-        //        BorderDash = new List<int> { },
-        //        BorderDashOffset = 0.0,
-        //        BorderJoinStyle = "miter",
-        //        PointBorderColor = new List<ChartColor>() { ChartColor.FromRgba(75, 192, 192, 1) },
-        //        PointBackgroundColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
-        //        PointBorderWidth = new List<int> { 1 },
-        //        PointHoverRadius = new List<int> { 5 },
-        //        PointHoverBackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(75, 192, 192, 1) },
-        //        PointHoverBorderColor = new List<ChartColor>() { ChartColor.FromRgba(220, 220, 220, 1) },
-        //        PointHoverBorderWidth = new List<int> { 2 },
-        //        PointRadius = new List<int> { 1 },
-        //        PointHitRadius = new List<int> { 10 },
-        //        SpanGaps = false
-        //    };
 
-        //    data.Datasets = new List<Dataset>();
-        //    data.Datasets.Add(dataset);
+            Data data = new Data
+            {
+                Labels = new List<string> { "January", "February", "March", "April", "May", "June", "July" }
+            };
 
-        //    Options options = new Options()
-        //    {
-        //        Scales = new Scales()
-        //    };
+            LineDataset dataset = new LineDataset()
+            {
+                Label = "My First dataset",
+                Data = new List<double?> { 65, 59, 80, 81, 56, 55, 40 },
+                Fill = "false",
+                Tension = .01,
+                BackgroundColor = new List<ChartColor> {ChartColor.FromRgba(75, 192, 192, 0.4)},
+                BorderColor = new List<ChartColor> {ChartColor.FromRgb(75, 192, 192)},
+                BorderCapStyle = "butt",
+                BorderDash = new List<int>(),
+                BorderDashOffset = 0.0,
+                BorderJoinStyle = "miter",
+                PointBorderColor = new List<ChartColor> { ChartColor.FromRgb(75, 192, 192) },
+                PointBackgroundColor = new List<ChartColor> { ChartColor.FromHexString("#ffffff") },
+                PointBorderWidth = new List<int> { 1 },
+                PointHoverRadius = new List<int> { 5 },
+                PointHoverBackgroundColor = new List<ChartColor> { ChartColor.FromRgb(75, 192, 192) },
+                PointHoverBorderColor = new List<ChartColor> { ChartColor.FromRgb(220, 220, 220) },
+                PointHoverBorderWidth = new List<int> { 2 },
+                PointRadius = new List<int> { 1 },
+                PointHitRadius = new List<int> { 10 },
+                SpanGaps = false
+            };
 
-        //    Scales scales = new Scales()
-        //    {
-        //        YAxes = new List<Scale>()
-        //        {
-        //            new CartesianScale()
-        //        }
-        //    };
+            data.Datasets = new List<Dataset>
+            {
+                dataset
+            };
 
-        //    CartesianScale yAxes = new CartesianScale()
-        //    {
-        //        Ticks = new Tick()
-        //    };
+            chart.Data = data;
 
-        //    Tick tick = new Tick()
-        //    {
-        //        Callback = "function(value, index, values) {return '$' + value;}"
-        //    };
+            ZoomOptions zoomOptions = new ZoomOptions
+            {
+                Zoom = new Zoom
+                {
+                    Wheel = new Wheel
+                    {
+                        Enabled = true
+                    },
+                    Pinch = new Pinch
+                    {
+                        Enabled = true
+                    },
+                    Drag = new Drag
+                    {
+                        Enabled = true,
+                        ModifierKey = Enums.ModifierKey.alt
+                    }
+                },
+                Pan = new Pan
+                {
+                    Enabled = true,
+                    Mode = "xy"
+                }
+            };
 
-        //    yAxes.Ticks = tick;
-        //    scales.YAxes = new List<Scale>() { yAxes };
-        //    options.Scales = scales;
-        //    chart.Options = options;
-
-        //    chart.Data = data;
-
-        //    return chart;
-        //}
+            chart.Options.Plugins = new ChartJSCore.Models.Plugins
+            {
+                PluginDynamic = new Dictionary<string, object> { { "zoom", zoomOptions } }
+            };
+            
+            return chart;
+        }
 
         //private static Chart GenerateLineScatterChart()
         //{
