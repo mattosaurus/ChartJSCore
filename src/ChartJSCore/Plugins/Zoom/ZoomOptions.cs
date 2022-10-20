@@ -8,7 +8,6 @@ namespace ChartJSCore.Plugins.Zoom
     /// </summary>
     public class ZoomOptions : Models.Options
     {
-        [Obsolete("Use Zoom.Pan")]
         public Pan Pan { get; set; }
 
         public Zoom Zoom { get; set; }
