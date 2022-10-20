@@ -21,7 +21,7 @@ namespace ChartJSCore.Demo.Controllers
             Chart verticalBarChart = GenerateVerticalBarChart();
             Chart horizontalBarChart = GenerateHorizontalBarChart();
             Chart lineChart = GenerateLineChart();
-            //Chart lineScatterChart = GenerateLineScatterChart();
+            Chart lineScatterChart = GenerateLineScatterChart();
             //Chart radarChart = GenerateRadarChart();
             //Chart polarChart = GeneratePolarChart();
             //Chart pieChart = GeneratePieChart();
@@ -30,7 +30,7 @@ namespace ChartJSCore.Demo.Controllers
             ViewData["VerticalBarChart"] = verticalBarChart;
             ViewData["HorizontalBarChart"] = horizontalBarChart;
             ViewData["LineChart"] = lineChart;
-            //ViewData["LineScatterChart"] = lineScatterChart;
+            ViewData["LineScatterChart"] = lineScatterChart;
             //ViewData["RadarChart"] = radarChart;
             //ViewData["PolarChart"] = polarChart;
             //ViewData["PieChart"] = pieChart;
@@ -263,9 +263,14 @@ namespace ChartJSCore.Demo.Controllers
 
             chart.Type = Enums.ChartType.Line;
             chart.Options.Scales = new Dictionary<string, Scale>();
-            Scale scale = new Scale();
-            scale.Display = false;
-            chart.Options.Scales.Add("xAxes", scale);
+            CartesianScale xAxis = new CartesianScale();
+            xAxis.Display = true;
+            xAxis.Title = new Title
+            {
+                Text = new List<string> {"Month"},
+                Display = true
+            };
+            chart.Options.Scales.Add("x", xAxis);
 
 
             Data data = new Data
@@ -277,7 +282,7 @@ namespace ChartJSCore.Demo.Controllers
             {
                 Label = "My First dataset",
                 Data = new List<double?> { 65, 59, 80, 81, 56, 55, 40 },
-                Fill = "false",
+                Fill = "true",
                 Tension = .01,
                 BackgroundColor = new List<ChartColor> {ChartColor.FromRgba(75, 192, 192, 0.4)},
                 BorderColor = new List<ChartColor> {ChartColor.FromRgb(75, 192, 192)},
@@ -333,71 +338,82 @@ namespace ChartJSCore.Demo.Controllers
             {
                 PluginDynamic = new Dictionary<string, object> { { "zoom", zoomOptions } }
             };
-            
+
             return chart;
         }
 
-        //private static Chart GenerateLineScatterChart()
-        //{
-        //    Chart chart = new Chart();
-        //    chart.Type = Enums.ChartType.Line;
+        private static Chart GenerateLineScatterChart()
+        {
+            Chart chart = new Chart();
+            chart.Type = Enums.ChartType.Scatter;
 
-        //    Data data = new Data();
+            Data data = new Data();
 
-        //    LineScatterDataset dataset = new LineScatterDataset()
-        //    {
-        //        Label = "Scatter Dataset",
-        //        Data = new List<LineScatterData>()
-        //    };
+            LineScatterDataset dataset = new LineScatterDataset()
+            {
+                Label = "Scatter Dataset",
+                Data = new List<LineScatterData>()
+            };
 
-        //    LineScatterData scatterData1 = new LineScatterData();
-        //    LineScatterData scatterData2 = new LineScatterData();
-        //    LineScatterData scatterData3 = new LineScatterData();
+            LineScatterData scatterData1 = new LineScatterData();
+            LineScatterData scatterData2 = new LineScatterData();
+            LineScatterData scatterData3 = new LineScatterData();
 
-        //    scatterData1.X = "-10";
-        //    scatterData1.Y = "0";
-        //    dataset.Data.Add(scatterData1);
+            scatterData1.X = "-10";
+            scatterData1.Y = "0";
+            dataset.Data.Add(scatterData1);
 
-        //    scatterData2.X = "0";
-        //    scatterData2.Y = "10";
-        //    dataset.Data.Add(scatterData2);
+            scatterData2.X = "0";
+            scatterData2.Y = "10";
+            dataset.Data.Add(scatterData2);
 
-        //    scatterData3.X = "10";
-        //    scatterData3.Y = "5";
-        //    dataset.Data.Add(scatterData3);
+            scatterData3.X = "10";
+            scatterData3.Y = "5";
+            dataset.Data.Add(scatterData3);
+            dataset.Type = Enums.ChartType.Scatter;
 
-        //    data.Datasets = new List<Dataset>();
-        //    data.Datasets.Add(dataset);
+            data.Datasets = new List<Dataset>();
+            data.Datasets.Add(dataset);
 
-        //    chart.Data = data;
+            chart.Data = data;
 
-        //    Options options = new Options()
-        //    {
-        //        Scales = new Scales()
-        //    };
+            Options options = new Options()
+            {
+                Scales = new Dictionary<string, Scale>()
+            };
 
-        //    Scales scales = new Scales()
-        //    {
-        //        XAxes = new List<Scale>()
-        //        {
-        //            new CartesianScale()
-        //            {
-        //                Type = "linear",
-        //                Position = "bottom",
-        //                Ticks = new CartesianLinearTick()
-        //                {
-        //                    BeginAtZero = true
-        //                }
-        //            }
-        //        }
-        //    };
+            CartesianLinearScale xAxis = new CartesianLinearScale()
+            {
+                Type = "linear",
+                Grace = "50%"
+            };
+            
+            CartesianLinearScale yAxis = new CartesianLinearScale()
+            {
+                Type = "linear",
+                Grace ="50%"
+            };
+                
+/*            {
+                XAxes = new List<Scale>()
+                {
+                    new CartesianScale()
+                    {
+                        Type = "linear",
+                        Position = "bottom",
+                        Ticks = new CartesianLinearTick()
+                        {
+                            BeginAtZero = true
+                        }
+                    } */
+    
+             options.Scales.Add("x",xAxis);
+             options.Scales.Add("y",yAxis);
+             
+             chart.Options = options;
 
-        //    options.Scales = scales;
-
-        //    chart.Options = options;
-
-        //    return chart;
-        //}
+            return chart;
+        }
 
         //private static Chart GenerateRadarChart()
         //{

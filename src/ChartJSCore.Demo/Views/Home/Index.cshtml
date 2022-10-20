@@ -6,7 +6,7 @@
     Chart verticalBarChart = (Chart)ViewData["VerticalBarChart"];
     Chart horizontalBarChart = (Chart)ViewData["HorizontalBarChart"];
     Chart lineChart = (Chart)ViewData["LineChart"];
-    //Chart lineScatterChart = (Chart)ViewData["LineScatterChart"];
+    Chart lineScatterChart = (Chart)ViewData["LineScatterChart"];
     //Chart radarChart = (Chart)ViewData["RadarChart"];
     //Chart polarChart = (Chart)ViewData["PolarChart"];
     //Chart pieChart = (Chart)ViewData["PieChart"];
@@ -51,7 +51,7 @@
         <div>Use alt-click for drag-to-zoom</div>
     </div>
 </div>
-@*<div class="row">
+<div class="row">
     <div class="col">
         &nbsp;
     </div>
@@ -59,7 +59,7 @@
 <div class="row">
     <div class="card col-md-6">
         <div class="card-body">
-            <h5 class="card-title">Line Scatter Chart</h5>
+            <h5 class="card-title">Scatter Chart</h5>
             <canvas id="lineScatterChart"></canvas>
             <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
         </div>
@@ -72,7 +72,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+@*<div class="row">
     <div class="col">
         &nbsp;
     </div>
@@ -130,10 +130,10 @@
     <script type="text/javascript">
         @Html.Raw(lineChart.CreateChartCode("lineChart"));
     </script>
-    @*<script type="text/javascript">
+    <script type="text/javascript">
         @Html.Raw(lineScatterChart.CreateChartCode("lineScatterChart"));
     </script>
-    <script type="text/javascript">
+   @*< <script type="text/javascript">
         @Html.Raw(radarChart.CreateChartCode("radarChart"));
     </script>
     <script type="text/javascript">
