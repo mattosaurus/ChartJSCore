@@ -1,5 +1,6 @@
 ﻿namespace ChartJSCore.Models
 {
+    // https://www.chartjs.org/docs/latest/axes/cartesian/linear.html
     public class CartesianScale : Scale
     {
         /// <summary>
@@ -35,6 +36,6 @@
         /// <summary>
         /// Scale title configuration.
         /// </summary>
-        public string Title { get; set; }
+        public Title Title { get; set; }
     }
 }

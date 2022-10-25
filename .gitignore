@@ -365,3 +365,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.idea/.idea.ChartJSCore/.idea/indexLayout.xml
+.idea/.idea.ChartJSCore/.idea/projectSettingsUpdater.xml
+.idea/.idea.ChartJSCore/.idea/vcs.xml
