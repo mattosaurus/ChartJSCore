@@ -28,6 +28,8 @@ using ChartJSCore.Models;
 
 This produces code for generating chart using Chart.js so Chart.js is required to render them, Chart.js also uses require.js so this is also needed. To install Chart.js using Bower on Visual Studio it is needed to update the registry in .bowerrc file, because the old heroku repository is deprecated as stated in [here](https://gist.github.com/sheerun/c04d856a7a368bad2896ff0c4958cb00). Otherwise you can download it directly to the project root folder wwwroot\lib\Chart.js.
 
+If you don't feel like using a package manager, Chart.JS can also be linked directly to your page and hosted from [cdnjs](https://cdnjs.com/libraries/Chart.js). 
+
 This package has been created and tested with version 2.4.0 of Chart.js, earlier versions may well be incompatible.
 
 Require.js isn't available in the Bower package manager but can be added by directly updating the bower.json file.
