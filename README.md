@@ -49,7 +49,7 @@ Require.js isn't available in the Bower package manager but can be added by dire
 
 ## Usage
 
-ChartJSCore is a .NET Standard 2.0 libtary, and is compatible with all ASP.NET MVC versions that support .NET Standard 2.0.
+ChartJSCore is a .NET Standard 2.0 library, and is compatible with all ASP.NET MVC versions that support .NET Standard 2.0 libraries.
 
 Once a project has been created a new Chart object can be created by using code similar to that below. In this example the Index method of the Home controller has been updated to generate a Chart and pass it through to the relevant view.
 
@@ -121,6 +121,6 @@ Within the Index view the Chart can then be accessed and rendered.
 
 ## Plugins
 
-ChartJSCore has built in support for the chartjs-plugin-zoom plugin. See the [demo project](https://github.com/mattosaurus/ChartJSCore/tree/master/src/ChartJSCore.Demo) for an example of how to use this.
+ChartJSCore has built in support for the popular **chartjs-plugin-zoom** plugin. See the [demo project](https://github.com/mattosaurus/ChartJSCore/tree/master/src/ChartJSCore.Demo) for an example of how to use this.
 
 As there's a large number of plugins available for Chart.js and it's not feasable to create object representations of them all, I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
