@@ -98,7 +98,7 @@ Once a project has been created a new Chart object can be created by using code 
         }
 ```
 
-See the [test project](https://github.com/mattosaurus/ChartJSCore/tree/master/src/ChartJSCoreTest) for further examples.
+See the [demo project](https://github.com/mattosaurus/ChartJSCore/tree/master/src/ChartJSCore.Demo) for further examples.
 
 Within the Index view the Chart can then be accessed and rendered.
 
@@ -121,4 +121,6 @@ Within the Index view the Chart can then be accessed and rendered.
 
 ## Plugins
 
-ChartJSCore has built in support for the chartjs-plugin-zoom plugin. As there's a large number of plugins available for Chart.js and it's not feasable to create object representations of them all I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
+ChartJSCore has built in support for the chartjs-plugin-zoom plugin. See the [demo project](https://github.com/mattosaurus/ChartJSCore/tree/master/src/ChartJSCore.Demo) for an example of how to use this.
+
+As there's a large number of plugins available for Chart.js and it's not feasable to create object representations of them all, I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
