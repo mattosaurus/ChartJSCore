@@ -30,6 +30,11 @@ namespace ChartJSCore.Models
             return json;
         }
 
+        /// <summary>
+        /// Generates client side code for this <see cref="Chart"/> suitable for inclusion in a script tag.
+        /// </summary>
+        /// <param name="canvasId">ID of HTML canvas tag to hold the chart.</param>
+        /// <returns>JavaScript code snippet.</returns>
         public string CreateChartCode(string canvasId)
         {
             string code = $"var {canvasId}Element = document.getElementById(\"{canvasId}\");{Environment.NewLine}";
