@@ -4,7 +4,7 @@ using ChartJSCore.Models;
 namespace ChartJSCore.Plugins.Zoom
 {
     /// <summary>
-    /// Container for Pan Zoom Options
+    /// Container for Panning Options
     /// </summary>
     public class Pan
     {

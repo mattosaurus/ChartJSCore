@@ -3,7 +3,7 @@ using ChartJSCore.Models;
 namespace ChartJSCore.Plugins.Zoom
 {
     /// <summary>
-    /// Container for Wheel Zoom Options
+    /// Container for mouse wheel Zoom Options
     /// </summary>
     public class Wheel
     {
