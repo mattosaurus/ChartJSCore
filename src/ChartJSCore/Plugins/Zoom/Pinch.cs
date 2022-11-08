@@ -1,7 +1,7 @@
 namespace ChartJSCore.Plugins.Zoom
 {
     /// <summary>
-    /// Container for Pinch zoom options
+    /// Container for Pinch-to-Zoom options
     /// </summary>
     public class Pinch
     {

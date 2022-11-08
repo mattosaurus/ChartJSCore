@@ -14,12 +14,12 @@ namespace ChartJSCore.Plugins.Zoom
         public bool? Enabled { get; set; }
         
         /// <summary>
-        /// Container for Wheel options
+        /// Container for mouse wheel zoom options
         /// </summary>
         public Wheel Wheel { get; set; }
 
         /// <summary>
-        /// Container for Pinch options
+        /// Container for multi-touch pinch-to-zoom options
         /// </summary>
         public Pinch Pinch { get; set; }
 

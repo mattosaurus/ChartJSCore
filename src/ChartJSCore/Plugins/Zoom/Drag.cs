@@ -3,6 +3,12 @@ using ChartJSCore.Models;
 
 namespace ChartJSCore.Plugins.Zoom
 {
+    /// <summary>
+    /// Container for Drag-to-Zoom options
+    /// </summary>
+    /// <remarks>
+    /// Note that <see cref="Pan">panning</see> and Drag-to-Zoom are mutually exclusive. To enable both, you must place a <see cref="ModifierKey"/> on one or both.
+    /// </remarks>
     public class Drag
     {
         /// <summary>

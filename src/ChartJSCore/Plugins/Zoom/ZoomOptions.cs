@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ChartJSCore.Plugins.Zoom
+﻿namespace ChartJSCore.Plugins.Zoom
 {
     /// <summary>
     /// Requires Zoom and Pan plugin.
