@@ -25,5 +25,11 @@ namespace ChartJSCore.Models
         /// The global options for the chart tooltips.
         /// </summary>
         public ToolTip Tooltip { get; set; }
+
+        /// <summary>
+        /// Allow to modify color options used for displaying the datasets.
+        /// The plugin is included in Chart.js by default.
+        /// </summary>
+        public ColorPlugin Colors { get; set; }
     }
 }
