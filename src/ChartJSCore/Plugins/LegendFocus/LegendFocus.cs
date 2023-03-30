@@ -6,6 +6,12 @@ using System.Text;
 namespace ChartJSCore.Plugins.LegenFocus
 {
     /// <summary>
+    /// This plugin toggles the legend behaviour: in chart.js standard, clicking on the legend leads to hiding
+    /// the corresponding dataset.
+    /// 
+    /// However, users often want the oppositive behaviour. By using this plugin, clicking on the legend leads
+    /// to highlighting the corresponding dataset, i.e. hiding all other datasets.
+    /// 
     /// Code was copied from here:
     /// https://stackoverflow.com/questions/42555513/chart-js-change-legend-toggle-behaviour
     /// </summary>
