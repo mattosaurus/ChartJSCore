@@ -134,10 +134,9 @@ Options = new Options()
     {                        
         Colors = new ColorPlugin()
         {
-            Enabled = false
+            Enabled = false // enabled by default
         },
 ```
-(it is enabled by default)
 
 You can also force using the pre-defined color scheme using:
 
@@ -148,10 +147,11 @@ Options = new Options()
     {                        
         Colors = new ColorPlugin()
         {
-            ForceOverride = true
+            ForceOverride = true   // disabled by default
         },
 ```
-(forceOverride is disabled by default)
+
+Generally, the option 'ForceOverride' is the option you want to set for proper coloring of your datasets.
 
 
 As there's a large number of plugins available for Chart.js and it's not feasible to create object representations of them all, I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
