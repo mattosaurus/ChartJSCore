@@ -125,4 +125,33 @@ Within the Index view the Chart can then be accessed and rendered.
 
 ChartJSCore has built-in support for the popular [chartjs-plugin-zoom](https://github.com/chartjs/chartjs-plugin-zoom) plugin. See the [demo project](https://github.com/mattosaurus/ChartJSCore/tree/master/src/ChartJSCore.Demo) for an example of how to use this.
 
+ChartJSCore als has built-in support for the color plugin that comes as part of ChartJS (https://www.chartjs.org/docs/latest/general/colors.html). This plugin is enabled by default within ChartJS and the plug-in allows to disable it using:
+
+```C#
+Options = new Options()
+{
+    Plugins = new Plugins()
+    {                        
+        Colors = new ColorPlugin()
+        {
+            Enabled = false
+        },
+```
+(it is enabled by default)
+
+You can also force using the pre-defined color scheme using:
+
+```C#
+Options = new Options()
+{
+    Plugins = new Plugins()
+    {                        
+        Colors = new ColorPlugin()
+        {
+            ForceOverride = true
+        },
+```
+(forceOverride is disabled by default)
+
+
 As there's a large number of plugins available for Chart.js and it's not feasible to create object representations of them all, I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
