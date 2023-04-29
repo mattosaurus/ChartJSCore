@@ -7,6 +7,7 @@
     Chart horizontalBarChart = (Chart)ViewData["HorizontalBarChart"];
     Chart lineChart = (Chart)ViewData["LineChart"];
     Chart lineScatterChart = (Chart)ViewData["LineScatterChart"];
+    Chart floatingBarChart = (Chart)ViewData["FloatingBarChart"];
     //Chart radarChart = (Chart)ViewData["RadarChart"];
     //Chart polarChart = (Chart)ViewData["PolarChart"];
     //Chart pieChart = (Chart)ViewData["PieChart"];
@@ -72,7 +73,7 @@
         </div>
     </div>
 </div>
-@*<div class="row">
+<div class="row">
     <div class="col">
         &nbsp;
     </div>
@@ -80,8 +81,8 @@
 <div class="row">
     <div class="card col-md-6">
         <div class="card-body">
-            <h5 class="card-title">Polar Chart</h5>
-            <canvas id="polarChart"></canvas>
+            <h5 class="card-title">Floating Bar Chart</h5>
+            <canvas id="floatingBarChart"></canvas>
             <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
         </div>
     </div>
@@ -93,7 +94,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+@*<div class="row">
     <div class="col">
         &nbsp;
     </div>
@@ -132,6 +133,9 @@
     </script>
     <script type="text/javascript">
         @Html.Raw(lineScatterChart.CreateChartCode("lineScatterChart"));
+    </script>
+    <script type="text/javascript">
+        @Html.Raw(floatingBarChart.CreateChartCode("floatingBarChart"));
     </script>
    @*< <script type="text/javascript">
         @Html.Raw(radarChart.CreateChartCode("radarChart"));
