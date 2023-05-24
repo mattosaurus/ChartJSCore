@@ -28,7 +28,7 @@ namespace ChartJSHelper.TagHelpers
                 output.TagName = "script";
                 output.TagMode = TagMode.StartTagAndEndTag;
                 output.Attributes.Clear();
-                output.Content.SetContent(chart.CreateChartCode(Canvas));
+                output.Content.SetHTMLContent(chart.CreateChartCode(Canvas));
             }
             else
             { throw new ArgumentException(); }
