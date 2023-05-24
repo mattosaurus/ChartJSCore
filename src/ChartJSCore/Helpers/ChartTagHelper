@@ -1,0 +1,30 @@
+using ChartJSCore.Models;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+
+namespace ChartJSCore.Helpers
+{
+    [HtmlTargetElement("chart", Attributes = (ForAttributeName + "," + nameof(Canvas)))]
+    public class ChartTagHelper : TagHelper
+    {
+        private const string ForAttributeName = "asp-for";
+
+        [HtmlAttributeName(ForAttributeName)]
+        public ModelExpression For { get; set; } = default!;
+
+        public string Canvas { get; set; } = "";
+
+        public override void Process(TagHelperContext context, TagHelperOutput output)
+        {
+            if (For.Model is Chart chart)
+            {
+                output.TagName = "script";
+                output.TagMode = TagMode.StartTagAndEndTag;
+                output.Attributes.Clear();
+                output.Content.SetContent(chart.CreateChartCode(Canvas));
+            }
+            else
+            { throw new ArgumentException(); }
+        }
+    }
+}
