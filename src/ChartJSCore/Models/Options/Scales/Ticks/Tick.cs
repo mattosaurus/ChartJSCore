@@ -1,5 +1,6 @@
 ﻿using ChartJSCore.Helpers;
 using Newtonsoft.Json;
+using System.Security.Principal;
 
 namespace ChartJSCore.Models
 {
@@ -60,5 +61,17 @@ namespace ChartJSCore.Models
         /// z-index of tick layer. Useful when ticks are drawn on chart area. Values <= 0 are drawn under datasets, > 0 on top.
         /// </summary>
         public string Z { get; set; }
+
+        /// <summary>
+        /// if defined and stepSize is not specified, the step size will be rounded to this many decimal places.
+        /// 
+        /// Might only work with linear axis.
+        /// </summary>
+        public int? Precision { get; set; }
+
+        /// <summary>
+        /// User-defined fixed step size for the scale.
+        /// </summary>
+        public decimal? StepSize { get; set; }
     }
 }
