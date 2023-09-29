@@ -41,6 +41,25 @@
     </div>
 </div>
 <hr />
+<script>
+    // Example of updating chart data
+    setInterval(function () {
+        // Rewrite the current dataset with random numbers
+        console.log("Updating chart data");
+        for (var i = 0; i < lineChart.data.datasets[0].data.length; i++) {
+            lineChart.data.datasets[0].data[i] = Math.floor(Math.random() * 100);
+            barChart.data.datasets[0].data[i] = Math.floor(Math.random() * 100);
+        }
+
+        // Change color of dataset value
+        let randNumbers = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)]
+        lineChart.data.datasets[0].borderColor = "rgba(" + randNumbers[0] + "," + randNumbers[1] + "," + randNumbers[2] + ", 1)";
+        lineChart.data.datasets[0].backgroundColor = "rgba(" + randNumbers[0] + "," + randNumbers[1] + "," + randNumbers[2] + ", 0.2)";
+
+        lineChart.update();
+        barChart.update();
+    }, 1000);
+</script>
 
 @code {
     ChartJSCore.Models.Chart lineChart =            ChartGenerator.GenerateLineChart();
