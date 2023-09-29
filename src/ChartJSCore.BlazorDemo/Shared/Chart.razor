@@ -1,0 +1,22 @@
+@using ChartJSCore.Models;
+@using ChartJSCore.Helpers;
+
+<canvas id="@id"></canvas>
+<script>@chart.CreateChartCode(id);</script>
+
+@code{
+    [Parameter, EditorRequired]
+    public ChartJSCore.Models.Chart? chart { get; set; }
+
+    [Parameter, EditorRequired]
+    public string id { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        if (chart == null) throw new ArgumentNullException(nameof(chart));
+
+        if (string.IsNullOrEmpty(id)) throw new ArgumentNullException(nameof(id));
+    }
+}
