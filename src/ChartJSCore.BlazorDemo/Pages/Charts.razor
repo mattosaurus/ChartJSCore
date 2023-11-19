@@ -1,0 +1,73 @@
+@using ChartJSCore.Helpers;
+@using ChartJSCore.Models;
+@using ChartJSCore.BlazorDemo.Helpers;
+
+@page "/charts"
+
+<h1>Charts</h1>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <h2>Line Chart</h2>
+        <Chart id="lineChart" chart="lineChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Bar Chart</h2>
+        <Chart id="barChart" chart="barChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Horizontal Bar Chart</h2>
+        <Chart id="horizontalBarChart" chart="horizontalBarChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Scatter Chart</h2>
+        <Chart id="scatterChart" chart="scatterChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Radar Chart</h2>
+        <Chart id="radarChart" chart="radarChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Polar Chart</h2>
+        <Chart id="polarChart" chart="polarChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Pie Chart</h2>
+        <Chart id="pieChart" chart="pieChart" />
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2>Doughnut Chart</h2>
+        <Chart id="doughnutChart" chart="doughnutChart" />
+    </div>
+</div>
+<hr />
+<script>
+    // Example of updating chart data
+    setInterval(function () {
+        // Rewrite the current dataset with random numbers
+        console.log("Updating chart data");
+        for (var i = 0; i < lineChart.data.datasets[0].data.length; i++) {
+            lineChart.data.datasets[0].data[i] = Math.floor(Math.random() * 100);
+            barChart.data.datasets[0].data[i] = Math.floor(Math.random() * 100);
+        }
+
+        // Change color of dataset value
+        let randNumbers = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)]
+        lineChart.data.datasets[0].borderColor = "rgba(" + randNumbers[0] + "," + randNumbers[1] + "," + randNumbers[2] + ", 1)";
+        lineChart.data.datasets[0].backgroundColor = "rgba(" + randNumbers[0] + "," + randNumbers[1] + "," + randNumbers[2] + ", 0.2)";
+
+        lineChart.update();
+        barChart.update();
+    }, 1000);
+</script>
+
+@code {
+    ChartJSCore.Models.Chart lineChart =            ChartGenerator.GenerateLineChart();
+    ChartJSCore.Models.Chart barChart =             ChartGenerator.GenerateVerticalBarChart();
+    ChartJSCore.Models.Chart radarChart =           ChartGenerator.GenerateRadarChart();
+    ChartJSCore.Models.Chart polarChart =           ChartGenerator.GeneratePolarChart();
+    ChartJSCore.Models.Chart pieChart =             ChartGenerator.GeneratePieChart();
+    ChartJSCore.Models.Chart horizontalBarChart =   ChartGenerator.GenerateHorizontalBarChart();
+    ChartJSCore.Models.Chart scatterChart =         ChartGenerator.GenerateLineScatterChart();
+    ChartJSCore.Models.Chart doughnutChart =        ChartGenerator.GenerateNestedDoughnutChart();
+}

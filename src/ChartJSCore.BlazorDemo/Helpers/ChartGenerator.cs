@@ -1,61 +1,17 @@
-﻿using ChartJSCore.Demo.Models;
-using ChartJSCore.Helpers;
+﻿using ChartJSCore.Helpers;
 using ChartJSCore.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 using ChartJSCore.Plugins.Zoom;
 
-namespace ChartJSCore.Demo.Controllers
+namespace ChartJSCore.BlazorDemo.Helpers
 {
-    public class HomeController : Controller
+    public static class ChartGenerator
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            Chart verticalBarChart = GenerateVerticalBarChart();
-            Chart horizontalBarChart = GenerateHorizontalBarChart();
-            Chart lineChart = GenerateLineChart();
-            Chart lineScatterChart = GenerateLineScatterChart();
-            Chart radarChart = GenerateRadarChart();
-            Chart polarChart = GeneratePolarChart();
-            Chart pieChart = GeneratePieChart();
-            Chart nestedDoughnutChart = GenerateNestedDoughnutChart();
-
-            ViewData["VerticalBarChart"] = verticalBarChart;
-            ViewData["HorizontalBarChart"] = horizontalBarChart;
-            ViewData["LineChart"] = lineChart;
-            ViewData["LineScatterChart"] = lineScatterChart;
-            ViewData["RadarChart"] = radarChart;
-            ViewData["PolarChart"] = polarChart;
-            ViewData["PieChart"] = pieChart;
-            ViewData["NestedDoughnutChart"] = nestedDoughnutChart;
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        private static Chart GenerateVerticalBarChart()
+        public static Chart GenerateVerticalBarChart()
         {
             Chart chart = new Chart();
             chart.Type = Enums.ChartType.Bar;
 
-            Data data = new Data();
+            Models.Data data = new Models.Data();
             data.Labels = new List<string>() { "Red", "Blue", "Yellow", "Green", "Purple", "Orange" };
 
             BarDataset dataset = new BarDataset()
@@ -129,12 +85,12 @@ namespace ChartJSCore.Demo.Controllers
             return chart;
         }
 
-        private static Chart GenerateHorizontalBarChart()
+        public static Chart GenerateHorizontalBarChart()
         {
             Chart chart = new Chart();
             chart.Type = Enums.ChartType.Bar;
 
-            chart.Data = new Data()
+            chart.Data = new Models.Data()
             {
                 Datasets = new List<Dataset>()
                 {
@@ -257,7 +213,7 @@ namespace ChartJSCore.Demo.Controllers
             return chart;
         }
 
-        private static Chart GenerateLineChart()
+        public static Chart GenerateLineChart()
         {
             Chart chart = new Chart();
 
@@ -267,13 +223,13 @@ namespace ChartJSCore.Demo.Controllers
             xAxis.Display = true;
             xAxis.Title = new Title
             {
-                Text = new List<string> {"Month"},
+                Text = new List<string> { "Month" },
                 Display = true
             };
             chart.Options.Scales.Add("x", xAxis);
 
 
-            Data data = new Data
+            Models.Data data = new Models.Data
             {
                 Labels = new List<string> { "January", "February", "March", "April", "May", "June", "July" }
             };
@@ -284,8 +240,8 @@ namespace ChartJSCore.Demo.Controllers
                 Data = new List<double?> { 65, 59, 100, 81, 56, 55, 40 },
                 Fill = "true",
                 Tension = .01,
-                BackgroundColor = new List<ChartColor> {ChartColor.FromRgba(75, 192, 192, 0.4)},
-                BorderColor = new List<ChartColor> {ChartColor.FromRgb(75, 192, 192)},
+                BackgroundColor = new List<ChartColor> { ChartColor.FromRgba(75, 192, 192, 0.4) },
+                BorderColor = new List<ChartColor> { ChartColor.FromRgb(75, 192, 192) },
                 BorderCapStyle = "butt",
                 BorderDash = new List<int>(),
                 BorderDashOffset = 0.0,
@@ -342,12 +298,12 @@ namespace ChartJSCore.Demo.Controllers
             return chart;
         }
 
-        private static Chart GenerateLineScatterChart()
+        public static Chart GenerateLineScatterChart()
         {
             Chart chart = new Chart();
             chart.Type = Enums.ChartType.Scatter;
 
-            Data data = new Data();
+            Models.Data data = new Models.Data();
 
             LineScatterDataset dataset = new LineScatterDataset()
             {
@@ -387,143 +343,143 @@ namespace ChartJSCore.Demo.Controllers
                 Type = "linear",
                 Grace = "50%"
             };
-            
+
             CartesianLinearScale yAxis = new CartesianLinearScale()
             {
                 Type = "linear",
-                Grace ="50%"
+                Grace = "50%"
             };
-                
-/*            {
-                XAxes = new List<Scale>()
-                {
-                    new CartesianScale()
-                    {
-                        Type = "linear",
-                        Position = "bottom",
-                        Ticks = new CartesianLinearTick()
-                        {
-                            BeginAtZero = true
-                        }
-                    } */
-    
-             options.Scales.Add("x",xAxis);
-             options.Scales.Add("y",yAxis);
-             
-             chart.Options = options;
+
+            /*            {
+                            XAxes = new List<Scale>()
+                            {
+                                new CartesianScale()
+                                {
+                                    Type = "linear",
+                                    Position = "bottom",
+                                    Ticks = new CartesianLinearTick()
+                                    {
+                                        BeginAtZero = true
+                                    }
+                                } */
+
+            options.Scales.Add("x", xAxis);
+            options.Scales.Add("y", yAxis);
+
+            chart.Options = options;
 
             return chart;
         }
 
-        private static Chart GenerateRadarChart()
+        public static Chart GenerateRadarChart()
         {
-           Chart chart = new Chart();
-           chart.Type = Enums.ChartType.Radar;
+            Chart chart = new Chart();
+            chart.Type = Enums.ChartType.Radar;
 
-           Data data = new Data();
-           data.Labels = new List<string>() { "Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running" };
+            Models.Data data = new Models.Data();
+            data.Labels = new List<string>() { "Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running" };
 
-           RadarDataset dataset1 = new RadarDataset()
-           {
-               Label = "My First dataset",
-               BackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 0.2) },
-               BorderColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 1) },
-               PointBackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 1) },
-               PointBorderColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
-               PointHoverBackgroundColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
-               PointHoverBorderColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 1) },
-               Data = new List<double?>() { 65, 59, 80, 81, 56, 55, 40 }
-           };
+            RadarDataset dataset1 = new RadarDataset()
+            {
+                Label = "My First dataset",
+                BackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 0.2) },
+                BorderColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 1) },
+                PointBackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 1) },
+                PointBorderColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
+                PointHoverBackgroundColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
+                PointHoverBorderColor = new List<ChartColor>() { ChartColor.FromRgba(179, 181, 198, 1) },
+                Data = new List<double?>() { 65, 59, 80, 81, 56, 55, 40 }
+            };
 
-           RadarDataset dataset2 = new RadarDataset()
-           {
-               Label = "My Second dataset",
-               BackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 0.2) },
-               BorderColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 1) },
-               PointBackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 1) },
-               PointBorderColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
-               PointHoverBackgroundColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
-               PointHoverBorderColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 1) },
-               Data = new List<double?>() { 28, 48, 40, 19, 96, 27, 100 }
-           };
+            RadarDataset dataset2 = new RadarDataset()
+            {
+                Label = "My Second dataset",
+                BackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 0.2) },
+                BorderColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 1) },
+                PointBackgroundColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 1) },
+                PointBorderColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
+                PointHoverBackgroundColor = new List<ChartColor>() { ChartColor.FromHexString("#fff") },
+                PointHoverBorderColor = new List<ChartColor>() { ChartColor.FromRgba(255, 99, 132, 1) },
+                Data = new List<double?>() { 28, 48, 40, 19, 96, 27, 100 }
+            };
 
-           data.Datasets = new List<Dataset>();
-           data.Datasets.Add(dataset1);
-           data.Datasets.Add(dataset2);
+            data.Datasets = new List<Dataset>();
+            data.Datasets.Add(dataset1);
+            data.Datasets.Add(dataset2);
 
-           chart.Data = data;
+            chart.Data = data;
 
-           return chart;
+            return chart;
         }
 
-        private static Chart GeneratePolarChart()
+        public static Chart GeneratePolarChart()
         {
-           Chart chart = new Chart();
-           chart.Type = Enums.ChartType.PolarArea;
+            Chart chart = new Chart();
+            chart.Type = Enums.ChartType.PolarArea;
 
-           Data data = new Data();
-           data.Labels = new List<string>() { "Red", "Green", "Yellow", "Grey", "Blue" };
+            Models.Data data = new Models.Data();
+            data.Labels = new List<string>() { "Red", "Green", "Yellow", "Grey", "Blue" };
 
-           PolarDataset dataset = new PolarDataset()
-           {
-               Label = "My dataset",
-               BackgroundColor = new List<ChartColor>() {
+            PolarDataset dataset = new PolarDataset()
+            {
+                Label = "My dataset",
+                BackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#FF6384"),
                    ChartColor.FromHexString("#4BC0C0"),
                    ChartColor.FromHexString("#FFCE56"),
                    ChartColor.FromHexString("#E7E9ED"),
                    ChartColor.FromHexString("#36A2EB")
                },
-               Data = new List<double?>() { 11, 16, 7, 3, 14 }
-           };
+                Data = new List<double?>() { 11, 16, 7, 3, 14 }
+            };
 
-           data.Datasets = new List<Dataset>();
-           data.Datasets.Add(dataset);
+            data.Datasets = new List<Dataset>();
+            data.Datasets.Add(dataset);
 
-           chart.Data = data;
+            chart.Data = data;
 
-           return chart;
+            return chart;
         }
 
-        private static Chart GeneratePieChart()
+        public static Chart GeneratePieChart()
         {
-           Chart chart = new Chart();
-           chart.Type = Enums.ChartType.Pie;
+            Chart chart = new Chart();
+            chart.Type = Enums.ChartType.Pie;
 
-           Data data = new Data();
-           data.Labels = new List<string>() { "Red", "Blue", "Yellow" };
+            Models.Data data = new Models.Data();
+            data.Labels = new List<string>() { "Red", "Blue", "Yellow" };
 
-           PieDataset dataset = new PieDataset()
-           {
-               Label = "My dataset",
-               BackgroundColor = new List<ChartColor>() {
+            PieDataset dataset = new PieDataset()
+            {
+                Label = "My dataset",
+                BackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#FF6384"),
                    ChartColor.FromHexString("#36A2EB"),
                    ChartColor.FromHexString("#FFCE56")
                },
-               HoverBackgroundColor = new List<ChartColor>() {
+                HoverBackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#FF6384"),
                    ChartColor.FromHexString("#36A2EB"),
                    ChartColor.FromHexString("#FFCE56")
                },
-               Data = new List<double?>() { 300, 50, 100 }
-           };
+                Data = new List<double?>() { 300, 50, 100 }
+            };
 
-           data.Datasets = new List<Dataset>();
-           data.Datasets.Add(dataset);
+            data.Datasets = new List<Dataset>();
+            data.Datasets.Add(dataset);
 
-           chart.Data = data;
+            chart.Data = data;
 
-           return chart;
+            return chart;
         }
 
-        private static Chart GenerateNestedDoughnutChart()
+        public static Chart GenerateNestedDoughnutChart()
         {
-           Chart chart = new Chart();
-           chart.Type = Enums.ChartType.Doughnut;
+            Chart chart = new Chart();
+            chart.Type = Enums.ChartType.Doughnut;
 
-           Data data = new Data();
-           data.Labels = new List<string>() {
+            Models.Data data = new Models.Data();
+            data.Labels = new List<string>() {
                "resource-group-1",
                "resource-group-2",
                "Data Services - Basic Database Days",
@@ -532,9 +488,9 @@ namespace ChartJSCore.Demo.Controllers
                "resource-group-2 - Other"
            };
 
-           PieDataset outerDataset = new PieDataset()
-           {
-               BackgroundColor = new List<ChartColor>() {
+            PieDataset outerDataset = new PieDataset()
+            {
+                BackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#3366CC"),
                    ChartColor.FromHexString("#DC3912"),
                    ChartColor.FromHexString("#FF9900"),
@@ -542,7 +498,7 @@ namespace ChartJSCore.Demo.Controllers
                    ChartColor.FromHexString("#990099"),
                    ChartColor.FromHexString("#3B3EAC")
                },
-               HoverBackgroundColor = new List<ChartColor>() {
+                HoverBackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#3366CC"),
                    ChartColor.FromHexString("#DC3912"),
                    ChartColor.FromHexString("#FF9900"),
@@ -550,7 +506,7 @@ namespace ChartJSCore.Demo.Controllers
                    ChartColor.FromHexString("#990099"),
                    ChartColor.FromHexString("#3B3EAC")
                },
-               Data = new List<double?>() {
+                Data = new List<double?>() {
                    0.0,
                    0.0,
                    8.31,
@@ -558,11 +514,11 @@ namespace ChartJSCore.Demo.Controllers
                    84.69,
                    0.84
                }
-           };
+            };
 
-           PieDataset innerDataset = new PieDataset()
-           {
-               BackgroundColor = new List<ChartColor>() {
+            PieDataset innerDataset = new PieDataset()
+            {
+                BackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#3366CC"),
                    ChartColor.FromHexString("#DC3912"),
                    ChartColor.FromHexString("#FF9900"),
@@ -570,7 +526,7 @@ namespace ChartJSCore.Demo.Controllers
                    ChartColor.FromHexString("#990099"),
                    ChartColor.FromHexString("#3B3EAC")
                },
-               HoverBackgroundColor = new List<ChartColor>() {
+                HoverBackgroundColor = new List<ChartColor>() {
                    ChartColor.FromHexString("#3366CC"),
                    ChartColor.FromHexString("#DC3912"),
                    ChartColor.FromHexString("#FF9900"),
@@ -578,19 +534,19 @@ namespace ChartJSCore.Demo.Controllers
                    ChartColor.FromHexString("#990099"),
                    ChartColor.FromHexString("#3B3EAC")
                },
-               Data = new List<double?>() {
+                Data = new List<double?>() {
                    8.31,
                    95.96
                }
-           };
+            };
 
-           data.Datasets = new List<Dataset>();
-           data.Datasets.Add(outerDataset);
-           data.Datasets.Add(innerDataset);
+            data.Datasets = new List<Dataset>();
+            data.Datasets.Add(outerDataset);
+            data.Datasets.Add(innerDataset);
 
-           chart.Data = data;
+            chart.Data = data;
 
-           return chart;
+            return chart;
         }
     }
 }

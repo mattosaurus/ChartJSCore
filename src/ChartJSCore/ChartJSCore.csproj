@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>A .NET Core library for generating Chart.js code.</Description>
     <AssemblyTitle>ChartJSCore</AssemblyTitle>
-    <VersionPrefix>3.9.0</VersionPrefix>
+    <VersionPrefix>3.10.0</VersionPrefix>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>ChartJSCore</AssemblyName>
     <PackageId>ChartJSCore</PackageId>
@@ -11,19 +11,23 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>3.9.1</Version>
+    <Version>3.10.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
     <AssemblyVersion>3.0.0</AssemblyVersion>
-    <FileVersion>3.9.1</FileVersion>
-    <PackageReleaseNotes>Version 3.9.1 - Axes fix for Chart.js 3.9</PackageReleaseNotes>
+    <FileVersion>3.10.1</FileVersion>
+    <PackageReleaseNotes>Version 3.10.1 - Add missing position property</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
     <PackOnBuild>true</PackOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\ChartJSCore.BlazorDemo\Pages\Chart.razor" Link="Chart.razor" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />

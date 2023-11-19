@@ -7,11 +7,11 @@
     Chart horizontalBarChart = (Chart)ViewData["HorizontalBarChart"];
     Chart lineChart = (Chart)ViewData["LineChart"];
     Chart lineScatterChart = (Chart)ViewData["LineScatterChart"];
-    //Chart radarChart = (Chart)ViewData["RadarChart"];
-    //Chart polarChart = (Chart)ViewData["PolarChart"];
-    //Chart pieChart = (Chart)ViewData["PieChart"];
-    //Chart liveLineChart = (Chart)ViewData["LineChart"];
-    //Chart nestedDoughnutChart = (Chart)ViewData["NestedDoughnutChart"];
+    Chart radarChart = (Chart)ViewData["RadarChart"];
+    Chart polarChart = (Chart)ViewData["PolarChart"];
+    Chart pieChart = (Chart)ViewData["PieChart"];
+    Chart liveLineChart = (Chart)ViewData["LineChart"];
+    Chart nestedDoughnutChart = (Chart)ViewData["NestedDoughnutChart"];
 }
 
 @section Head {
@@ -50,6 +50,13 @@
         </div>
         <div>Use alt-click for drag-to-zoom</div>
     </div>
+        <div class="card col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Scatter Chart</h5>
+            <canvas id="lineScatterChart"></canvas>
+            <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
+        </div>
+    </div>
 </div>
 <div class="row">
     <div class="col">
@@ -57,14 +64,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="card col-md-6">
-        <div class="card-body">
-            <h5 class="card-title">Scatter Chart</h5>
-            <canvas id="lineScatterChart"></canvas>
-            <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
-        </div>
-    </div>
-    <div class="card col-md-6">
+    <div class="card col-md-12">
         <div class="card-body">
             <h5 class="card-title">Radar Chart</h5>
             <canvas id="radarChart"></canvas>
@@ -72,7 +72,7 @@
         </div>
     </div>
 </div>
-@*<div class="row">
+<div class="row">
     <div class="col">
         &nbsp;
     </div>
@@ -99,21 +99,21 @@
     </div>
 </div>
 <div class="row">
-    <div class="card col-md-6">
+    <div class="card col-md-12">
         <div class="card-body">
             <h5 class="card-title">Live Line Chart</h5>
             <canvas id="liveLineChart"></canvas>
             <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
         </div>
     </div>
-    <div class="card col-md-6">
+    <div class="card col-md-12">
         <div class="card-body">
             <h5 class="card-title">Nested Doughnut Chart</h5>
             <canvas id="nestedDoughnutChart"></canvas>
             <a href="https://github.com/mattosaurus/bitScry/blob/master/bitScry/Controllers/Projects/ChartController.cs" class="btn btn-primary">View Code</a>
         </div>
     </div>
-</div>*@
+</div>
 <div class="row">
     <div class="col">
         &nbsp;
@@ -133,7 +133,7 @@
     <script type="text/javascript">
         @Html.Raw(lineScatterChart.CreateChartCode("lineScatterChart"));
     </script>
-   @*< <script type="text/javascript">
+   <script type="text/javascript">
         @Html.Raw(radarChart.CreateChartCode("radarChart"));
     </script>
     <script type="text/javascript">
@@ -146,15 +146,20 @@
         @Html.Raw(liveLineChart.CreateChartCode("liveLineChart"));
 
         setInterval(function () {
-            // Get chart data
-            $.get('@Url.Action("GetRandomData", "Chart", new { id = 7 })', function (data) {
-                liveLineChart.data.datasets[0].data = data;
-            });
+            // Rewrite the current dataset with random numbers
+            for (var i = 0; i < liveLineChart.data.datasets[0].data.length; i++) {
+                liveLineChart.data.datasets[0].data[i] = Math.floor(Math.random() * 100);
+            }
+
+            // Change color of dataset value
+            let randNumbers = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)]
+            liveLineChart.data.datasets[0].borderColor = "rgba(" + randNumbers[0] + "," + randNumbers[1] + "," + randNumbers[2] + ", 1)";
+            liveLineChart.data.datasets[0].backgroundColor = "rgba(" + randNumbers[0] + "," + randNumbers[1] + "," + randNumbers[2] + ", 0.2)";
 
             liveLineChart.update();
-        }, 5000);
+        }, 1000);
     </script>
     <script type="text/javascript">
         @Html.Raw(nestedDoughnutChart.CreateChartCode("nestedDoughnutChart"));
-    </script>*@
+    </script>
 }
