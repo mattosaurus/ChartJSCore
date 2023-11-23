@@ -161,5 +161,10 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
         public string AfterUpdate { get; set; }
+
+        /// <summary>
+        /// Border-specific settings
+        /// </summary>
+        public Border Border { get; set; }
     }
 }
