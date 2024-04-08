@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartJSCore.BlazorDemo", "src\ChartJSCore.BlazorDemo\ChartJSCore.BlazorDemo.csproj", "{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,14 @@ Global
 		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|x64.ActiveCfg = Release|Any CPU
 		{F5E1EF1F-FFAB-4CC2-B89E-2690A2408283}.Release|x64.Build.0 = Release|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Debug|x64.Build.0 = Debug|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Release|x64.ActiveCfg = Release|Any CPU
+		{42AC3C2C-C07D-4A21-A8C4-FD497E5F7544}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

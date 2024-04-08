@@ -72,6 +72,13 @@ namespace ChartJSCore.Models
         public string Weight { get; set; }
 
         /// <summary>
+        /// Position of the axis. Valid values: 'left' and 'right'.
+        /// 
+        /// In case of using multiple y axis, it is useful to place one y axis on the left and the other on the right
+        /// </summary>
+        public string Position { get; set; }
+
+        /// <summary>
         /// Callback called before the update process starts.
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
@@ -154,5 +161,10 @@ namespace ChartJSCore.Models
         /// </summary>
         [JsonConverter(typeof(PlainJsonStringConverter))]
         public string AfterUpdate { get; set; }
+
+        /// <summary>
+        /// Border-specific settings
+        /// </summary>
+        public Border Border { get; set; }
     }
 }
