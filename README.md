@@ -155,3 +155,28 @@ Generally, the option 'ForceOverride' is the option you want to set for proper c
 
 
 As there's a large number of plugins available for Chart.js and it's not feasible to create object representations of them all, I've added the "PluginDynamic" property to all chart objects to allow customisation. This is a ```Dictionary<string, object>``` in which the string is the name of the property and the object contains the object to be serialized, these will be added to the parent object as distinct properties.
+
+### DataLabels plugin
+You can easily integrate the DataLabels plugin (https://chartjs-plugin-datalabels.netlify.app/) using this code:
+
+```C#
+DataLabelsPlugin dataLabels = new DataLabelsPlugin()
+{
+  /// set properties
+};
+
+Options = new Options()
+{
+    PluginDynamic = new Dictionary<string, object>()
+{ 
+    { 
+        "plugins",
+        new Dictionary<string, object>()
+        {
+            { "datalabels",
+              dataLabels
+            }
+        }
+    } 
+}
+```
