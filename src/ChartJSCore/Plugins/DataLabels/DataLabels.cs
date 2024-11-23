@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace ChartJSCore.Plugins.DataLabels
 {
-    public class DataLabelsPlugin: Models.Options
+    public class DataLabels: Models.Options
     {
         /// <summary>
         /// The align option defines the position of the label relative to the anchor point position and orientation. 
