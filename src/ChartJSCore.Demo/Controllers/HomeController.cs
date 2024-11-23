@@ -22,6 +22,7 @@ namespace ChartJSCore.Demo.Controllers
             Chart horizontalBarChart = GenerateHorizontalBarChart();
             Chart lineChart = GenerateLineChart();
             Chart lineScatterChart = GenerateLineScatterChart();
+            Chart floatingBarChart = GenerateFloatingBarChart();
             Chart radarChart = GenerateRadarChart();
             Chart polarChart = GeneratePolarChart();
             Chart pieChart = GeneratePieChart();
@@ -31,6 +32,7 @@ namespace ChartJSCore.Demo.Controllers
             ViewData["HorizontalBarChart"] = horizontalBarChart;
             ViewData["LineChart"] = lineChart;
             ViewData["LineScatterChart"] = lineScatterChart;
+            ViewData["FloatingBarChart"] = floatingBarChart;
             ViewData["RadarChart"] = radarChart;
             ViewData["PolarChart"] = polarChart;
             ViewData["PieChart"] = pieChart;
@@ -250,6 +252,60 @@ namespace ChartJSCore.Demo.Controllers
                     {
                         Display = true,
                         Text = new List<string>() { "Chart.js Horizontal Bar Chart" }
+                    }
+                }
+            };
+
+            return chart;
+        }
+
+        private static Chart GenerateFloatingBarChart()
+        {
+            Chart chart = new Chart();
+            chart.Type = Enums.ChartType.Bar;
+
+            chart.Data = new Data
+            {
+                Labels = new List<string>() { "January", "February", "March", "April", "May", "June" },
+                Datasets = new List<Dataset>()
+                {
+                    {
+                        new FloatingBarDataset()
+                        {
+                            Label = "Dataset 1",
+                            Data = new List<List<double>>
+                            {
+                                new List<double> {3,8},
+                                new List<double> {5,7},
+                                new List<double> {6,8},
+                                new List<double> {4,8},
+                                new List<double> {2,9},
+                                new List<double> {6,7}
+
+                            },
+                            BackgroundColor = new List<ChartColor>
+                            {
+                                ChartColor.FromRgba(255, 99, 132, 0.2)
+                            },
+                            BorderWidth = new List<int>() { 2 }
+                        }
+                    }
+                }
+            };
+
+            chart.Options = new Options()
+            {
+                Responsive = true,
+                Plugins = new ChartJSCore.Models.Plugins()
+                {
+                    Legend = new Legend()
+                    {
+                        Position = "right"
+                    },
+                    Title = new Title()
+                    {
+                        Display = true,
+                        Text = new List<string>() { "Chart.js Floating Bar Chart" }
                     }
                 }
             };
