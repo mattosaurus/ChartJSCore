@@ -180,3 +180,37 @@ Options = new Options()
     } 
 }
 ```
+
+
+### Annotation plugin
+You can easily integrate the Annotation plugin ([https://chartjs-plugin-datalabels.netlify.app/](https://www.chartjs.org/chartjs-plugin-annotation/latest/)) using this code:
+
+```C#
+AnnotationPlugin annotation = new AnnotationPlugin()
+{
+Annotations = new Dictionary<string, ChartJSCore.Plugins.Annotation.Annotation>()
+{
+    {
+        "line1",
+        new ChartJSCore.Plugins.Annotation.LineAnnotation()
+        {
+            /// set properties
+        }
+    }
+};
+
+Options = new Options()
+{
+    PluginDynamic = new Dictionary<string, object>()
+{ 
+    { 
+        "plugins",
+        new Dictionary<string, object>()
+        {
+            { "annotation",
+              annotation
+            }
+        }
+    } 
+}
+```
