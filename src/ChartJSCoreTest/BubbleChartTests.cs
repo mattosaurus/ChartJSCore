@@ -17,7 +17,7 @@ namespace ChartJSCoreTest
 
             string actual = GenerateBubbleChart().CreateChartCode("bubbleChart");
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
 
         private static Chart GenerateBubbleChart()

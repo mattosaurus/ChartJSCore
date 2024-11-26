@@ -16,7 +16,7 @@ namespace ChartJSCoreTest
 
             string actual = GenerateLineScatterChart().CreateChartCode("lineScatterChart");
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
 
         private static Chart GenerateLineScatterChart()

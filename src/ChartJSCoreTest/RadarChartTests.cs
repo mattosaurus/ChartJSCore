@@ -17,7 +17,7 @@ namespace ChartJSCoreTest
 
             string actual = GenerateRadarChart().CreateChartCode("radarChart");
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
 
         private static Chart GenerateRadarChart()

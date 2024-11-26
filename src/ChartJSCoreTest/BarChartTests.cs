@@ -17,7 +17,7 @@ namespace ChartJSCoreTest
 
             string actual = GenerateBarChart().CreateChartCode("barChart");
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
 
         private static Chart GenerateBarChart()

@@ -17,7 +17,7 @@ namespace ChartJSCoreTest
 
             string actual = GeneratePolarChart().CreateChartCode("polarChart");
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
 
         private static Chart GeneratePolarChart()

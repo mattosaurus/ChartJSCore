@@ -17,7 +17,7 @@ namespace ChartJSCoreTest
 
             string actual = GeneratePieChart().CreateChartCode("pieChart");
 
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
 
         private static Chart GeneratePieChart()

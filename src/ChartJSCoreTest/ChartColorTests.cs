@@ -40,10 +40,10 @@ namespace ChartJSCoreTest
 
             var actualColor = ChartColor.FromRgba(expectedRed, expectedGreen, expectedBlue, expectedAlpha);
 
-            Assert.AreEqual(expectedRed, actualColor.Red);
-            Assert.AreEqual(expectedGreen, actualColor.Green);
-            Assert.AreEqual(expectedBlue, actualColor.Blue);
-            Assert.AreEqual(expectedAlpha, actualColor.Alpha);
+            Assert.Equals(expectedRed, actualColor.Red);
+            Assert.Equals(expectedGreen, actualColor.Green);
+            Assert.Equals(expectedBlue, actualColor.Blue);
+            Assert.Equals(expectedAlpha, actualColor.Alpha);
         }
 
         [Test]
@@ -55,9 +55,9 @@ namespace ChartJSCoreTest
 
             var actualColor = ChartColor.FromRgb(expectedRed, expectedGreen, expectedBlue);
 
-            Assert.AreEqual(expectedRed, actualColor.Red);
-            Assert.AreEqual(expectedGreen, actualColor.Green);
-            Assert.AreEqual(expectedBlue, actualColor.Blue);
+            Assert.Equals(expectedRed, actualColor.Red);
+            Assert.Equals(expectedGreen, actualColor.Green);
+            Assert.Equals(expectedBlue, actualColor.Blue);
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace ChartJSCoreTest
 
             var actualColor = ChartColor.FromRgb(0, 0, 0);
 
-            Assert.AreEqual(expectedAlpha, actualColor.Alpha);
+            Assert.Equals(expectedAlpha, actualColor.Alpha);
         }
 
         [Test]
@@ -107,10 +107,10 @@ namespace ChartJSCoreTest
 
             var actualColor = ChartColor.FromHexString($"#{expectedRed:X}{expectedGreen:X}{expectedBlue:X}");
 
-            Assert.AreEqual(expectedRed, actualColor.Red);
-            Assert.AreEqual(expectedGreen, actualColor.Green);
-            Assert.AreEqual(expectedBlue, actualColor.Blue);
-            Assert.AreEqual(expectedAlpha, actualColor.Alpha);
+            Assert.Equals(expectedRed, actualColor.Red);
+            Assert.Equals(expectedGreen, actualColor.Green);
+            Assert.Equals(expectedBlue, actualColor.Blue);
+            Assert.Equals(expectedAlpha, actualColor.Alpha);
         }
 
         [Test]
@@ -134,7 +134,7 @@ namespace ChartJSCoreTest
             Assert.That(randomColor.Red, Is.GreaterThanOrEqualTo(0).And.LessThanOrEqualTo(256));
             Assert.That(randomColor.Green, Is.GreaterThanOrEqualTo(0).And.LessThanOrEqualTo(256));
             Assert.That(randomColor.Blue, Is.GreaterThanOrEqualTo(0).And.LessThanOrEqualTo(256));
-            Assert.AreEqual(randomColor.Alpha, expectedAlpha);
+            Assert.Equals(randomColor.Alpha, expectedAlpha);
         }
 
         [Test]
@@ -150,7 +150,7 @@ namespace ChartJSCoreTest
             var color = ChartColor.FromRgba(red, green, blue, alpha);
             var actualString = color.ToString();
 
-            Assert.AreEqual(expectedString, actualString);
+            Assert.Equals(expectedString, actualString);
         }
 
         [Test]
@@ -167,7 +167,7 @@ namespace ChartJSCoreTest
             var color = ChartColor.FromRgba(red, green, blue, alpha);
             var actualString = color.ToString();
 
-            Assert.AreEqual(expectedString, actualString);
+            Assert.Equals(expectedString, actualString);
         }
     }
 }
