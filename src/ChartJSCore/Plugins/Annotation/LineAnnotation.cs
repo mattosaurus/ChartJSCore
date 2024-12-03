@@ -12,8 +12,8 @@ namespace ChartJSCore.Plugins.Annotation
     {
         public string Type { get; private set; } = "line";
         public LabelAnnotation Label { get; set; }
-        public bool Curve { get; set; }
+        public bool? Curve { get; set; }
         public string ScaleID { get; set; }
-        public int BorderWidth { get; set; } = 2;        
+        public int? BorderWidth { get; set; }      
     }
 }
