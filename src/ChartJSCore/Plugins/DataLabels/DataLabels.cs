@@ -22,7 +22,7 @@ namespace ChartJSCore.Plugins.DataLabels
         /// 'left': the label is positioned to the left of the anchor point(180°)
         /// 'top': the label is positioned to the top of the anchor point(270°)
         /// </summary>
-        public string Align { get; set; } = "center";
+        public string Align { get; set; }
 
         /// <summary>
         /// An anchor point is defined by an orientation vector and a position on the data element. 
@@ -35,25 +35,25 @@ namespace ChartJSCore.Plugins.DataLabels
         /// 'start': lowest element boundary
         /// 'end': highest element boundary
         /// </summary>
-        public string Anchor { get; set; } = "center";
+        public string Anchor { get; set; }
         public ChartColor BackgroundColor { get; set; }
         public ChartColor BorderColor { get; set; }
-        public int BorderRadius { get; set; } = 0;
-        public int BorderWidth { get; set; } = 0;
+        public int? BorderRadius { get; set; }
+        public int? BorderWidth { get; set; }
 
         /// <summary>
         /// The clamp option, when true, enforces the anchor position to be calculated based on 
         /// the visible geometry of the associated element (i.e. part inside the chart area).
         /// </summary>
-        public bool Clamp { get; set; } = false;
+        public bool? Clamp { get; set; }
 
         /// <summary>
         /// When the clip option is true, the part of the label which is outside the chart 
         /// area will be masked (see CanvasRenderingContext2D.clip() )
         /// </summary>
-        public bool Clip { get; set; } = false;
+        public bool? Clip { get; set; }
         public ChartColor Color { get; set; }
-        public bool Display { get; set; } = true;
+        public bool? Display { get; set; }
         public Font Font { get; set; }
         public string Formatter { get; set; }
 
@@ -62,15 +62,15 @@ namespace ChartJSCore.Plugins.DataLabels
         /// This option is not applicable when align is 'center'. Also note that if align is 'start', 
         /// the label is moved in the opposite direction. The default value is 4.
         /// </summary>
-        public int Offset { get; set; } = 4;
-        public int Opacity { get; set; } = 1;
+        public int? Offset { get; set; }
+        public int? Opacity { get; set; }
         public Padding Padding { get; set; }
-        public int Rotation { get; set; } = 0;
-        public string TextAlign { get; set; } = "start";
+        public int? Rotation { get; set; }
+        public string TextAlign { get; set; }
         public ChartColor TextStrokeColor { get; set; }
 
-        public int TextStrokeWidth { get; set; } = 0;
-        public int TextShadowBlur { get; set; } = 0;
+        public int? TextStrokeWidth { get; set; }
+        public int? TextShadowBlur { get; set; }
         public ChartColor TextShadowColor { get; set; }                      
     }
 }
