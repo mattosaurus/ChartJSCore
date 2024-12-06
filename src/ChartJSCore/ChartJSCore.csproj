@@ -11,15 +11,15 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>3.11.0</Version>
+    <Version>3.12.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/mattosaurus/ChartJSCore</RepositoryUrl>
     <PackageTags>Chart.js chart graph chartjs</PackageTags>
     <PackageProjectUrl>https://github.com/mattosaurus/ChartJSCore</PackageProjectUrl>
     <Platforms>AnyCPU;x64</Platforms>
     <AssemblyVersion>3.0.0</AssemblyVersion>
-    <FileVersion>3.11.0</FileVersion>
-    <PackageReleaseNotes>Version 3.11.0 - Add DataLabels and Annotation plugins</PackageReleaseNotes>
+    <FileVersion>3.12.0</FileVersion>
+    <PackageReleaseNotes>Version 3.12.0 - Update DataLabels and Annotation plugins default values</PackageReleaseNotes>
     <Authors>mattosaurus</Authors>
     <PackOnBuild>true</PackOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
